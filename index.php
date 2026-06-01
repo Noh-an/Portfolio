@@ -193,7 +193,7 @@
                                 </div>
                             </div>
                         </div>
-                        
+
                         <!-- /********** PROJET 2  **********/ -->
                         <div class="row gy-4 gy-md-4 gy-lg-4">
                             <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
@@ -256,3 +256,5 @@
             </div>
         </section>
     </main>
+    <?php include 'footer.php'; ?>
+</body>
