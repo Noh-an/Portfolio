@@ -30,6 +30,7 @@
                 <div class="cv-body">
                     <!-- colonne de gauche -->
                     <div class="cv-main">
+
                         <!-- formation -->
                         <div class="cv-section">
                             <div class="cv-section-title">Formation</div>
@@ -58,12 +59,63 @@
                                 <div class="cv-item-description">Réalisation de projets concrets mêlant l'ingénierie, l'énergie, l'informatique et l'éco-conception.</div>
                             </div>
                         </div>
-                    </div>
-                    
-                    <!-- experience professionnelle -->
-                    <div class="cv-section">
-                        <div class="cv-section-title">Expérience professionnelle</div>  
-                        
+
+                        <!-- experience professionnelle -->
+                        <div class="cv-section">
+                            <div class="cv-section-title">Expériences</div>
+
+                            <!-- EASY2DRIVE -->
+                            <div class="cv-item">
+                                <div class="cv-header">
+                                    <div class="cv-item-title"><h3>Projet EASY2DRIVE - BTS SIO</h3></div>
+                                    <div class="cv-item-date">2026 - 2 sem.</div>
+                                </div>
+                                <div class="cv-item-subtitle">Développement d'un espace “Pro”</div>
+                                <div class="cv-item-description">
+                                    <p>Espace “Pro” dans lequel les auto-écoles pourront inscrire leurs élèves et leur affecter un formateur qui suivra leur formation</p>
+                                    <ul>
+                                        <li>Création d'une page web pour la gestion et le suivi des utilisateurs(HTML, CSS, PHP)</li>
+                                        <li>Conception de bases de données pour le stockage des informations et logs (MySQL)</li>
+                                        <li>Création des droits utilisateurs sur la base de données</li>
+                                        <li>Sécurisation de l'application contre les attaques XSS et SQL Injection(PHP)</li>
+                                        <li>Utilisation de Git pour la gestion de version du projet</li>
+                                        <li>Documentation du projet(Dokuwiki)</li>
+                                    </ul>
+                                </div>
+                            </div>
+
+                            <!-- COOPENOIX -->
+                            <div class="cv-item">
+                                <div class="cv-header">
+                                    <div class="cv-item-title"><h3>Projet COOPENOIX - BTS SIO</h3></div>
+                                    <div class="cv-item-date">2025 - 1 sem.</div>
+                                </div>
+                                <div class="cv-item-subtitle">Suivi des commandes clients</div>
+                                <div class="cv-item-description">
+                                    <ul>
+                                        <li>Création d'une page web pour le suivi des commandes des clients.(HTML, CSS)</li>
+                                        <li>Conception d'une base de données pour stocker les informations (MySQL)</li>
+                                        <li>Création des droits utilisateurs avec script bash</li>
+                                    </ul>
+                                </div>
+                            </div>
+
+                            <!-- hillebrand gori -->
+                            <div class="cv-item">
+                                <div class="cv-header">
+                                    <div class="cv-item-title"><h3>Stage d'observation - Hillebrand Gori</h3></div>
+                                    <div class="cv-item-date">février 2025 - 2 sem.</div>
+                                </div>
+                                <div class="cv-item-subtitle">Intégration du Service Informatique</div>
+                                <div class="cv-item-description">
+                                    <ul>
+                                        <li>Découverte du fonctionnement d'un service informatique au sein d'une entreprise de logistique.</li>
+                                        <li>Participation à la maintenance et à l'assistance technique des utilisateurs.</li>
+                                        <li>Participation aux challenges PHP sur le site internet Tainix</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
