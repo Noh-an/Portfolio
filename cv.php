@@ -1,3 +1,5 @@
+<?php include 'head.php'; ?>
+
 <body>
 
     <?php include 'header.php'; ?>
@@ -116,6 +118,89 @@
                                 </div>
                             </div>
                         </div>
+                    </div>
+                </div>
+                <!-- colonne latérale -->
+                <div class="cv-sidebar">
+
+                    <!-- Compétences techniques -->
+                    <div class="cv-section">
+                    <div class="cv-section-title">Compétences</div>
+                    <div class="side-skill-item">
+                        <div class="side-skill-header">
+                        <span>HTML / CSS</span>
+                        <!-- <span class="side-skill-pct">72%</span> -->
+                        </div>
+                        <!-- <div class="skill-bar-bg"><div class="skill-bar-fill" style="width:72%"></div></div> -->
+                    </div>
+                    <div class="side-skill-item">
+                        <div class="side-skill-header">
+                        <span>Python</span>
+                        <!-- <span class="side-skill-pct">60%</span> -->
+                        </div>
+                        <!-- <div class="skill-bar-bg"><div class="skill-bar-fill" style="width:60%"></div></div> -->
+                    </div>
+                    <div class="side-skill-item">
+                        <div class="side-skill-header">
+                        <span>JAVA</span>
+                        <!-- <span class="side-skill-pct">38%</span> -->
+                        </div>
+                        <!-- <div class="skill-bar-bg"><div class="skill-bar-fill" style="width:38%"></div></div> -->
+                    </div>
+                    <div class="side-skill-item">
+                        <div class="side-skill-header">
+                        <span>PHP</span>
+                        <!-- <span class="side-skill-pct">38%</span> -->
+                        </div>
+                        <!-- <div class="skill-bar-bg"><div class="skill-bar-fill" style="width:38%"></div></div> -->
+                    </div>
+                    <div class="side-skill-item">
+                        <div class="side-skill-header">
+                        <span>SQL / MySQL</span>
+                        <!-- <span class="side-skill-pct">58%</span> -->
+                        </div>
+                        <!-- <div class="skill-bar-bg"><div class="skill-bar-fill" style="width:58%"></div></div> -->
+                    </div>
+                    <div class="side-skill-item">
+                        <div class="side-skill-header">
+                        <span>JavaScript</span>
+                        <!-- <span class="side-skill-pct">52%</span> -->
+                        </div>
+                        <!-- <div class="skill-bar-bg"><div class="skill-bar-fill" style="width:52%"></div></div> -->
+                    </div>
+                    <div class="side-skill-item">
+                        <div class="side-skill-header">
+                        <span>Git</span>
+                        <!-- <span class="side-skill-pct">50%</span> -->
+                        </div>
+                        <!-- <div class="skill-bar-bg"><div class="skill-bar-fill" style="width:50%"></div></div> -->
+                    </div>
+                    </div>
+
+                    <!-- Langues -->
+                    <div class="cv-section">
+                    <div class="cv-section-title">Langues</div>
+                    <div class="cv-lang-item">
+                        <span>🇫🇷 Français</span>
+                        <span class="lang-level">Natif</span>
+                    </div>
+                    <div class="cv-lang-item">
+                        <span>🇬🇧 Anglais</span>
+                        <span class="lang-level">B1 — Tech</span>
+                    </div>
+                    <div class="cv-lang-item">
+                        <span>🇪🇸 Espagnol</span>
+                        <span class="lang-level">A2</span>
+                    </div>
+                    </div>
+
+                    <!-- Centres d'intérêt -->
+                    <div class="cv-section">
+                    <div class="cv-section-title">Intérêts</div>
+                    <div class="cv-interests">
+                        <span class="interest-tag">Musique</span>
+                        <span class="interest-tag">Sport</span>
+                        <span class="interest-tag">Films/Séries</span>
                     </div>
                 </div>
             </div>
