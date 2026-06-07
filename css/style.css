@@ -1,0 +1,25 @@
+/* 1. Déclaration de la variable dans le :root */
+:root {
+  --police-brouillon: 'Leckerli One', cursive;
+}
+
+/* 2. Utilisation de la variable sur tout le site */
+body, input, textarea, button, select {
+  font-family: var(--police-brouillon);
+}
+
+body {
+
+    /* Police d'écriture pour un style de brouillon manuscrit */
+    /* font-family: "Leckerli One", cursive; */
+    font-weight: 400;
+    font-style: normal;
+    font-size: 1.5rem;
+
+    /* Fond clair pour un effet de papier, avec des lignes pour simuler un cahier */
+    background-color: #fafafa; /* Un blanc légèrement cassé pour faire plus naturel */
+    background-image: 
+    linear-gradient(90deg, transparent 79px, #abced7 79px, #abced7 81px, transparent 81px), /* Marge */
+    linear-gradient(#eee .1em, transparent .1em); /* Lignes horizontales */
+    background-size: 100% 24px; /* Espace entre les lignes */
+}

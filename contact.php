@@ -13,7 +13,6 @@
                 <form action="send_message.php" method="post">
                     <!-- Le fieldset dessine le contour noir/gris natif autour de tout le formulaire -->
                     <fieldset>
-                        <legend>Formulaire de contact</legend>
                         
                         <label for="name">Nom :</label><br>
                         <input type="text" id="name" name="name" required><br><br>
