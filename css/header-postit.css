@@ -1,0 +1,218 @@
+/* =========================================
+   HEADER — Style Post-it / Papier Scotché
+   Portfolio Nohan Gagnor
+
+   PRÉREQUIS : ajouter dans <head>
+   <link rel="preconnect" href="https://fonts.googleapis.com">
+   <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400;700&display=swap" rel="stylesheet">
+   ========================================= */
+
+
+/* ---- Fond type cahier à lignes (à adapter selon ton body existant) ---- */
+/* 1. Déclaration de la variable dans le :root */
+:root {
+  --police-brouillon: 'Leckerli One', cursive;
+}
+
+/* 2. Utilisation de la variable sur tout le site */
+body, input, textarea, button, select {
+  font-family: var(--police-brouillon);
+}
+
+
+body {
+  background-color: #ede8dc;
+  background-image:
+    /* Lignes horizontales séyès */
+    repeating-linear-gradient(
+      to bottom,
+      transparent 0px,
+      transparent 23px,
+      rgba(120, 155, 205, 0.28) 23px,
+      rgba(120, 155, 205, 0.28) 24px
+    ),
+    /* Marge rouge à gauche */
+    linear-gradient(
+      to right,
+      transparent 55px,
+      rgba(205, 75, 75, 0.22) 55px,
+      rgba(205, 75, 75, 0.22) 56px,
+      transparent 56px
+    );
+}
+
+
+/* ---- Header — papier scotché sur la page ---- */
+header {
+  position: relative;
+  margin: 50px auto 30px;
+  padding: 20px 36px 16px;
+
+  /* Couleur papier post-it */
+  background-color: #fdf8e6;
+  border: 1px solid #d4c870;
+
+  /* Légère rotation "posé à la main" */
+  transform: rotate(-0.6deg);
+
+  /* Ombre portée — papier surélevé de la feuille */
+  box-shadow:
+    2px 3px 0 #c4b860,
+    4px 6px 14px rgba(0, 0, 0, 0.17);
+
+  /* Indispensable : les scotchs dépassent en haut */
+  overflow: visible;
+}
+
+
+/* ---- Scotch gauche ---- */
+header::before {
+  content: '';
+  position: absolute;
+  top: -13px;
+  left: 40px;
+  width: 58px;
+  height: 24px;
+
+  /* Transparent avec teinte ambrée (scotch vieilli) */
+  background: rgba(212, 192, 128, 0.46);
+  /* Fibres diagonales du film adhésif */
+  background-image: repeating-linear-gradient(
+    100deg,
+    transparent 0px,
+    transparent 3px,
+    rgba(255, 255, 255, 0.2) 3px,
+    rgba(255, 255, 255, 0.2) 4.5px
+  );
+
+  border: 1px solid rgba(185, 165, 95, 0.22);
+  border-radius: 1px;
+  transform: rotate(-2.5deg);
+  box-shadow:
+    0 1px 4px rgba(0, 0, 0, 0.1),
+    inset 0 1px 0 rgba(255, 255, 255, 0.35);
+  z-index: 2;
+}
+
+
+/* ---- Scotch droit ---- */
+header::after {
+  content: '';
+  position: absolute;
+  top: -13px;
+  right: 40px;
+  width: 58px;
+  height: 24px;
+
+  background: rgba(212, 192, 128, 0.46);
+  background-image: repeating-linear-gradient(
+    100deg,
+    transparent 0px,
+    transparent 3px,
+    rgba(255, 255, 255, 0.2) 3px,
+    rgba(255, 255, 255, 0.2) 4.5px
+  );
+
+  border: 1px solid rgba(185, 165, 95, 0.22);
+  border-radius: 1px;
+  transform: rotate(2deg);
+  box-shadow:
+    0 1px 4px rgba(0, 0, 0, 0.1),
+    inset 0 1px 0 rgba(255, 255, 255, 0.35);
+  z-index: 2;
+}
+
+
+/* ---- Contenu intérieur ---- */
+.header-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+
+/* ---- Logo — style signature à la main ---- */
+.logo {
+  font-family: 'Caveat', cursive;
+  font-size: 1.9rem;
+  font-weight: 700;
+  color: #1e1810;
+  text-decoration: none;
+  letter-spacing: 0.03em;
+
+  /* Soulignement stylo-bille */
+  border-bottom: 2.5px solid #1e1810;
+  padding-bottom: 1px;
+
+  transition: color 0.2s ease, border-color 0.2s ease;
+}
+
+.logo:hover {
+  color: #4a3a12;
+  border-color: #6b5215;
+}
+
+
+/* ---- Navigation ---- */
+.main-nav {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+}
+
+.main-nav a {
+  font-family: 'Caveat', cursive;
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: #3a3020;
+  text-decoration: none;
+  position: relative;
+  letter-spacing: 0.02em;
+  transition: color 0.2s ease;
+}
+
+/* Surlignage marqueur fluo au hover */
+.main-nav a::after {
+  content: '';
+  position: absolute;
+  bottom: -3px;
+  left: -2px;
+  right: -2px;
+  height: 7px;
+  background: rgba(255, 208, 45, 0.5);
+  transform: scaleX(0) rotate(-1.2deg);
+  transform-origin: left center;
+  transition: transform 0.22s ease;
+  border-radius: 1px;
+  z-index: -1;
+}
+
+.main-nav a:hover {
+  color: #1a1408;
+}
+
+.main-nav a:hover::after {
+  transform: scaleX(1) rotate(-1.2deg);
+}
+
+
+/* ---- Responsive mobile ---- */
+@media (max-width: 600px) {
+  header {
+    padding: 16px 20px 12px;
+    margin: 30px 10px 20px;
+  }
+
+  .logo {
+    font-size: 1.5rem;
+  }
+
+  .main-nav {
+    gap: 14px;
+  }
+
+  .main-nav a {
+    font-size: 1.1rem;
+  }
+}
