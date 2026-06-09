@@ -12,6 +12,7 @@
     <!-- <link rel="stylesheet" href="css/style.css"> -->
     <link rel="stylesheet" href="css/header-postit.css">
 
-
     <title>Mon Portfolio</title>
 </head>
+
+ <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
