@@ -15,11 +15,11 @@
                     <!-- Colonne TEXTE — gauche (7/12 sur md+, pleine largeur sur mobile) -->
                     <div class="col-12 col-md-7">
                         <div class="intro">
-                            <p class="">Bonjour, je suis</p>
-                            <h1 class="">Nohan Gagnor</h1>
+                            <p class="lean">Bonjour, je suis</p>
+                            <h1 class="title-intro">Nohan Gagnor</h1>
 
-                            <div class="">
-                                <p class="">
+                            <div class="descr-intro">
+                                <p>
                                     Étudiant en BTS SIO <strong>SLAM</strong> — passionné par le développement web et les nouvelles technologies.
                                     Je construis des projets concrets pour apprendre et évoluer.
                                 </p>
@@ -29,21 +29,20 @@
                                 <a id="btn-contact" href="contact.php" class="">Me contacter</a>
                                 <a id="btn-projets" href="#projets" class="">Mes projets</a>
                             </div>
-
-                            <div class="social-links">
-                                <a href="https://www.linkedin.com/in/nohan-gagnor/" target="_blank" class="social-link">LinkedIn</a>
-                                <a href="https://github.com/nohangagnor" target="_blank" class="social-link">GitHub</a>
-                            </div>
                         </div>
                     </div>
 
                     <!-- Colonne IMAGE — droite (5/12 sur md+, pleine largeur sur mobile) -->
                     <!-- text-center : centre l'image horizontalement dans sa colonne -->
                     <div class="col-12 col-md-5 text-center">
-                        <img src="./img/photo.png"
-                             alt="Photo de Nohan Gagnor"
-                             class="img-fluid rounded-circle shadow"
-                             style="max-width: 280px; width: 100%;">
+                        <div class="polaroid">
+                            <img src="./img/photo.png"
+                                 alt="Photo de Nohan Gagnor">
+                            <div class="social-links">
+                                <a href="https://www.linkedin.com/in/nohan-gagnor/" target="_blank" class="social-link">LinkedIn</a>
+                                <a href="https://github.com/nohangagnor" target="_blank" class="social-link">GitHub</a>
+                            </div>
+                        </div>
                     </div>
 
                 </div>
