@@ -258,9 +258,32 @@ header::after {
 }
 
 .title-intro {
-    font-size : 6rem;
-    font-family: 'Caveat', cursive;
-    margin-bottom: 24px;
+  font-size : 6rem;
+  font-family: 'Caveat', cursive;
+  margin-bottom: 24px;
+  position: relative;
+  display: inline; /* ou inline-block */
+  padding: 0 5px; /* Petit padding pour le débordement */
+  z-index: 1; /* Pour garder le texte au-dessus du fond */
+}
+
+.title-intro::before {
+  content: "";
+  position: absolute;
+  top: 35%; left: -4%;
+  width: 110%; height: 55%;
+  background-color: rgb(255, 235, 59); /* Jaune surligneur */
+  z-index: -1; /* Place le fond jaune derrière le texte */
+  
+  /* L'astuce : clip-path pour irregulariser les bords */
+  /* Imaginez 4 points : top-left, top-right, bottom-right, bottom-left */
+  /* On modifie légèrement les pourcentages pour créer des vagues */
+  clip-path: polygon(
+    2% 8%,    /* Haut-Gauche légèrement décalé */
+    98% 3%,   /* Haut-Droite légèrement décalé */
+    96% 95%,  /* Bas-Droite légèrement décalé */
+    4% 91%    /* Bas-Gauche légèrement décalé */
+  );
 }
 
 .lean {
@@ -287,17 +310,17 @@ header::after {
 }
 
 .boutons{
-
  margin-left: 54px;
 }
 
 .boutons a {
+  font-family: 'Caveat', cursive;
   position: relative;
   z-index: 1;
   padding: 0 8px;
   gap: 8px;
   padding: 10px 18px;
-  font-size: 1.15rem;
+  font-size: 1.25rem;
 }
 
 .boutons a::before {
@@ -319,13 +342,29 @@ header::after {
   transform: scaleX(1) skewX(-12deg) rotate(-1deg);
 }
 
+#introduction {
+    margin-bottom: 40px;
+}
 
-
+strong {
+    font-weight: 700;
+     /* On applique un soulignement de base */
+  text-decoration: underline;
+  /* Couleur jaune fluo semi-transparente */
+  text-decoration-color: rgba(255, 242, 0, 0.5); 
+  /* On donne de l'épaisseur au trait (comme un feutre) */
+  text-decoration-thickness: 0.35em; 
+  /* On remonte légèrement le trait pour qu'il chevauche le bas des lettres */
+  text-underline-offset: -0.1em; 
+  /* CRITIQUE : Empêche le trait de se couper au niveau des lettres descendantes (g, p, y, q) */
+  text-decoration-skip-ink: none; 
+  transition: text-decoration-color 0.25s ease;
+}
 
 .polaroid {
     display       : inline-block;
     background    : #ffffff;               /* papier légèrement jauni */
-    padding       : 14px 14px 114px 14px;   /* bande blanche épaisse en bas */
+    padding       : 14px;   /* bande blanche épaisse en bas */
     max-width     : 380px;
     width         : 100%;
     border-radius  : 6px;
@@ -360,9 +399,52 @@ header::after {
     letter-spacing: 0.03em;
 }
 
+.social-links a {
+  margin-right: 12px;
+    text-decoration: none;
+    color: #3a3020;
+    font-family: 'Caveat', cursive;
+    font-size: 1.25rem;
+
+    height: 75px;          /* Donne la hauteur à la bande blanche */
+    display: flex;
+    align-items: center;    /* Centre verticalement */
+    justify-content: center;/* Centre horizontalement */
+}
+
 @media (max-width: 767.98px) {
     .polaroid {
         transform: rotate(1.5deg);
         max-width: 220px;
     }
+}
+
+/* --------------------------------------------
+            SECTION "PRESENTATION"
+-------------------------------------------- */
+
+.layout-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr; /* Crée 2 colonnes identiques side-by-side */
+  grid-template-rows: repeat(3, auto); /* Les lignes s'ajustent automatiquement à la hauteur du contenu */  
+  gap: 24px; /* Gère l'espace horizontal entre les deux colonnes */
+  max-width: 1350px;
+  margin: 0 auto; /* Centre le bloc entier dans la page */
+}
+
+.layout-column{
+  display: flex;
+  flex-direction: column; /* Empile les cartes du haut vers le bas */
+  justify-content: center;
+}
+
+.layout-column.info {
+  margin-top: 50px;
+}
+
+.card {
+  background-color: transparent; 
+  margin-bottom: 24px;
+  padding: 10px;
+  /* border: none; */
 }

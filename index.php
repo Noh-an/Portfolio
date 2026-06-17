@@ -40,7 +40,7 @@
                                  alt="Photo de Nohan Gagnor">
                             <div class="social-links">
                                 <a href="https://www.linkedin.com/in/nohan-gagnor/" target="_blank" class="social-link">LinkedIn</a>
-                                <a href="https://github.com/nohangagnor" target="_blank" class="social-link">GitHub</a>
+                                <a href="https://github.com/nohangagnor" target="_blank" class="social-git">GitHub</a>
                             </div>
                         </div>
                     </div>
@@ -52,88 +52,87 @@
 
         <!-- section Présentation -->
         <section id="presentation">
-            <div class="container">
-                <div class="">
-                    
-                    <!-- moi -->
-                    <p class="">A propos</p>
-                    <h2 class="">Créatif, organisé, empathique</h2>
-                    
-                    <div class="">
+            <div class="layout-container">
+                <!-- moi -->
+                <div class="layout-column text">
+                    <p class="card about-me">A propos</p>
+                    <article class="card text-card">
                         <p>Je suis Nohan GAGNOR, 20 ans, basé à Dijon. Actuellement étudiant en BTS SIO option SLAM au lycée polyvalent Le Castel, je suis passionné par le développement de solutions logicielles performantes et méthodiques.</p>
                         <p>Mon parcours m'a permis de développer une approche rigoureuse du développement, combinant perfectionnisme et esprit d'équipe. Je suis constamment en quête d'apprentissage et de montée en compétences sur les technologies web et applicatives.</p>
-                    </div>
+                    </article>
+                    <h2 class="card soft-skills">Créatif, organisé, empathique</h2>
+                </div>
 
-                    <!-- mes informations -->
-                    <div class="">
+                <!-- mes informations -->
+                <div class="layout-column info">
+                    <div class="card info-card">
                         <h3>Informations</h3>
-
                         <ul>
                             <li><strong>Âge :</strong> 20 ans</li>
                             <li><strong>Localisation :</strong> Dijon, France</li>
                             <li><strong>Formation :</strong> BTS SIO option SLAM</li>
                         </ul>
                     </div>
-
                     <!-- objectif et compétences -->
-                    <div class="">
+                    <div class="card objectif-card">
                         <h3>Mon objectif</h3>
-
                         <p>Mon objectif est de devenir un développeur web et applicatif complet, capable de concevoir et de réaliser des projets  innovants et performants. Je souhaite contribuer à des équipes dynamiques et engagées dans l'excellence technique.</p>
                     </div>
+                </div>
+            </div>
+        </section>
 
-                    <div class="">
-                        <h3>Compétences</h3>
-                        
-                        <div class="">
-                            <img accesskey="" src="./img/languages.png" alt="Languages" class="img-fluid" style="max-width: 50px;">
-                            <h4>Languages</h4>
+        <section id="competences">
+            <div class="container">
+                <h3>Compétences</h3>
+                
+                <div class="">
+                    <img accesskey="" src="./img/languages.png" alt="Languages" class="img-fluid" style="max-width: 50px;">
+                    <h4>Languages</h4>
 
-                            <ul>
-                                <li>HTML</li>
-                                <li>CSS</li>
-                                <li>JavaScript</li>
-                                <li>PHP</li>
-                                <li>JAVA</li>
-                                <li>Python</li>
-                            </ul>
-                        </div>
+                    <ul>
+                        <li>HTML</li>
+                        <li>CSS</li>
+                        <li>JavaScript</li>
+                        <li>PHP</li>
+                        <li>JAVA</li>
+                        <li>Python</li>
+                    </ul>
+                </div>
 
-                        <div class="">
-                            <img accesskey="" src="./img/languages.png" alt="Languages" class="img-fluid" style="max-width: 50px;">
-                            <h4>Base de données</h4>
+                <div class="">
+                    <img accesskey="" src="./img/languages.png" alt="Languages" class="img-fluid" style="max-width: 50px;">
+                    <h4>Base de données</h4>
 
-                            <ul>
-                                <li>SQL</li>
-                                <li>MySQL</li>
-                                <li>dbGate</li>
-                            </ul>
-                        </div>
+                    <ul>
+                        <li>SQL</li>
+                        <li>MySQL</li>
+                        <li>dbGate</li>
+                    </ul>
+                </div>
 
-                        <div class="">
-                            <img accesskey="" src="./img/languages.png" alt="Languages" class="img-fluid" style="max-width: 50px;">
-                            <h4>Frameworks et outils</h4>
+                <div class="">
+                    <img accesskey="" src="./img/languages.png" alt="Languages" class="img-fluid" style="max-width: 50px;">
+                    <h4>Frameworks et outils</h4>
 
-                            <ul>
-                                <li>Bootstrap</li>
-                                <li>Django</li>
-                                <li>Git</li>
-                                <li>Visual Studio Code</li>
-                                <li>intellij IDEA</li>
-                                <li>Oracle Virtual Box</li>
-                            </ul>
-                        </div>
+                    <ul>
+                        <li>Bootstrap</li>
+                        <li>Django</li>
+                        <li>Git</li>
+                        <li>Visual Studio Code</li>
+                        <li>intellij IDEA</li>
+                        <li>Oracle Virtual Box</li>
+                    </ul>
+                </div>
 
-                        <div class="">
-                            <img accesskey="" src="./img/languages.png" alt="Languages" class="img-fluid" style="max-width: 50px;">
-                            <h4>Langues</h4>
+                <div class="">
+                    <img accesskey="" src="./img/languages.png" alt="Languages" class="img-fluid" style="max-width: 50px;">
+                    <h4>Langues</h4>
 
-                            <ul>
-                                <li>Français (natif)</li>
-                                <li>Anglais (B1)</li>
-                            </ul>
-                        </div>
-                    </div>
+                    <ul>
+                        <li>Français (natif)</li>
+                        <li>Anglais (B1)</li>
+                    </ul>
                 </div>
             </div>
         </section>
