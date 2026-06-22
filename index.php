@@ -55,12 +55,12 @@
             <div class="layout-container">
                 <!-- moi -->
                 <div class="layout-column text">
-                    <p class="card about-me">A propos</p>
+                    <h2 class="card about-me">A propos</h2>
                     <article class="card text-card">
-                        <p>Je suis Nohan GAGNOR, 20 ans, basé à Dijon. Actuellement étudiant en BTS SIO option SLAM au lycée polyvalent Le Castel, je suis passionné par le développement de solutions logicielles performantes et méthodiques.</p>
+                        <p>Je m'appelle Nohan GAGNOR, 20 ans, basé à Dijon. Actuellement étudiant en BTS SIO option SLAM au lycée polyvalent Le Castel, je suis passionné par le développement de solutions logicielles performantes et méthodiques.</p>
                         <p>Mon parcours m'a permis de développer une approche rigoureuse du développement, combinant perfectionnisme et esprit d'équipe. Je suis constamment en quête d'apprentissage et de montée en compétences sur les technologies web et applicatives.</p>
                     </article>
-                    <h2 class="card soft-skills">Créatif, organisé, empathique</h2>
+                    <h4 class="card soft-skills">Créatif organisé empathique</h4>
                 </div>
 
                 <!-- mes informations -->
@@ -83,10 +83,10 @@
         </section>
 
         <section id="competences">
-            <div class="container">
-                <h3>Compétences</h3>
-                
-                <div class="">
+            
+                <h2>Compétences</h2>
+            <div class="skills-container">  
+                <div class="card languages">
                     <img accesskey="" src="./img/languages.png" alt="Languages" class="img-fluid" style="max-width: 50px;">
                     <h4>Languages</h4>
 
@@ -100,7 +100,7 @@
                     </ul>
                 </div>
 
-                <div class="">
+                <div class="card bdd">
                     <img accesskey="" src="./img/languages.png" alt="Languages" class="img-fluid" style="max-width: 50px;">
                     <h4>Base de données</h4>
 
@@ -111,7 +111,7 @@
                     </ul>
                 </div>
 
-                <div class="">
+                <div class="card frameworks">
                     <img accesskey="" src="./img/languages.png" alt="Languages" class="img-fluid" style="max-width: 50px;">
                     <h4>Frameworks et outils</h4>
 
@@ -125,7 +125,7 @@
                     </ul>
                 </div>
 
-                <div class="">
+                <div class="card langue">
                     <img accesskey="" src="./img/languages.png" alt="Languages" class="img-fluid" style="max-width: 50px;">
                     <h4>Langues</h4>
 

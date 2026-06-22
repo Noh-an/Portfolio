@@ -442,9 +442,62 @@ strong {
   margin-top: 50px;
 }
 
-.card {
-  background-color: transparent; 
+#presentation .card {
   margin-bottom: 24px;
   padding: 10px;
-  /* border: none; */
+  border: none;
+  border-radius: 0%;
 }
+
+.info-card {
+  background-color: #FFC0CB;
+  width: max-content;
+  box-shadow: 2px 4px 12px rgba(42, 62, 69, 0.15);
+  padding: 25px ;
+  transform: rotate(0.2deg);
+}
+
+.objectif-card {
+  background-color: #FFC0CB;
+  box-shadow: 2px 4px 12px rgba(42, 62, 69, 0.15);
+  transform: rotate(-0.3deg);
+}
+
+.objectif-card p{
+  text-align: justify;
+  padding: 10px;
+}
+
+.about-me {
+  background-color: transparent;
+}
+
+.soft-skills {
+  background-color: transparent;
+}
+
+.text-card {
+  text-align: justify;
+  padding: 25px;
+  font-size: 1.25rem;
+  background-color: transparent;
+  line-height: 1.7;
+}
+
+.skills-container {
+
+  display: flex;
+  justify-content: center;
+  margin: 20px;
+}
+
+.skills-container div {
+  margin: 0 85px;
+}
+
+#competences h2 {
+
+  margin: 0 0 30px 95px;
+
+}
+
