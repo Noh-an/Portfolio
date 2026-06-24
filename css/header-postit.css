@@ -484,20 +484,80 @@ strong {
   line-height: 1.7;
 }
 
-.skills-container {
+/* --------------------------------------------
+            SECTION "COMPETENCES"
+-------------------------------------------- */
 
+.skills-container {
   display: flex;
-  justify-content: center;
-  margin: 20px;
+  justify-content: space-between;
+  flex-wrap: wrap;    /* TRÈS IMPORTANT : permet aux cartes de passer à la ligne sur petit écran au lieu de s'écraser */
+  margin: 40px auto;
+  max-width: 1400px;  /* Empêche les cartes de trop s'éparpiller sur les écrans géants */
 }
 
-.skills-container div {
-  margin: 0 85px;
+.skills-container .card {
+  padding: 25px;
+  border-radius: 0px;
+  min-width: 220px;   
+  flex: 1;            /* Permet aux cartes d'occuper l'espace de manière égale */
+  max-width: 280px;   
+  transition: transform 0.3s ease;
+  box-shadow: 2px 4px 12px rgba(42, 62, 69, 0.15);
+  border: none !important;
+}
+
+.skills-container .card.languages {
+  transform: rotate(-0.7deg) translateY(0px); /* Rotation -1.5 degré */
+  background-color: #F5D128;
+}
+
+/* Carte 2 (Base de données) : Plus haute et droite */
+.skills-container .card.bdd {
+  transform: rotate(0.4deg) translateY(-10px); /* Rotation 1 degré + relevée de 15px */
+  background-color: #BBE2EC;
+}
+
+/* Carte 3 (Frameworks) : De travers à gauche et plus basse */
+.skills-container .card.frameworks {
+  transform: rotate(-0.7deg) translateY(-2px); /* Rotation -2.5 degrés + abaissée de 10px */
+  background-color: #B2F0B2;
+}
+
+/* Carte 4 (Langues) : Relevée et de travers à droite */
+.skills-container .card.langue {
+  transform: rotate(0.5deg) translateY(-5px); /* Rotation 2 degrés + relevée de 8px */
+  background-color: #FFC0CB;
+}
+
+/* --- BONUS --- */
+/* Petit effet visuel : la carte se remet droite quand on passe la souris dessus */
+#competences .card:hover {
+  transform: rotate(0deg) translateY(-5px) scale(1.02); /* Devient droite, monte un peu et grossit légèrement */
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15); /* Ombre plus forte */
+  z-index: 10; /* Passe au-dessus des autres si elles se chevauchent */
 }
 
 #competences h2 {
-
   margin: 0 0 30px 95px;
-
 }
+
+#competences .card h4 {
+  font-size: 1.2rem;
+  margin: 15px 0;
+  text-align: center; 
+}
+
+#competences .card ul {
+  padding-left: 20px;
+}
+
+#competences .card li {
+  margin-bottom: 8px; 
+}
+
+/* --------------------------------------------
+            SECTION "PROJETS"
+-------------------------------------------- */
+
 
