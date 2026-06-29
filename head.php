@@ -11,6 +11,7 @@
     <!-- Lien pour charger votre propre CSS -->
     <!-- <link rel="stylesheet" href="css/style.css"> -->
     <link rel="stylesheet" href="css/header-postit.css">
+    <link rel="stylesheet" href="css/style.css">
 
     <title>Mon Portfolio</title>
 </head>

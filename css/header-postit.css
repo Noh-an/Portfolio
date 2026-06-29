@@ -560,4 +560,350 @@ strong {
             SECTION "PROJETS"
 -------------------------------------------- */
 
+.font-handwriting { font-family: 'Caveat', cursive, sans-serif; font-size: 1.2rem; }
+.font-handwriting-bold { font-family: 'Caveat', cursive, sans-serif; font-weight: bold; font-size: 1.8rem; }
+
+/* Styles des Post-it */
+.card-postit-yellow { background-color: #fef5c1 !important; color: #333; }
+.card-postit-blue { background-color: #d1ecf1 !important; color: #333; }
+
+/* Légères rotations pour casser la rigidité */
+.transform-rotate-left { transform: rotate(-1.5deg); }
+.transform-rotate-right { transform: rotate(1.2deg); }
+
+/* Effet Scotch sur le Post-it */
+.tape-effect {
+    position: absolute;
+    top: -12px;
+    left: 40%;
+    width: 80px;
+    height: 25px;
+    background-color: rgba(243, 234, 203, 0.5);
+    box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+    transform: rotate(-2deg);
+}
+
+/* Le Polaroid dans le volet de droite */
+.polaroid-container {
+    background: #ffffff;
+    padding: 15px 15px 25px 15px;
+    border: 1px solid #eee;
+    max-width: 450px;
+    width: 100%;
+}
+.polaroid-container .carousel-inner img {
+    border: 1px solid #ddd; /* Cadre fin de la photo */
+}
+
+#infoProjet1{
+
+  background-color: #f3f1ec;
+  background-image:
+    /* Lignes horizontales séyès */
+    repeating-linear-gradient(
+      to bottom,
+      transparent 0px,
+      transparent 23px,
+      rgba(120, 155, 205, 0.28) 23px,
+      rgba(120, 155, 205, 0.28) 24px
+    ),
+    /* Marge rouge à gauche */
+    /* transparent jusqu'à 55px a partir de la gauche puis couleur rouge puis redeviens transparent a 56px */
+    /* linear-gradient fait un dégradé de couleur */
+    linear-gradient(
+      to right,
+      transparent 55px,
+      rgba(205, 75, 75, 0.22) 55px,
+      rgba(205, 75, 75, 0.22) 56px,
+      transparent 56px
+    );
+}
+
+#infoProjet2{
+
+  background-color: #f3f1ec;
+  background-image:
+    /* Lignes horizontales séyès */
+    repeating-linear-gradient(
+      to bottom,
+      transparent 0px,
+      transparent 23px,
+      rgba(120, 155, 205, 0.28) 23px,
+      rgba(120, 155, 205, 0.28) 24px
+    ),
+    /* Marge rouge à gauche */
+    /* transparent jusqu'à 55px a partir de la gauche puis couleur rouge puis redeviens transparent a 56px */
+    /* linear-gradient fait un dégradé de couleur */
+    linear-gradient(
+      to right,
+      transparent 55px,
+      rgba(205, 75, 75, 0.22) 55px,
+      rgba(205, 75, 75, 0.22) 56px,
+      transparent 56px
+    );
+}
+
+
+/* --------------------------------------------
+            PAGE "CV"
+-------------------------------------------- */
+#cv{
+  margin: 25px 45px; 
+}
+
+.download-cv{
+  display: flex;
+  justify-content: flex-end;
+}
+
+#cv-container {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+ 
+/* Header sur toute la largeur */
+.cv-header {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    padding: 20px;
+    border-bottom: 2px solid;
+    margin-bottom: 30px;
+    width: 100%;
+}
+ 
+.download-cv button {
+    padding: 8px 16px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 14px;
+}
+ 
+.cv-logo img {
+    width: 60px;
+    height: 60px;
+}
+ 
+.cv-header-info h1 {
+    margin: 0;
+    font-size: 28px;
+}
+ 
+.cv-title {
+    font-size: 14px;
+    margin-top: 4px;
+}
+ 
+.cv-contact {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    font-size: 13px;
+    margin-left: auto;
+}
+ 
+/* Contenu 2 colonnes */
+.cv-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+    padding: 0 20px;
+}
+ 
+.cv-column {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+ 
+.cv-left {
+    border-right: 2px solid;
+    padding: 15px 10px;
+
+}
+ 
+.cv-right {
+    padding-left: 20px;
+}
+ 
+/* Sections */
+.cv-section-title {
+    font-size: 16px;
+    font-weight: bold;
+    margin-bottom: 12px;
+    border-bottom: 1px solid;
+    padding-bottom: 8px;
+}
+ 
+.cv-formation,
+.cv-experiences,
+.cv-section {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+#stageCnam{
+  background-color: #BBE2EC;
+  transform: rotate(-0.5deg);
+   box-shadow: 2px 4px 12px rgba(42, 62, 69, 0.15);
+  border-left: 1px solid rgba(255, 255, 255, 0.4);
+}
+
+#stageCnam:hover{
+  transform: rotate(0deg) translateY(-5px) scale(1.02); /* Devient droite, monte un peu et grossit légèrement */
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15); /* Ombre plus forte */
+  z-index: 10; /* Passe au-dessus des autres si elles se chevauchent */
+}
+
+#easyDrive{
+  background-color: #BBE2EC;
+  transform: rotate(0.2deg);
+   box-shadow: 2px 4px 12px rgba(42, 62, 69, 0.15);
+  border-left: 1px solid rgba(255, 255, 255, 0.4);
+}
+#easyDrive:hover{
+  transform: rotate(0deg) translateY(-5px) scale(1.02); /* Devient droite, monte un peu et grossit légèrement */
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15); /* Ombre plus forte */
+  z-index: 10; /* Passe au-dessus des autres si elles se chevauchent */
+}
+
+#coopenoix{
+  background-color: #BBE2EC;
+  transform: rotate(-0.6deg);
+   box-shadow: 2px 4px 12px rgba(42, 62, 69, 0.15);
+  border-left: 1px solid rgba(255, 255, 255, 0.4);
+}
+#coopenoix:hover{
+  transform: rotate(0deg) translateY(-5px) scale(1.02); /* Devient droite, monte un peu et grossit légèrement */
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15); /* Ombre plus forte */
+  z-index: 10; /* Passe au-dessus des autres si elles se chevauchent */
+}
+ 
+#stage{
+  background-color: #BBE2EC;
+  transform: rotate(0.4deg);
+   box-shadow: 2px 4px 12px rgba(42, 62, 69, 0.15);
+  border-left: 1px solid rgba(255, 255, 255, 0.4);
+}
+#stage:hover{
+  transform: rotate(0deg) translateY(-5px) scale(1.02); /* Devient droite, monte un peu et grossit légèrement */
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15); /* Ombre plus forte */
+  z-index: 10; /* Passe au-dessus des autres si elles se chevauchent */
+}
+
+/* Items */
+.cv-item {
+  margin-bottom: 16px;
+  padding: 25px;
+}
+
+#formations{
+  background-color: #FFC0CB;
+  transform: rotate(0.4deg);
+   box-shadow: 2px 4px 12px rgba(42, 62, 69, 0.15);
+  border-left: 1px solid rgba(255, 255, 255, 0.4);
+}
+
+
+ 
+.cv-item .cv-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    gap: 10px;
+    border: none;
+    padding: 0;
+    margin-bottom: 6px;
+}
+ 
+.cv-item-title h3 {
+    margin: 0;
+    font-size: 14px;
+    font-weight: 600;
+}
+ 
+.cv-item-date {
+    white-space: nowrap;
+}
+ 
+.cv-item-subtitle {
+    font-style: italic;
+    margin-bottom: 6px;
+}
+ 
+.cv-item-description {
+    line-height: 1.5;
+}
+ 
+.cv-item-description ul {
+    margin: 8px 0;
+    padding-left: 20px;
+}
+ 
+.cv-item-description li {
+    margin: 4px 0;
+}
+ 
+/* Skills */
+.side-skill-item {
+    display: flex;
+    align-items: center;
+    padding: 6px 0;
+}
+ 
+.side-skill-header {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    font-size: 13px;
+}
+ 
+/* Langues */
+.cv-lang-item {
+    display: flex;
+    justify-content: space-between;
+    padding: 4px 0;
+}
+ 
+.lang-level {
+    color: #999;
+}
+ 
+/* Intérêts */
+.cv-interests {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+ 
+.interest-tag {
+    padding: 4px 10px;
+    border-radius: 12px;
+}
+ 
+/* Responsive */
+@media (max-width: 768px) {
+    .cv-content {
+        grid-template-columns: 1fr;
+    }
+ 
+    .cv-left {
+        border-right: none;
+        border-bottom: 2px solid;
+        padding-right: 0;
+        padding-bottom: 20px;
+    }
+ 
+    .cv-right {
+        padding-left: 0;
+    }
+}
+
+
+
+
+
 
