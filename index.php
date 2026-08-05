@@ -138,126 +138,126 @@
         </section>
 
         <section id="projets">
-    <div class="container">
-        <div>
-            <p class="h5 font-handwriting mb-1">Projets</p>
-            <h2 class="font-handwriting-bold mb-4">Mes réalisations</h2>
+            <div class="container">
+                <div>
+                    <p class="h5 font-handwriting mb-1">Projets</p>
+                    <h2 class="font-handwriting-bold mb-4">Mes réalisations</h2>
 
-            <div class="row g-5">
-                <p class="font-handwriting text-muted col-12 mb-4">Voici quelques-uns de mes projets les plus récents et pertinents, démontrant mes compétences en développement web et applicatif :</p>
-                
-                <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
-                    <div class="card card-postit-yellow border-0 shadow-sm p-4 h-100 position-relative transform-rotate-left">
-                        <div class="tape-effect"></div> <div class="card-body d-flex flex-column justify-content-between p-2">
-                            <div>
-                                <h5 class="card-title font-handwriting-bold">COOPENOIX</h5>
-                                <p class="card-text font-handwriting">Permettre au client de SUIVRE ET Vérifier en temps réel l'état de sa commande</p>
-                            </div>
-                            <a class="btn btn-outline-dark rounded-pill font-handwriting mt-4 align-self-start shadow-sm" data-bs-toggle="offcanvas" data-bs-target="#infoProjet1" aria-controls="infoProjet1">En savoir plus</a>
-                        </div>
-                    </div>
-
-                    <div class="offcanvas offcanvas-end border-0 shadow-lg w-100 w-md-50" tabindex="-1" id="infoProjet1" aria-labelledby="infoProjet1">
-                        <div class="offcanvas-header border-bottom-0 p-4">
-                            <h5 class="offcanvas-title font-handwriting-bold fs-3" id="titleProjet1">COOPENOIX</h5>
-                            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
-                        </div>
+                    <div class="row g-5">
+                        <p class="font-handwriting text-muted col-12 mb-4">Voici quelques-uns de mes projets les plus récents et pertinents, démontrant mes compétences en développement web et applicatif :</p>
                         
-                        <div class="offcanvas-body p-4 d-flex flex-column gap-4 align-items-center">
-                            
-                            <div class="polaroid-container shadow">
-                                <div id="carouselProject1" class="carousel slide" data-bs-ride="carousel" data-bs-touch="true">
-                                    <div class="carousel-inner">
-                                        <div class="carousel-item active" data-bs-interval="10000">
-                                            <img src="img/site_extranet.png" class="d-block w-100" alt="Site extranet">
+                        <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
+                            <div class="card card-postit-yellow border-0 shadow-sm p-4 h-100 position-relative transform-rotate-left">
+                                <div class="tape-effect"></div> <div class="card-body d-flex flex-column justify-content-between p-2">
+                                    <div>
+                                        <h5 class="card-title font-handwriting-bold">COOPENOIX</h5>
+                                        <p class="card-text font-handwriting">Permettre au client de SUIVRE ET Vérifier en temps réel l'état de sa commande</p>
+                                    </div>
+                                    <a class="btn btn-outline-dark rounded-pill font-handwriting mt-4 align-self-start shadow-sm" data-bs-toggle="offcanvas" data-bs-target="#infoProjet1" aria-controls="infoProjet1">En savoir plus</a>
+                                </div>
+                            </div>
+
+                            <div class="offcanvas offcanvas-end border-0 w-100 w-md-75" tabindex="-1" id="infoProjet1" aria-labelledby="infoProjet1">
+                                <div class="offcanvas-header border-bottom-0 p-4">
+                                    <h5 class="offcanvas-title font-handwriting-bold fs-3" id="titleProjet1">COOPENOIX</h5>
+                                    <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                                </div>
+                                
+                                <div class="offcanvas-body p-4 d-flex flex-column gap-4 align-items-center">
+                                    
+                                    <div class="polaroid-container">
+                                        <div id="carouselProject1" class="carousel slide" data-bs-ride="carousel" data-bs-touch="true">
+                                            <div class="carousel-inner">
+                                                <div class="carousel-item active" data-bs-interval="10000">
+                                                    <img src="img/site_extranet.png" class="d-block w-100" alt="Site extranet">
+                                                </div>
+                                                <div class="carousel-item">
+                                                    <img src="img/connexion.png" class="d-block w-100" alt="Page de connexion">
+                                                </div>
+                                                <div class="carousel-item">
+                                                    <img src="img/affichageCommande.png" class="d-block w-100" alt="Affichage des commandes">
+                                                </div>
+                                            </div>
+                                            
+                                            <button class="carousel-control-prev" type="button" data-bs-target="#carouselProject1" data-bs-slide="prev">
+                                                <span class="carousel-control-prev-icon" aria-hidden="true" style="filter: invert(1);"></span>
+                                                <span class="visually-hidden">Previous</span>
+                                            </button>
+                                            <button class="carousel-control-next" type="button" data-bs-target="#carouselProject1" data-bs-slide="next">
+                                                <span class="carousel-control-next-icon" aria-hidden="true" style="filter: invert(1);"></span>
+                                                <span class="visually-hidden">Next</span>
+                                            </button>
                                         </div>
-                                        <div class="carousel-item">
-                                            <img src="img/connexion.png" class="d-block w-100" alt="Page de connexion">
-                                        </div>
-                                        <div class="carousel-item">
-                                            <img src="img/affichageCommande.png" class="d-block w-100" alt="Affichage des commandes">
+                                        
+                                        <div class="polaroid-caption mt-3">
+                                            <h6 class="font-handwriting-bold text-dark mb-2">Notes de développement :</h6>
+                                            <p class="font-handwriting text-muted small mb-0">
+                                                Les clients de coopenoix doivent se connecter pour accéder à leurs commandes via un mot de passe et un identifiant. Affichage en temps réel.
+                                            </p>
                                         </div>
                                     </div>
                                     
-                                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselProject1" data-bs-slide="prev">
-                                        <span class="carousel-control-prev-icon" aria-hidden="true" style="filter: invert(1);"></span>
-                                        <span class="visually-hidden">Previous</span>
-                                    </button>
-                                    <button class="carousel-control-next" type="button" data-bs-target="#carouselProject1" data-bs-slide="next">
-                                        <span class="carousel-control-next-icon" aria-hidden="true" style="filter: invert(1);"></span>
-                                        <span class="visually-hidden">Next</span>
-                                    </button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
+                            <div class="card card-postit-blue border-0 shadow-sm p-4 h-100 position-relative transform-rotate-right">
+                                <div class="tape-effect"></div>
+                                <div class="card-body d-flex flex-column justify-content-between p-2">
+                                    <div>
+                                        <h5 class="card-title font-handwriting-bold">EASY2DRIVE</h5>
+                                        <p class="card-text font-handwriting">Application lourde et web de gestion complète pour auto-école (Directeurs, Formateurs et Élèves).</p>
+                                    </div>
+                                    <a class="btn btn-outline-dark rounded-pill font-handwriting mt-4 align-self-start shadow-sm" data-bs-toggle="offcanvas" data-bs-target="#infoProjet2" aria-controls="infoProjet2">En savoir plus</a>
+                                </div>
+                            </div>
+
+                            <div class="offcanvas offcanvas-end border-0 shadow-lg w-100 w-md-75" tabindex="-1" id="infoProjet2" aria-labelledby="infoProjet2">
+                                <div class="offcanvas-header border-bottom-0 p-4">
+                                    <h5 class="offcanvas-title font-handwriting-bold fs-3" id="titleProjet2">EASY2DRIVE</h5>
+                                    <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
                                 </div>
                                 
-                                <div class="polaroid-caption mt-3">
-                                    <h6 class="font-handwriting-bold text-dark mb-2">Notes de développement :</h6>
-                                    <p class="font-handwriting text-muted small mb-0">
-                                        Les clients de coopenoix doivent se connecter pour accéder à leurs commandes via un mot de passe et un identifiant. Affichage en temps réel.
-                                    </p>
-                                </div>
-                            </div>
-                            
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
-                    <div class="card card-postit-blue border-0 shadow-sm p-4 h-100 position-relative transform-rotate-right">
-                        <div class="tape-effect"></div>
-                        <div class="card-body d-flex flex-column justify-content-between p-2">
-                            <div>
-                                <h5 class="card-title font-handwriting-bold">EASY2DRIVE</h5>
-                                <p class="card-text font-handwriting">Application lourde et web de gestion complète pour auto-école (Directeurs, Formateurs et Élèves).</p>
-                            </div>
-                            <a class="btn btn-outline-dark rounded-pill font-handwriting mt-4 align-self-start shadow-sm" data-bs-toggle="offcanvas" data-bs-target="#infoProjet2" aria-controls="infoProjet2">En savoir plus</a>
-                        </div>
-                    </div>
-
-                    <div class="offcanvas offcanvas-end border-0 shadow-lg w-100 w-md-50" tabindex="-1" id="infoProjet2" aria-labelledby="infoProjet2">
-                        <div class="offcanvas-header border-bottom-0 p-4">
-                            <h5 class="offcanvas-title font-handwriting-bold fs-3" id="titleProjet2">EASY2DRIVE</h5>
-                            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
-                        </div>
-                        
-                        <div class="offcanvas-body p-4 d-flex flex-column gap-4 align-items-center">
-                            
-                            <div class="polaroid-container shadow">
-                                <div id="carouselProject2" class="carousel slide" data-bs-ride="carousel" data-bs-touch="true">
-                                    <div class="carousel-inner">
-                                        <div class="carousel-item active" data-bs-interval="10000">
-                                            <img src="img/site_extranet.png" class="d-block w-100" alt="Dashboard Easy2Drive">
+                                <div class="offcanvas-body p-4 d-flex flex-column gap-4 align-items-center">
+                                    
+                                    <div class="polaroid-container shadow">
+                                        <div id="carouselProject2" class="carousel slide" data-bs-ride="carousel" data-bs-touch="true">
+                                            <div class="carousel-inner">
+                                                <div class="carousel-item active" data-bs-interval="10000">
+                                                    <img src="img/site_extranet.png" class="d-block w-100" alt="Dashboard Easy2Drive">
+                                                </div>
+                                                <div class="carousel-item">
+                                                    <img src="img/connexion.png" class="d-block w-100" alt="Planning Auto-école">
+                                                </div>
+                                            </div>
+                                            
+                                            <button class="carousel-control-prev" type="button" data-bs-target="#carouselProject2" data-bs-slide="prev">
+                                                <span class="carousel-control-prev-icon" aria-hidden="true" style="filter: invert(1);"></span>
+                                                <span class="visually-hidden">Previous</span>
+                                            </button>
+                                            <button class="carousel-control-next" type="button" data-bs-target="#carouselProject2" data-bs-slide="next">
+                                                <span class="carousel-control-next-icon" aria-hidden="true" style="filter: invert(1);"></span>
+                                                <span class="visually-hidden">Next</span>
+                                            </button>
                                         </div>
-                                        <div class="carousel-item">
-                                            <img src="img/connexion.png" class="d-block w-100" alt="Planning Auto-école">
+                                        
+                                        <div class="polaroid-caption mt-3">
+                                            <h6 class="font-handwriting-bold text-dark mb-2">Notes de développement :</h6>
+                                            <p class="font-handwriting text-muted small mb-0">
+                                                Gestion multi-rôles permettant le suivi des heures de conduite, la planification des leçons et le suivi pédagogique des élèves.
+                                            </p>
                                         </div>
                                     </div>
                                     
-                                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselProject2" data-bs-slide="prev">
-                                        <span class="carousel-control-prev-icon" aria-hidden="true" style="filter: invert(1);"></span>
-                                        <span class="visually-hidden">Previous</span>
-                                    </button>
-                                    <button class="carousel-control-next" type="button" data-bs-target="#carouselProject2" data-bs-slide="next">
-                                        <span class="carousel-control-next-icon" aria-hidden="true" style="filter: invert(1);"></span>
-                                        <span class="visually-hidden">Next</span>
-                                    </button>
-                                </div>
-                                
-                                <div class="polaroid-caption mt-3">
-                                    <h6 class="font-handwriting-bold text-dark mb-2">Notes de développement :</h6>
-                                    <p class="font-handwriting text-muted small mb-0">
-                                        Gestion multi-rôles permettant le suivi des heures de conduite, la planification des leçons et le suivi pédagogique des élèves.
-                                    </p>
                                 </div>
                             </div>
-                            
                         </div>
                     </div>
                 </div>
-
             </div>
-        </div>
-    </div>
-</section>
+            
+        </section>
     </main>
     <?php include 'footer.php'; ?>
 </body>

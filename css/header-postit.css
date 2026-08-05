@@ -559,7 +559,11 @@ strong {
 /* --------------------------------------------
             SECTION "PROJETS"
 -------------------------------------------- */
+#projets{
 
+  margin-bottom: 40px;
+
+}
 .font-handwriting { font-family: 'Caveat', cursive, sans-serif; font-size: 1.2rem; }
 .font-handwriting-bold { font-family: 'Caveat', cursive, sans-serif; font-weight: bold; font-size: 1.8rem; }
 
@@ -588,8 +592,9 @@ strong {
     background: #ffffff;
     padding: 15px 15px 25px 15px;
     border: 1px solid #eee;
-    max-width: 450px;
+    max-width: 850px;
     width: 100%;
+    box-shadow: 4px 4px 10px 0px rgba(0, 0, 0, 0.08);
 }
 .polaroid-container .carousel-inner img {
     border: 1px solid #ddd; /* Cadre fin de la photo */
