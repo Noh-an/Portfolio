@@ -684,6 +684,13 @@ strong {
     margin-bottom: 30px;
     width: 100%;
 }
+.cv-header-info {
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+    text-align: center;  
+    flex: 1;
+}
  
 .download-cv button {
     padding: 8px 16px;
@@ -731,7 +738,7 @@ strong {
 }
  
 .cv-left {
-    border-right: 2px solid;
+    /* border-right: 2px solid; */
     padding: 15px 10px;
 
 }
@@ -742,10 +749,9 @@ strong {
  
 /* Sections */
 .cv-section-title {
-    font-size: 16px;
+    font-size: 24px;
     font-weight: bold;
     margin-bottom: 12px;
-    border-bottom: 1px solid;
     padding-bottom: 8px;
 }
  
@@ -819,7 +825,12 @@ strong {
   border-left: 1px solid rgba(255, 255, 255, 0.4);
 }
 
-
+.cv-section-skills{
+  background-color: #fef5c1;
+  transform: rotate(0.4deg);
+  box-shadow: 2px 4px 12px rgba(42, 62, 69, 0.15);
+  border-left: 1px solid rgba(255, 255, 255, 0.4);
+}
  
 .cv-item .cv-header {
     display: flex;
@@ -872,6 +883,14 @@ strong {
     width: 100%;
     font-size: 13px;
 }
+
+#skills-items{
+  padding: 25px;
+}
+
+.side-skill-header{
+  font-size: 1.2rem;
+}
  
 /* Langues */
 .cv-lang-item {
@@ -881,21 +900,39 @@ strong {
 }
  
 .lang-level {
-    color: #999;
+    color: #ff9898;
 }
+
+.cv-section-langues{
+  background-color: #fef5c1;
+  transform: rotate(0.4deg);
+  box-shadow: 2px 4px 12px rgba(42, 62, 69, 0.15);
+  border-left: 1px solid rgba(255, 255, 255, 0.4);
+  padding: 25px;
+}
+
  
 /* Intérêts */
 .cv-interests {
     display: flex;
     flex-wrap: wrap;
     gap: 8px;
+    justify-content: space-around;
 }
  
 .interest-tag {
     padding: 4px 10px;
     border-radius: 12px;
 }
- 
+
+.cv-section-interests{
+  background-color: #fef5c1;
+  transform: rotate(0.4deg);
+  box-shadow: 2px 4px 12px rgba(42, 62, 69, 0.15);
+  border-left: 1px solid rgba(255, 255, 255, 0.4);
+  padding: 10px;
+}
+
 /* Responsive */
 @media (max-width: 768px) {
     .cv-content {

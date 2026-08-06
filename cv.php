@@ -146,47 +146,49 @@
                         </div>
         
                         <!-- Compétences -->
-                        <div class="cv-section">
-                            <div class="cv-section-title">Compétences</div>
-                            <div class="side-skill-item">
-                                <div class="side-skill-header">
-                                    <span>HTML / CSS</span>
+                        <div class="cv-section-skills">
+                            <div id="skills-items">
+                                <div class="cv-section-title">Compétences</div>
+                                <div class="side-skill-item">
+                                    <div class="side-skill-header">
+                                        <span>HTML / CSS</span>
+                                    </div>
                                 </div>
-                            </div>
-                            <div class="side-skill-item">
-                                <div class="side-skill-header">
-                                    <span>Python</span>
+                                <div class="side-skill-item">
+                                    <div class="side-skill-header">
+                                        <span>Python</span>
+                                    </div>
                                 </div>
-                            </div>
-                            <div class="side-skill-item">
-                                <div class="side-skill-header">
-                                    <span>JAVA</span>
+                                <div class="side-skill-item">
+                                    <div class="side-skill-header">
+                                        <span>JAVA</span>
+                                    </div>
                                 </div>
-                            </div>
-                            <div class="side-skill-item">
-                                <div class="side-skill-header">
-                                    <span>PHP</span>
+                                <div class="side-skill-item">
+                                    <div class="side-skill-header">
+                                        <span>PHP</span>
+                                    </div>
                                 </div>
-                            </div>
-                            <div class="side-skill-item">
-                                <div class="side-skill-header">
-                                    <span>SQL / MySQL</span>
+                                <div class="side-skill-item">
+                                    <div class="side-skill-header">
+                                        <span>SQL / MySQL</span>
+                                    </div>
                                 </div>
-                            </div>
-                            <div class="side-skill-item">
-                                <div class="side-skill-header">
-                                    <span>JavaScript</span>
+                                <div class="side-skill-item">
+                                    <div class="side-skill-header">
+                                        <span>JavaScript</span>
+                                    </div>
                                 </div>
-                            </div>
-                            <div class="side-skill-item">
-                                <div class="side-skill-header">
-                                    <span>Git</span>
+                                <div class="side-skill-item">
+                                    <div class="side-skill-header">
+                                        <span>Git</span>
+                                    </div>
                                 </div>
                             </div>
                         </div>
         
                         <!-- Langues -->
-                        <div class="cv-section">
+                        <div class="cv-section-langues">
                             <div class="cv-section-title">Langues</div>
                             <div class="cv-lang-item">
                                 <span>🇫🇷 Français</span>
@@ -203,7 +205,7 @@
                         </div>
         
                         <!-- Centres d'intérêt -->
-                        <div class="cv-section">
+                        <div class="cv-section-interests">
                             <div class="cv-section-title">Intérêts</div>
                             <div class="cv-interests">
                                 <span class="interest-tag">Musique</span>
