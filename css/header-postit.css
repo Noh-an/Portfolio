@@ -955,12 +955,30 @@ strong {
             PAGE "CONTACT"
 -------------------------------------------- */
 .contact-container {
-  display: flex;
-  flex-direction: column;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
   align-items: center;
   margin: 40px auto;
   max-width: 800px;
   padding: 0 20px;
+}
+
+.contact-intro {
+  margin-top: 37px;
+}
+
+.contact-intro h1{
+  margin-bottom: 20px;
+}
+
+.contact-form {
+  background-color: #BBE2EC;
+  transform: rotate(0.2deg);
+  box-shadow: 2px 4px 12px rgba(42, 62, 69, 0.15);
+  border-left: 1px solid rgba(255, 255, 255, 0.4);
+  padding: 25px;
+  width: 100%;
+
 }
 
 

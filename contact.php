@@ -10,7 +10,7 @@
             </div>
 
             <div class="contact-container">
-                <div class="contact_form">
+                <div class="contact-form">
                     <form action="send_message.php" method="post">
                         <!-- Le fieldset dessine le contour noir/gris natif autour de tout le formulaire -->
                         <fieldset>
@@ -45,7 +45,7 @@
                 <div class="contact-info">
                     <ul>
                         <li><a href="mailto:gagnor.nohan@gmail.com" class="social-link">Email</a></li>
-                        <li><a href="https://github.com/nohangagnor" target="_blank" class="social-link">GitHub.com/nohangagnor</a></li>
+                        <li><a href="https://github.com/Noh-an" target="_blank" class="social-link">GitHub.com/Noh-an</a></li>
                         <li><a href="https://www.linkedin.com/in/nohan-gagnor/" target="_blank" class="social-link">LinkedIn</a></li>
                         <li><a href="address:21000, Dijon" class="adresse">21000, Dijon</a></li>
                     </ul>
