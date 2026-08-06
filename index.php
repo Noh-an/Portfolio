@@ -36,8 +36,9 @@
                     <!-- text-center : centre l'image horizontalement dans sa colonne -->
                     <div class="col-12 col-md-5 text-center">
                         <div class="polaroid">
-                            <img src="./img/photo.png"
-                                 alt="Photo de Nohan Gagnor">
+                            <div class="polaroid-frame">
+                                <img src="./img/pdpNohan.jpg" alt="Photo de Nohan Gagnor">
+                            </div>
                             <div class="social-links">
                                 <a href="https://www.linkedin.com/in/nohan-gagnor/" target="_blank" class="social-link">LinkedIn</a>
                                 <a href="https://github.com/nohangagnor" target="_blank" class="social-git">GitHub</a>
@@ -60,7 +61,6 @@
                         <p>Je m'appelle Nohan GAGNOR, 20 ans, basé à Dijon. Actuellement étudiant en BTS SIO option SLAM au lycée polyvalent Le Castel, je suis passionné par le développement de solutions logicielles performantes et méthodiques.</p>
                         <p>Mon parcours m'a permis de développer une approche rigoureuse du développement, combinant perfectionnisme et esprit d'équipe. Je suis constamment en quête d'apprentissage et de montée en compétences sur les technologies web et applicatives.</p>
                     </article>
-                    <h4 class="card soft-skills">Créatif organisé empathique</h4>
                 </div>
 
                 <!-- mes informations -->
@@ -140,7 +140,6 @@
         <section id="projets">
             <div class="container">
                 <div>
-                    <p class="h5 font-handwriting mb-1">Projets</p>
                     <h2 class="font-handwriting-bold mb-4">Mes réalisations</h2>
 
                     <div class="row g-5">

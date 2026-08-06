@@ -15,7 +15,7 @@
                         </a>
                     </div>
                     <div class="cv-logo">
-                        <img src="assets/cv-logo.png" alt="CV Logo">
+                        <img src="img/logo.png" alt="CV Logo">
                     </div>
                     <div class="cv-header-info">
                         <h1>Nohan Gagnor</h1>
