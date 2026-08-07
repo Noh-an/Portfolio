@@ -1,3 +1,1096 @@
+/* =========================================
+   HEADER — Style Post-it / Papier Scotché
+   Portfolio Nohan Gagnor
+
+   PRÉREQUIS : ajouter dans <head>
+   <link rel="preconnect" href="https://fonts.googleapis.com">
+   <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400;700&display=swap" rel="stylesheet">
+   ========================================= */
+
+
+/* ---- Fond type cahier à lignes (à adapter selon ton body existant) ---- */
+/* 1. Déclaration de la variable dans le :root */
+:root {
+  --police-brouillon: 'Caveat', cursive;
+}
+
+/* 2. Utilisation de la variable sur tout le site */
+body, input, textarea, button, select {
+  font-family: var(--police-brouillon);
+}
+
+
+body {
+  background-color: #f3f1ec;
+  background-image:
+    /* Lignes horizontales séyès */
+    repeating-linear-gradient(
+      to bottom,
+      transparent 0px,
+      transparent 23px,
+      rgba(120, 155, 205, 0.28) 23px,
+      rgba(120, 155, 205, 0.28) 24px
+    ),
+    /* Marge rouge à gauche */
+    /* transparent jusqu'à 55px a partir de la gauche puis couleur rouge puis redeviens transparent a 56px */
+    /* linear-gradient fait un dégradé de couleur */
+    linear-gradient(
+      to right,
+      transparent 55px,
+      rgba(205, 75, 75, 0.22) 55px,
+      rgba(205, 75, 75, 0.22) 56px,
+      transparent 56px
+    );
+}
+
+
+/* ---- Header — papier scotché sur la page ---- */
+header {
+  position: relative;
+  margin: 28px 50px 30px 30px;
+  padding: 35px 36px 24px;
+
+  /* Couleur papier post-it */
+  background-color: #F4E7B4;
+  border: 1px solid #f3e15c;
+
+  /* Légère rotation "posé à la main" */
+  transform: rotate(-0.6deg);
+
+  /* Ombre portée — papier surélevé de la feuille */
+  box-shadow:
+    2px 3px 0 #c4b860,
+    4px 6px 14px rgba(0, 0, 0, 0.17);
+
+  /* Indispensable : les scotchs dépassent en haut */
+  overflow: visible;
+}
+
+
+/* ---- Scotch gauche ---- */
+header::before {
+  content: '';
+  position: absolute;
+  top: -10px;
+  left: -36px;
+  width: 116px;
+  height: 42px;
+
+  /* Transparent avec teinte ambrée (scotch vieilli) */
+  background: rgba(212, 192, 128, 0.46);
+  /* Fibres diagonales du film adhésif */
+  background-image: repeating-linear-gradient(
+    100deg,
+    transparent 0px,
+    transparent 3px,
+    rgba(255, 255, 255, 0.2) 3px,
+    rgba(255, 255, 255, 0.2) 4.5px
+  );
+
+  border: 1px solid rgba(185, 165, 95, 0.22);
+  border-radius: 1px;
+  transform: rotate(-30deg);
+  box-shadow:
+    0 1px 4px rgba(0, 0, 0, 0.1),
+    inset 0 1px 0 rgba(255, 255, 255, 0.35);
+  z-index: 2;
+
+  clip-path: polygon(
+    /* Bord Gauche en dents de scie */
+    0% 0%, 5% 20%, 0% 40%, 4% 60%, 1% 80%, 0% 100%, 
+    /* Bord Bas (droit) */
+    100% 100%, 
+    /* Bord Droit en dents de scie */
+    96% 80%, 100% 60%, 95% 40%, 99% 20%, 95% 0%
+  );
+}
+
+
+/* ---- Scotch droit ---- */
+header::after {
+  content: '';
+  position: absolute;
+  top: 8px;
+  right: -54px;
+  width: 134px;
+  height: 42px;
+
+  background: rgba(212, 192, 128, 0.46);
+  background-image: repeating-linear-gradient(
+    100deg,
+    transparent 0px,
+    transparent 3px,
+    rgba(255, 255, 255, 0.2) 3px,
+    rgba(255, 255, 255, 0.2) 4.5px
+  );
+
+  border: 1px solid rgba(185, 165, 95, 0.22);
+  border-radius: 1px;
+
+  box-shadow:
+    0 1px 4px rgba(0, 0, 0, 0.1),
+    inset 0 1px 0 rgba(255, 255, 255, 0.35); 
+
+  transform: rotate(55deg);
+  z-index: 2;
+
+  clip-path: polygon(
+    /* Bord Gauche en dents de scie */
+    0% 0%, 5% 20%, 0% 40%, 4% 60%, 1% 80%, 0% 100%, 
+    /* Bord Bas (droit) */
+    100% 100%, 
+    /* Bord Droit en dents de scie */
+    96% 80%, 100% 60%, 95% 40%, 99% 20%, 95% 0%
+  );
+}
+
+
+/* ---- Contenu intérieur ---- */
+.header-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+
+/* ---- Logo — style signature à la main ---- */
+.logo {
+  font-family: 'Caveat', cursive;
+  font-size: 1.9rem;
+  font-weight: 700;
+  color: #1e1810;
+  text-decoration: none;
+  letter-spacing: 0.03em;
+
+  /* Soulignement stylo-bille */
+  border-bottom: 2.5px solid #1e1810;
+  padding-bottom: 1px;
+
+  transition: color 0.2s ease, border-color 0.2s ease;
+}
+
+.logo:hover {
+  color: #4a3a12;
+  border-color: #6b5215;
+}
+
+
+/* ---- Navigation ---- */
+.main-nav {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+}
+
+.main-nav a {
+  font-family: 'Caveat', cursive;
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: #3a3020;
+  text-decoration: none;
+  position: relative;
+  letter-spacing: 0.02em;
+  transition: color 0.2s ease;
+}
+
+/* Surlignage marqueur fluo au hover */
+.main-nav a::after {
+  content: '';
+  position: absolute;
+  bottom: -3px;
+  left: -2px;
+  right: -2px;
+  height: 7px;
+  background: rgba(255, 208, 45, 0.5);
+  transform: scaleX(0) rotate(-1.2deg);
+  transform-origin: left center;
+  transition: transform 0.22s ease;
+  border-radius: 1px;
+  z-index: -1;
+}
+
+.main-nav a:hover {
+  color: #1a1408;
+}
+
+.main-nav a:hover::after {
+  transform: scaleX(1) rotate(-1.2deg);
+}
+
+
+/* ---- Responsive mobile ---- */
+@media (max-width: 600px) {
+  header {
+    padding: 16px 20px 12px;
+    margin: 30px 10px 20px;
+  }
+
+  .logo {
+    font-size: 1.5rem;
+  }
+
+  .main-nav {
+    gap: 14px;
+  }
+
+  .main-nav a {
+    font-size: 1.1rem;
+  }
+}
+
+/* --------------------------------------------
+            SECTION "INTRODUCTION"
+-------------------------------------------- */
+
+.intro {
+    margin: 25px -25px 30px;
+    padding: 25px;
+    /* background-color: #fbf9f3; */
+    transform: rotate(0.1deg);
+     /* box-shadow:
+        1px 1px 0px #d6cca7,
+        3px 4px 18px rgba(67, 67, 67, 0.22); */
+    background-color: #BBE2EC;
+    /* color: #2A3E45; */
+    box-shadow: 2px 4px 12px rgba(42, 62, 69, 0.15);
+    border-left: 1px solid rgba(255, 255, 255, 0.4);
+}
+
+.title-intro {
+  font-size : 6rem;
+  font-family: 'Caveat', cursive;
+  margin-bottom: 24px;
+  position: relative;
+  display: inline; /* ou inline-block */
+  padding: 0 5px; /* Petit padding pour le débordement */
+  z-index: 1; /* Pour garder le texte au-dessus du fond */
+}
+
+.title-intro::before {
+  content: "";
+  position: absolute;
+  top: 35%; left: -4%;
+  width: 110%; height: 55%;
+  background-color: rgb(255, 235, 59); /* Jaune surligneur */
+  z-index: -1; /* Place le fond jaune derrière le texte */
+  
+  /* L'astuce : clip-path pour irregulariser les bords */
+  /* Imaginez 4 points : top-left, top-right, bottom-right, bottom-left */
+  /* On modifie légèrement les pourcentages pour créer des vagues */
+  clip-path: polygon(
+    2% 8%,    /* Haut-Gauche légèrement décalé */
+    98% 3%,   /* Haut-Droite légèrement décalé */
+    96% 95%,  /* Bas-Droite légèrement décalé */
+    4% 91%    /* Bas-Gauche légèrement décalé */
+  );
+}
+
+.lean {
+    font-size: 1.25rem;
+    margin : 0 0 8px 12px;
+}
+
+.intro .boutons{
+    display: flex;
+    gap: 18px;
+}
+
+.intro a {
+    text-decoration: none;
+    letter-spacing: 0.03em;
+    color    : #000000;
+}
+
+.descr-intro {
+    font-size: 1.5rem;
+    margin-bottom: 24px;
+    line-height: 1.5;
+    margin-left: 12px;
+}
+
+.boutons{
+ margin-left: 54px;
+}
+
+.boutons a {
+  font-family: 'Caveat', cursive;
+  position: relative;
+  z-index: 1;
+  padding: 0 8px;
+  gap: 8px;
+  padding: 10px 18px;
+  font-size: 1.25rem;
+}
+
+.boutons a::before {
+  content: "";
+  position: absolute;
+  top: 30%; left: 17px; width: 80%; height: 55%;
+  background-color: rgba(255, 242, 0, 0.6); /* Vert fluo pour changer ! */
+  z-index: -1;
+  
+  /* On l'incline de -12 degrés et on lui donne 1 degré de rotation */
+  transform: scaleX(0) skewX(-12deg) rotate(-1deg);
+  
+  transform-origin: left;
+  transition: transform 0.25s ease-in-out;
+}
+
+.boutons a:hover::before {
+  /* On garde le skewX et le rotate au survol, sinon l'inclinaison disparaît pendant l'animation */
+  transform: scaleX(1) skewX(-12deg) rotate(-1deg);
+}
+
+#introduction {
+    margin-bottom: 40px;
+}
+
+strong {
+    font-weight: 700;
+     /* On applique un soulignement de base */
+  text-decoration: underline;
+  /* Couleur jaune fluo semi-transparente */
+  text-decoration-color: rgba(255, 242, 0, 0.5); 
+  /* On donne de l'épaisseur au trait (comme un feutre) */
+  text-decoration-thickness: 0.35em; 
+  /* On remonte légèrement le trait pour qu'il chevauche le bas des lettres */
+  text-underline-offset: -0.1em; 
+  /* CRITIQUE : Empêche le trait de se couper au niveau des lettres descendantes (g, p, y, q) */
+  text-decoration-skip-ink: none; 
+  transition: text-decoration-color 0.25s ease;
+}
+
+.polaroid {
+    display       : inline-block;
+    background    : #ffffff;               /* papier légèrement jauni */
+    padding       : 14px;   /* bande blanche épaisse en bas */
+    max-width     : 380px;
+    width         : 100%;
+    border-radius  : 6px;
+    margin        : 0 0 0 40px;
+
+    /* Ombre portée — photo posée sur la page */
+    box-shadow:
+        1px 1px 0px #d6cca7,
+        6px 8px 28px rgba(67, 67, 67, 0.22);
+
+    /* Légère rotation "jetée à la main", cohérente avec le header post-it */
+    transform: rotate(-1.5deg);
+}
+
+.polaroid-frame {
+    overflow : hidden;
+    border   : 1px solid #000000; /* Bordure déplacée ici */
+}
+
+.polaroid img {
+    display     : block;
+    width       : 100%;
+    aspect-ratio: 1 / 1;       /* toujours carré comme un vrai polaroid */
+    object-fit  : cover;
+    object-position: center top; /* garde le visage cadré */
+    border      : 1px solid #000000;
+
+    transform       : scale(1.8) translateY(-65px); /* <-- LIGNE À AJOUTER (ajuste la valeur entre 1.1 et 1.5 selon le zoom désiré) */
+}
+
+/* Légende manuscrite dans la bande blanche */
+.polaroid-caption {
+    margin      : 10px 0 0;
+    text-align  : center;
+    font-family : 'Caveat', cursive;
+    font-size   : 1.15rem;
+    font-weight : 700;
+    color       : #3a3020;
+    letter-spacing: 0.03em;
+}
+
+.social-links a {
+  margin-right: 12px;
+    text-decoration: none;
+    color: #3a3020;
+    font-family: 'Caveat', cursive;
+    font-size: 1.25rem;
+
+    height: 75px;          /* Donne la hauteur à la bande blanche */
+    display: flex;
+    align-items: center;    /* Centre verticalement */
+    justify-content: center;/* Centre horizontalement */
+}
+
+@media (max-width: 767.98px) {
+    .polaroid {
+        transform: rotate(1.5deg);
+        max-width: 220px;
+    }
+}
+
+/* --------------------------------------------
+            SECTION "PRESENTATION"
+-------------------------------------------- */
+
+.layout-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr; /* Crée 2 colonnes identiques side-by-side */
+  grid-template-rows: repeat(3, auto); /* Les lignes s'ajustent automatiquement à la hauteur du contenu */  
+  gap: 24px; /* Gère l'espace horizontal entre les deux colonnes */
+  max-width: 1350px;
+  margin: 0 auto; /* Centre le bloc entier dans la page */
+}
+
+.layout-column{
+  display: flex;
+  flex-direction: column; /* Empile les cartes du haut vers le bas */
+  justify-content: center;
+}
+
+.layout-column.info {
+  margin-top: 50px;
+}
+
+#presentation .card {
+  margin-bottom: 24px;
+  padding: 10px;
+  border: none;
+  border-radius: 0%;
+}
+
+.info-card {
+  background-color: #FFC0CB;
+  width: max-content;
+  box-shadow: 2px 4px 12px rgba(42, 62, 69, 0.15);
+  padding: 25px ;
+  transform: rotate(0.2deg);
+}
+
+.objectif-card {
+  background-color: #FFC0CB;
+  box-shadow: 2px 4px 12px rgba(42, 62, 69, 0.15);
+  transform: rotate(-0.3deg);
+}
+
+.objectif-card p{
+  text-align: justify;
+  padding: 10px;
+}
+
+.about-me {
+  background-color: transparent;
+}
+
+.soft-skills {
+  background-color: transparent;
+}
+
+.text-card {
+  text-align: justify;
+  padding: 25px;
+  font-size: 1.25rem;
+  background-color: transparent;
+  line-height: 1.7;
+}
+
+/* --------------------------------------------
+            SECTION "COMPETENCES"
+-------------------------------------------- */
+
+.skills-container {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;    /* TRÈS IMPORTANT : permet aux cartes de passer à la ligne sur petit écran au lieu de s'écraser */
+  margin: 40px auto;
+  max-width: 1400px;  /* Empêche les cartes de trop s'éparpiller sur les écrans géants */
+}
+
+.skills-container .card {
+  padding: 25px;
+  border-radius: 0px;
+  min-width: 220px;   
+  flex: 1;            /* Permet aux cartes d'occuper l'espace de manière égale */
+  max-width: 280px;   
+  transition: transform 0.3s ease;
+  box-shadow: 2px 4px 12px rgba(42, 62, 69, 0.15);
+  border: none !important;
+}
+
+.skills-container .card.languages {
+  transform: rotate(-0.7deg) translateY(0px); /* Rotation -1.5 degré */
+  background-color: #F5D128;
+}
+
+/* Carte 2 (Base de données) : Plus haute et droite */
+.skills-container .card.bdd {
+  transform: rotate(0.4deg) translateY(-10px); /* Rotation 1 degré + relevée de 15px */
+  background-color: #BBE2EC;
+}
+
+/* Carte 3 (Frameworks) : De travers à gauche et plus basse */
+.skills-container .card.frameworks {
+  transform: rotate(-0.7deg) translateY(-2px); /* Rotation -2.5 degrés + abaissée de 10px */
+  background-color: #B2F0B2;
+}
+
+/* Carte 4 (Langues) : Relevée et de travers à droite */
+.skills-container .card.langue {
+  transform: rotate(0.5deg) translateY(-5px); /* Rotation 2 degrés + relevée de 8px */
+  background-color: #FFC0CB;
+}
+
+/* --- BONUS --- */
+/* Petit effet visuel : la carte se remet droite quand on passe la souris dessus */
+#competences .card:hover {
+  transform: rotate(0deg) translateY(-5px) scale(1.02); /* Devient droite, monte un peu et grossit légèrement */
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15); /* Ombre plus forte */
+  z-index: 10; /* Passe au-dessus des autres si elles se chevauchent */
+}
+
+#competences h2 {
+  margin: 0 0 30px 95px;
+}
+
+#competences .card h4 {
+  font-size: 1.2rem;
+  margin: 15px 0;
+  text-align: center; 
+}
+
+#competences .card ul {
+  padding-left: 20px;
+}
+
+#competences .card li {
+  margin-bottom: 8px; 
+}
+
+/* --------------------------------------------
+            SECTION "PROJETS"
+-------------------------------------------- */
+#projets{
+
+  margin-bottom: 40px;
+
+}
+.font-handwriting { font-family: 'Caveat', cursive, sans-serif; font-size: 1.2rem; }
+.font-handwriting-bold { font-family: 'Caveat', cursive, sans-serif; font-weight: bold; font-size: 1.8rem; }
+
+/* Styles des Post-it */
+.card-postit-yellow { background-color: #fef5c1 !important; color: #333; }
+.card-postit-blue { background-color: #d1ecf1 !important; color: #333; }
+
+/* Légères rotations pour casser la rigidité */
+.transform-rotate-left { transform: rotate(-1.5deg); }
+.transform-rotate-right { transform: rotate(1.2deg); }
+
+/* Effet Scotch sur le Post-it */
+.tape-effect {
+    position: absolute;
+    top: -12px;
+    left: 40%;
+    width: 80px;
+    height: 25px;
+    background-color: rgba(243, 234, 203, 0.5);
+    box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+    transform: rotate(-2deg);
+}
+
+/* Le Polaroid dans le volet de droite */
+.polaroid-container {
+    background: #ffffff;
+    padding: 15px 15px 25px 15px;
+    border: 1px solid #eee;
+    max-width: 850px;
+    width: 100%;
+    box-shadow: 4px 4px 10px 0px rgba(0, 0, 0, 0.08);
+}
+.polaroid-container .carousel-inner img {
+    border: 1px solid #ddd; /* Cadre fin de la photo */
+}
+
+#infoProjet1{
+
+  background-color: #f3f1ec;
+  background-image:
+    /* Lignes horizontales séyès */
+    repeating-linear-gradient(
+      to bottom,
+      transparent 0px,
+      transparent 23px,
+      rgba(120, 155, 205, 0.28) 23px,
+      rgba(120, 155, 205, 0.28) 24px
+    ),
+    /* Marge rouge à gauche */
+    /* transparent jusqu'à 55px a partir de la gauche puis couleur rouge puis redeviens transparent a 56px */
+    /* linear-gradient fait un dégradé de couleur */
+    linear-gradient(
+      to right,
+      transparent 55px,
+      rgba(205, 75, 75, 0.22) 55px,
+      rgba(205, 75, 75, 0.22) 56px,
+      transparent 56px
+    );
+}
+
+#infoProjet2{
+
+  background-color: #f3f1ec;
+  background-image:
+    /* Lignes horizontales séyès */
+    repeating-linear-gradient(
+      to bottom,
+      transparent 0px,
+      transparent 23px,
+      rgba(120, 155, 205, 0.28) 23px,
+      rgba(120, 155, 205, 0.28) 24px
+    ),
+    /* Marge rouge à gauche */
+    /* transparent jusqu'à 55px a partir de la gauche puis couleur rouge puis redeviens transparent a 56px */
+    /* linear-gradient fait un dégradé de couleur */
+    linear-gradient(
+      to right,
+      transparent 55px,
+      rgba(205, 75, 75, 0.22) 55px,
+      rgba(205, 75, 75, 0.22) 56px,
+      transparent 56px
+    );
+}
+
+
+/* --------------------------------------------
+            PAGE "CV"
+-------------------------------------------- */
+#cv{
+  margin: 25px 45px; 
+}
+
+.download-cv{
+  display: flex;
+  justify-content: flex-end;
+}
+
+#cv-container {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+ 
+/* Header sur toute la largeur */
+.cv-header {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    padding: 20px;
+    border-bottom: 2px solid;
+    margin-bottom: 30px;
+    width: 100%;
+}
+.cv-header-info {
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+    text-align: center;  
+    flex: 1;
+}
+ 
+.download-cv button {
+    padding: 8px 16px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 14px;
+}
+ 
+.cv-logo img {
+    width: 60px;
+    height: 60px;
+}
+ 
+.cv-header-info h1 {
+    margin: 0;
+    font-size: 28px;
+}
+ 
+.cv-title {
+    font-size: 14px;
+    margin-top: 4px;
+}
+ 
+.cv-contact {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    font-size: 13px;
+    margin-left: auto;
+}
+ 
+/* Contenu 2 colonnes */
+.cv-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+    padding: 0 20px;
+}
+ 
+.cv-column {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+ 
+.cv-left {
+    /* border-right: 2px solid; */
+    padding: 15px 10px;
+
+}
+ 
+.cv-right {
+    padding-left: 20px;
+}
+ 
+/* Sections */
+.cv-section-title {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 12px;
+    padding-bottom: 8px;
+}
+ 
+.cv-formation,
+.cv-experiences,
+.cv-section {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+#stageCnam{
+  background-color: #BBE2EC;
+  transform: rotate(-0.5deg);
+   box-shadow: 2px 4px 12px rgba(42, 62, 69, 0.15);
+  border-left: 1px solid rgba(255, 255, 255, 0.4);
+}
+
+#stageCnam:hover{
+  transform: rotate(0deg) translateY(-5px) scale(1.02); /* Devient droite, monte un peu et grossit légèrement */
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15); /* Ombre plus forte */
+  z-index: 10; /* Passe au-dessus des autres si elles se chevauchent */
+}
+
+#easyDrive{
+  background-color: #BBE2EC;
+  transform: rotate(0.2deg);
+   box-shadow: 2px 4px 12px rgba(42, 62, 69, 0.15);
+  border-left: 1px solid rgba(255, 255, 255, 0.4);
+}
+#easyDrive:hover{
+  transform: rotate(0deg) translateY(-5px) scale(1.02); /* Devient droite, monte un peu et grossit légèrement */
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15); /* Ombre plus forte */
+  z-index: 10; /* Passe au-dessus des autres si elles se chevauchent */
+}
+
+#coopenoix{
+  background-color: #BBE2EC;
+  transform: rotate(-0.6deg);
+   box-shadow: 2px 4px 12px rgba(42, 62, 69, 0.15);
+  border-left: 1px solid rgba(255, 255, 255, 0.4);
+}
+#coopenoix:hover{
+  transform: rotate(0deg) translateY(-5px) scale(1.02); /* Devient droite, monte un peu et grossit légèrement */
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15); /* Ombre plus forte */
+  z-index: 10; /* Passe au-dessus des autres si elles se chevauchent */
+}
+ 
+#stage{
+  background-color: #BBE2EC;
+  transform: rotate(0.4deg);
+   box-shadow: 2px 4px 12px rgba(42, 62, 69, 0.15);
+  border-left: 1px solid rgba(255, 255, 255, 0.4);
+}
+#stage:hover{
+  transform: rotate(0deg) translateY(-5px) scale(1.02); /* Devient droite, monte un peu et grossit légèrement */
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15); /* Ombre plus forte */
+  z-index: 10; /* Passe au-dessus des autres si elles se chevauchent */
+}
+
+/* Items */
+.cv-item {
+  margin-bottom: 16px;
+  padding: 25px;
+}
+
+#formations{
+  background-color: #FFC0CB;
+  transform: rotate(0.4deg);
+   box-shadow: 2px 4px 12px rgba(42, 62, 69, 0.15);
+  border-left: 1px solid rgba(255, 255, 255, 0.4);
+}
+
+.cv-section-skills{
+  background-color: #fef5c1;
+  transform: rotate(0.4deg);
+  box-shadow: 2px 4px 12px rgba(42, 62, 69, 0.15);
+  border-left: 1px solid rgba(255, 255, 255, 0.4);
+}
+ 
+.cv-item .cv-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    gap: 10px;
+    border: none;
+    padding: 0;
+    margin-bottom: 6px;
+}
+ 
+.cv-item-title h3 {
+    margin: 0;
+    font-size: 14px;
+    font-weight: 600;
+}
+ 
+.cv-item-date {
+    white-space: nowrap;
+}
+ 
+.cv-item-subtitle {
+    font-style: italic;
+    margin-bottom: 6px;
+}
+ 
+.cv-item-description {
+    line-height: 1.5;
+}
+ 
+.cv-item-description ul {
+    margin: 8px 0;
+    padding-left: 20px;
+}
+ 
+.cv-item-description li {
+    margin: 4px 0;
+}
+ 
+/* Skills */
+.side-skill-item {
+    display: flex;
+    align-items: center;
+    padding: 6px 0;
+}
+ 
+.side-skill-header {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    font-size: 13px;
+}
+
+#skills-items{
+  padding: 25px;
+}
+
+.side-skill-header{
+  font-size: 1.2rem;
+}
+ 
+/* Langues */
+.cv-lang-item {
+    display: flex;
+    justify-content: space-between;
+    padding: 4px 0;
+}
+ 
+.lang-level {
+    color: #ff9898;
+}
+
+.cv-section-langues{
+  background-color: #fef5c1;
+  transform: rotate(0.4deg);
+  box-shadow: 2px 4px 12px rgba(42, 62, 69, 0.15);
+  border-left: 1px solid rgba(255, 255, 255, 0.4);
+  padding: 25px;
+}
+
+ 
+/* Intérêts */
+.cv-interests {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    justify-content: space-around;
+}
+ 
+.interest-tag {
+    padding: 4px 10px;
+    border-radius: 12px;
+}
+
+.cv-section-interests{
+  background-color: #fef5c1;
+  transform: rotate(0.4deg);
+  box-shadow: 2px 4px 12px rgba(42, 62, 69, 0.15);
+  border-left: 1px solid rgba(255, 255, 255, 0.4);
+  padding: 10px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .cv-content {
+        grid-template-columns: 1fr;
+    }
+ 
+    .cv-left {
+        border-right: none;
+        border-bottom: 2px solid;
+        padding-right: 0;
+        padding-bottom: 20px;
+    }
+ 
+    .cv-right {
+        padding-left: 0;
+    }
+}
+
+/* --------------------------------------------
+            PAGE "CONTACT"
+-------------------------------------------- */
+.contact-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  justify-content: center;
+  max-width: 900px;
+  padding: 0 20px;
+  gap: 30px;
+}
+
+.contact-intro {
+  margin-top: 37px;
+}
+
+.contact-intro h1{
+  margin-bottom: 20px;
+}
+
+.contact-form {
+  background-color: #BBE2EC;
+  transform: rotate(0.2deg);
+  box-shadow: 2px 4px 12px rgba(42, 62, 69, 0.15);
+  border-left: 1px solid rgba(255, 255, 255, 0.4);
+  padding: 25px;
+}
+
+label {
+    font-family: 'Caveat', cursive, sans-serif;
+    font-size: 1.15rem;
+    font-weight: bold;
+    color: #2a3e45;
+    margin-bottom: 4px;
+    display: inline-block;
+}
+
+#name-fields {
+    display: flex;
+    gap: 15px;            
+    margin-bottom: 15px;
+}
+
+/* Chaque colonne prend 50% de l'espace disponible */
+#name-fields .form-group {
+    flex: 1;
+    display: flex;
+    flex-direction: column; /* Place le label au-dessus de l'input */
+    gap: 5px;              /* Espace entre le label et son champ */
+}
+
+/* Règle globale pour uniformiser la taille de tous tes champs */
+input[type="text"],
+input[type="email"],
+select,
+textarea {
+    /* width: 100%;
+    box-sizing: border-box; Évite que les bordures et paddings ne dépassent */
+    background-color: #ffffff;
+    border: 1.5px solid #8ecae6; /* Bordure douce au lieu du gris brut */
+    border-radius: 6px;         /* Arrondi léger */
+    padding: 8px 12px;          /* Espace interne pour que le texte respire */
+    font-size: 0.95rem;
+    color: #333;
+    transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+/* Effet au clic / focus (supprime l'outline bleu natif) */
+input[type="text"]:focus,
+input[type="email"]:focus,
+select:focus,
+textarea:focus {
+    outline: none;
+    border-color: #219ebc;
+    box-shadow: 0 0 0 3px rgba(33, 158, 188, 0.25); /* Halo discret */
+}
+
+fieldset {
+    border: 1px dashed #789bc5; /* Bordure pointillée */
+    border-radius: 8px;
+    padding: 20px;
+}
+
+.contact-info ul li{
+  list-style: none;
+  margin-bottom: 12px;
+  font-size: 1.1rem;
+}
+
+.contact-info a{
+  text-decoration: none;
+  color: #2a3e45;
+}
+
+.contact-info{
+  margin-top: 26px;
+}
+
+#links{
+  background-color: #FFC0CB;
+  transform: rotate(-0.4deg);
+  box-shadow: 2px 4px 12px rgba(42, 62, 69, 0.15);
+  border-left: 1px solid rgba(255, 255, 255, 0.4);
+  padding-top: 25px;
+  padding-bottom: 25px;
+}
+
+/* --------------------------------------------
+            "FOOTER"
+-------------------------------------------- */
+.footer-content{
+ 
+  width: 100%;
+  margin: 0 auto;
+  padding: 20px;
+
+}
+.footer-info ul{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  list-style: none;
+  width: 100%;
+  padding: 10px;
+  margin: 0;
+}
+
+.footer-links a{
+  text-decoration: none;
+  color: #2a3e45;
+  font-family: 'Caveat', cursive;
+  font-size: 1.25rem;
+}
+
+.footer-links ul{
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
 
 
 

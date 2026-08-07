@@ -9,7 +9,7 @@
         </div>
         <div class="footer-info">
             <ul>
-                <li>&copy; 2026 Nohan Gagnor.</li>
+                <li>&copy; 2026 Nohan Gagnor</li>
                 <li>Fais avec 🤍 à Dijon</li>
                 <li>BTS SIO-SLAM</li>
             </ul>
