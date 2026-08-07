@@ -14,18 +14,23 @@
                     <form action="send_message.php" method="post">
                         <!-- Le fieldset dessine le contour noir/gris natif autour de tout le formulaire -->
                         <fieldset>
-                            
-                            <label for="name">Nom :</label><br>
-                            <input type="text" id="name" name="name" required><br><br>
+                            <!-- Conteneur flex pour Nom et Prénom -->
+                            <div id="name-fields">
+                                <div class="form-group">
+                                    <label for="name">Nom :</label>
+                                    <input type="text" id="name" name="name" required>
+                                </div>
 
-                            <label for="first_name">Prénom :</label><br>
-                            <input type="text" id="first_name" name="first_name" required><br><br>
+                                <div class="form-group">
+                                    <label for="first_name">Prénom :</label>
+                                    <input type="text" id="first_name" name="first_name" required>
+                                </div>
+                            </div>
 
                             <label for="email">Email :</label><br>
                             <input type="email" id="email" name="email" required><br><br>
 
                             <label for="subject">Sujet :</label><br>
-                            <!-- Ajout de name="subject[]" pour que le PHP reçoive les choix multiples -->
                             <select id="subject" name="subject[]" multiple size="4">
                                 <option value="stage">Proposition de stage</option>
                                 <option value="alternance">Proposition d'alternance</option>
@@ -37,18 +42,19 @@
                             <textarea id="message" name="message" rows="5" required></textarea><br><br>
                             
                             <button type="submit">Envoyer</button>
-                            
                         </fieldset>
                     </form>
                 </div>
 
                 <div class="contact-info">
-                    <ul>
-                        <li><a href="mailto:gagnor.nohan@gmail.com" class="social-link">Email</a></li>
-                        <li><a href="https://github.com/Noh-an" target="_blank" class="social-link">GitHub.com/Noh-an</a></li>
-                        <li><a href="https://www.linkedin.com/in/nohan-gagnor/" target="_blank" class="social-link">LinkedIn</a></li>
-                        <li><a href="address:21000, Dijon" class="adresse">21000, Dijon</a></li>
-                    </ul>
+                    <div id="links">
+                        <ul>
+                            <li><a href="mailto:gagnor.nohan@gmail.com" class="social-link">Email</a></li>
+                            <li><a href="https://github.com/Noh-an" target="_blank" class="social-link">GitHub.com/Noh-an</a></li>
+                            <li><a href="https://www.linkedin.com/in/nohan-gagnor/" target="_blank" class="social-link">LinkedIn</a></li>
+                            <li><a href="address:21000, Dijon" class="adresse">21000, Dijon</a></li>
+                        </ul>
+                    </div>
                 </div>
             </div>
         </div>
