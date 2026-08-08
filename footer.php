@@ -1,3 +1,4 @@
+<?php include 'head.php'; ?>
 <footer>
     <div class="footer-content">
         <div class="footer-links">

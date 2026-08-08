@@ -971,6 +971,10 @@ strong {
   margin-bottom: 20px;
 }
 
+.contact-intro p{
+  font-family: 'Caveat', cursive;
+}
+
 .contact-form {
   background-color: #BBE2EC;
   transform: rotate(0.2deg);
@@ -998,8 +1002,8 @@ label {
 #name-fields .form-group {
     flex: 1;
     display: flex;
-    flex-direction: column; /* Place le label au-dessus de l'input */
-    gap: 5px;              /* Espace entre le label et son champ */
+    flex-direction: column;
+    gap: 5px;
 }
 
 /* Règle globale pour uniformiser la taille de tous tes champs */
@@ -1007,12 +1011,10 @@ input[type="text"],
 input[type="email"],
 select,
 textarea {
-    /* width: 100%;
-    box-sizing: border-box; Évite que les bordures et paddings ne dépassent */
     background-color: #ffffff;
-    border: 1.5px solid #8ecae6; /* Bordure douce au lieu du gris brut */
-    border-radius: 6px;         /* Arrondi léger */
-    padding: 8px 12px;          /* Espace interne pour que le texte respire */
+    border: 1.5px solid #8ecae6; 
+    border-radius: 6px;
+    padding: 8px 12px; 
     font-size: 0.95rem;
     color: #333;
     transition: border-color 0.2s, box-shadow 0.2s;
@@ -1061,13 +1063,106 @@ fieldset {
 /* --------------------------------------------
             "FOOTER"
 -------------------------------------------- */
-.footer-content{
- 
-  width: 100%;
-  margin: 0 auto;
-  padding: 20px;
 
+/* ---- footer — papier scotché sur la page ---- */
+footer {
+  position: relative;
+  margin: 55px 35px 15px 35px;
+  padding: 20px 20px 20px;
+  /* Couleur papier post-it */
+  background-color: #F4E7B4;
+  border: 1px solid #f3e15c;
+
+  /* Légère rotation "posé à la main" */
+  transform: rotate(-0.3deg);
+
+  /* Ombre portée — papier surélevé de la feuille */
+  box-shadow:
+    2px 3px 0 #c4b860,
+    4px 6px 14px rgba(0, 0, 0, 0.17);
+
+  /* Indispensable : les scotchs dépassent en haut */
+  overflow: visible;
 }
+
+
+/* ---- Scotch gauche ---- */
+footer::before {
+  content: '';
+  position: absolute;
+  top: -10px;
+  left: -36px;
+  width: 116px;
+  height: 42px;
+
+  /* Transparent avec teinte ambrée (scotch vieilli) */
+  background: rgba(212, 192, 128, 0.46);
+  /* Fibres diagonales du film adhésif */
+  background-image: repeating-linear-gradient(
+    100deg,
+    transparent 0px,
+    transparent 3px,
+    rgba(255, 255, 255, 0.2) 3px,
+    rgba(255, 255, 255, 0.2) 4.5px
+  );
+
+  border: 1px solid rgba(185, 165, 95, 0.22);
+  border-radius: 1px;
+  transform: rotate(-30deg);
+  box-shadow:
+    0 1px 4px rgba(0, 0, 0, 0.1),
+    inset 0 1px 0 rgba(255, 255, 255, 0.35);
+  z-index: 2;
+
+  clip-path: polygon(
+    /* Bord Gauche en dents de scie */
+    0% 0%, 5% 20%, 0% 40%, 4% 60%, 1% 80%, 0% 100%, 
+    /* Bord Bas (droit) */
+    100% 100%, 
+    /* Bord Droit en dents de scie */
+    96% 80%, 100% 60%, 95% 40%, 99% 20%, 95% 0%
+  );
+}
+
+
+/* ---- Scotch droit ---- */
+footer::after {
+  content: '';
+  position: absolute;
+  top: 8px;
+  right: -54px;
+  width: 134px;
+  height: 42px;
+
+  background: rgba(212, 192, 128, 0.46);
+  background-image: repeating-linear-gradient(
+    100deg,
+    transparent 0px,
+    transparent 3px,
+    rgba(255, 255, 255, 0.2) 3px,
+    rgba(255, 255, 255, 0.2) 4.5px
+  );
+
+  border: 1px solid rgba(185, 165, 95, 0.22);
+  border-radius: 1px;
+
+  box-shadow:
+    0 1px 4px rgba(0, 0, 0, 0.1),
+    inset 0 1px 0 rgba(255, 255, 255, 0.35); 
+
+  transform: rotate(55deg);
+  z-index: 2;
+
+  clip-path: polygon(
+    /* Bord Gauche en dents de scie */
+    0% 0%, 5% 20%, 0% 40%, 4% 60%, 1% 80%, 0% 100%, 
+    /* Bord Bas (droit) */
+    100% 100%, 
+    /* Bord Droit en dents de scie */
+    96% 80%, 100% 60%, 95% 40%, 99% 20%, 95% 0%
+  );
+}
+
 .footer-info ul{
   display: flex;
   justify-content: space-between;
@@ -1078,18 +1173,51 @@ fieldset {
   margin: 0;
 }
 
+
 .footer-links a{
-  text-decoration: none;
-  color: #2a3e45;
   font-family: 'Caveat', cursive;
   font-size: 1.25rem;
+  font-weight: 700;
+  color: #3a3020;
+  text-decoration: none;
+  position: relative;
+  letter-spacing: 0.02em;
+  transition: color 0.2s ease;
 }
 
 .footer-links ul{
   list-style: none;
   display: flex;
-  flex-direction: column;
+  justify-content: center;
   align-items: center;
+}
+
+.footer-links li{
+  margin: 0 15px;
+}
+
+/* Surlignage marqueur fluo au hover */
+.footer-links a::after {
+  content: '';
+  position: absolute;
+  bottom: -3px;
+  left: -2px;
+  right: -2px;
+  height: 7px;
+  background: rgba(255, 208, 45, 0.5);
+  transform: scaleX(0) rotate(-1.2deg);
+  transform-origin: left center;
+  transition: transform 0.22s ease;
+  border-radius: 1px;
+  z-index: -1;
+}
+
+.footer-links a:hover {
+  color: #1a1408;
+}
+
+.footer-links a:hover::after {
+  transform: scaleX(1) rotate(-1.2deg);
 }
 
 
