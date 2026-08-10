@@ -8,19 +8,33 @@ require 'PHPMailer/src/Exception.php';
 use PHPMailer\PHPMailer\PHPMailer;
 use PHPMailer\PHPMailer\Exception;
 
-// On n'accepte que les requêtes POST
+// 1. On n'accepte que les requêtes POST
 if ($_SERVER['REQUEST_METHOD'] !== 'POST') {
  http_response_code(405);
  die('Méthode non autorisée.');
 }
-// --- 1. Récupération brute des données ---
+// 2. Vérification du jeton CSRF
+if ( empty($_POST['csrf_token']) || empty($_SESSION['csrf_token']) || !hash_equals($_SESSION['csrf_token'], $_POST['csrf_token'])) {
+    http_response_code(403);
+    die("Requête invalide.");
+}
+
+// 3. Honeypot anti-bot
+//Si champ invisible est rempli -> c'est un bot, on ignore
+if (!empty($_POST['site_web'])) {
+ // On fait comme si tout s'était bien passé pour ne pas donner d'indice au bot, mais on n'envoie rien.
+ header('Location: index.php');
+ exit;
+}
+
+// --- 4. Récupération brute des données ---
 $nom = trim($_POST['name'] ?? '');
 $prenom = trim($_POST['first_name'] ?? '');
 $email = trim($_POST['email'] ?? '');
 $message = trim($_POST['message'] ?? '');
 $sujets = $_POST['subject'] ?? []; // tableau, car <select multiple>
 
-// --- 2. Validation ---
+// --- 5. Validation ---
 $erreurs = [];
 if ($nom === '' || mb_strlen($nom) > 30) {
  $erreurs[] = "Le nom est invalide.";
@@ -45,9 +59,9 @@ $sujets_autorises = [
 
 $sujets_valides = [];
 foreach ((array) $sujets as $s) {
- if (isset($sujets_autorises[$s])) {
- $sujets_valides[] = $sujets_autorises[$s];
- }
+    if (isset($sujets_autorises[$s])) {
+        $sujets_valides[] = $sujets_autorises[$s];
+    }
 }
 if (empty($sujets_valides)) {
  $erreurs[] = "Merci de choisir un sujet.";
@@ -57,6 +71,7 @@ if (!empty($erreurs)) {
  die(implode('<br>', array_map('htmlspecialchars', $erreurs)));
 }
 
+// --- 6. Envoi du mail ---
 $mail = new PHPMailer(true);
 try {
  // --- Config SMTP ---
@@ -84,14 +99,9 @@ try {
  "Sujet : " . implode(', ', $sujets_valides) . "\n\n" .
  "Message :\n$message\n";
  $mail->send();
- header('Location: merci.html');
+ header('Location: index.php'); 
  exit;
 } catch (Exception $e) {
  error_log("Erreur mail : {$mail->ErrorInfo}");
  die("Le message n'a pas pu être envoyé, réessaie plus tard.");
-}
-
-// --- Protection injection d'en-têtes mail ---
-if (!empty($email) ){
-    !filter_var($email, FILTER_VALIDATE_EMAIL) or die("Adresse email invalide.");
 }

@@ -1,6 +1,14 @@
-<?php include 'head.php'; ?>
+<?php 
+session_start();
+// --- Sur la page qui affiche le formulaire ---
+if (empty($_SESSION['csrf_token'])) {
+ $_SESSION['csrf_token'] = bin2hex(random_bytes(32));
+}
+$csrf_token = $_SESSION['csrf_token'];
+include 'head.php'; 
+?>
 <body>
-    <?php include 'header.php'; ?>
+<?php include 'header.php';?>
 
     <main>
         <div class="container">
@@ -12,9 +20,11 @@
             <div class="contact-container">
                 <div class="contact-form">
                     <form action="send_message.php" method="post">
-                        <!-- Le fieldset dessine le contour noir/gris natif autour de tout le formulaire -->
                         <fieldset>
-                            <!-- Conteneur flex pour Nom et Prénom -->
+                            <!-- Champ invisible pour les robots (honeypot) -->
+                            <input type="text" name="site_web" style="display:none" tabindex="-1" autocomplete="off">
+                            <!-- Jeton anti-CSRF généré en PHP -->
+                            <input type="hidden" name="csrf_token" value="<?= htmlspecialchars($csrf_token) ?>">
                             <div id="name-fields">
                                 <div class="form-group">
                                     <label for="name">Nom :</label>
