@@ -61,7 +61,7 @@ include 'head.php';
                         <ul>
                             <li><a href="mailto:gagnor.nohan@gmail.com" class="social-link">Email</a></li>
                             <li><a href="https://github.com/Noh-an" target="_blank" class="social-link">GitHub.com/Noh-an</a></li>
-                            <li><a href="https://www.linkedin.com/in/nohan-gagnor/" target="_blank" class="social-link">LinkedIn</a></li>
+                            <li><a href="https://www.linkedin.com/in/nohan-gagnor-228a36354" target="_blank" class="social-link">LinkedIn</a></li>
                             <li><a href="address:21000, Dijon" class="adresse">21000, Dijon</a></li>
                         </ul>
                     </div>

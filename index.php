@@ -40,8 +40,8 @@
                                 <img src="./img/pdpNohan.jpg" alt="Photo de Nohan Gagnor">
                             </div>
                             <div class="social-links">
-                                <a href="https://www.linkedin.com/in/nohan-gagnor/" target="_blank" class="social-link">LinkedIn</a>
-                                <a href="https://github.com/nohangagnor" target="_blank" class="social-git">GitHub</a>
+                                <a href="https://www.linkedin.com/in/nohan-gagnor-228a36354" target="_blank" class="social-link">LinkedIn</a>
+                                <a href="https://github.com/Noh-an" target="_blank" class="social-git">GitHub</a>
                             </div>
                         </div>
                     </div>
@@ -145,7 +145,9 @@
                     <div class="row g-5">
                         <p class="font-handwriting text-muted col-12 mb-4">Voici quelques-uns de mes projets les plus récents et pertinents, démontrant mes compétences en développement web et applicatif :</p>
                         
+                        <!-- Coopenoix -->
                         <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
+                            <!-- Carte du projet coopenoix dans l'index -->
                             <div class="card card-postit-yellow border-0 shadow-sm p-4 h-100 position-relative transform-rotate-left">
                                 <div class="tape-effect"></div> <div class="card-body d-flex flex-column justify-content-between p-2">
                                     <div>
@@ -168,13 +170,30 @@
                                         <div id="carouselProject1" class="carousel slide" data-bs-ride="carousel" data-bs-touch="true">
                                             <div class="carousel-inner">
                                                 <div class="carousel-item active" data-bs-interval="10000">
-                                                    <img src="img/site_extranet.png" class="d-block w-100" alt="Site extranet">
+                                                    <img src="img/connexion.png" class="d-block w-100" alt="Page de connexion">
+                                                    <div class="polaroid-caption mt-3">
+                                                        <p class="font-handwriting text-muted small mb-0">
+                                                            Les clients de coopenoix doivent se connecter pour accéder à leurs commandes via un mot de passe et un identifiant.
+                                                        </p>
+                                                    </div>
                                                 </div>
                                                 <div class="carousel-item">
-                                                    <img src="img/connexion.png" class="d-block w-100" alt="Page de connexion">
+                                                    <img src="img/site_extranet.png" class="d-block w-100" alt="Site extranet">
+                                                    <div class="polaroid-caption mt-3">
+                                                        
+                                                        <p class="font-handwriting text-muted small mb-0">
+                                                            l'extranet est composé d'une page d'accueil utilisateur qui affiche en temps réel le suivi des commandes, d'une page produit, catalogue et d'une page panier.
+                                                        </p>
+                                                    </div>
                                                 </div>
                                                 <div class="carousel-item">
                                                     <img src="img/affichageCommande.png" class="d-block w-100" alt="Affichage des commandes">
+                                                    <div class="polaroid-caption mt-3">
+                                                        
+                                                        <p class="font-handwriting text-muted small mb-0">
+                                                            Le catalogue permet aux clients de selectionner les produits qu'ils souhaitent commander.
+                                                        </p>
+                                                    </div>
                                                 </div>
                                             </div>
                                             
@@ -187,19 +206,13 @@
                                                 <span class="visually-hidden">Next</span>
                                             </button>
                                         </div>
-                                        
-                                        <div class="polaroid-caption mt-3">
-                                            <h6 class="font-handwriting-bold text-dark mb-2">Notes de développement :</h6>
-                                            <p class="font-handwriting text-muted small mb-0">
-                                                Les clients de coopenoix doivent se connecter pour accéder à leurs commandes via un mot de passe et un identifiant. Affichage en temps réel.
-                                            </p>
-                                        </div>
                                     </div>
                                     
                                 </div>
                             </div>
                         </div>
 
+                        <!-- Easy2Drive -->
                         <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
                             <div class="card card-postit-blue border-0 shadow-sm p-4 h-100 position-relative transform-rotate-right">
                                 <div class="tape-effect"></div>
@@ -224,10 +237,122 @@
                                         <div id="carouselProject2" class="carousel slide" data-bs-ride="carousel" data-bs-touch="true">
                                             <div class="carousel-inner">
                                                 <div class="carousel-item active" data-bs-interval="10000">
-                                                    <img src="img/site_extranet.png" class="d-block w-100" alt="Dashboard Easy2Drive">
+                                                    <img src="img/easy2drive/directeur/directeur.png" class="d-block w-100" alt="Dashboard Easy2Drive">
+                                                    <div class="polaroid-caption mt-3">
+
+                                                        <h6 class="font-handwriting-bold">Directeur:</h6>
+                                                        <p class="font-handwriting text-muted small mb-0">
+                                                            Le dashboard du directeur lui donne un accès à toutes les informations nécessaires pour gérer son auto-école, les formateurs et les élèves.
+                                                        </p>
+                                                    </div>
                                                 </div>
                                                 <div class="carousel-item">
-                                                    <img src="img/connexion.png" class="d-block w-100" alt="Planning Auto-école">
+                                                    <img src="img/easy2drive/directeur/listeEleve.png" class="d-block w-100" alt="Planning Auto-école">
+                                                    <div class="polaroid-caption mt-3">
+                                                        <h6 class="font-handwriting-bold">Directeur:</h6>
+                                                        <p class="font-handwriting text-muted small mb-0">
+                                                            La gestion des élèves permet d'ajouter un élève avec ses informations et/ou de les modifier.
+                                                        </p>
+                                                    </div>
+                                                </div>
+                                                <div class="carousel-item">
+                                                    <img src="img/easy2drive/directeur/listeFormateur.png" class="d-block w-100" alt="Planning Auto-école">
+                                                    <div class="polaroid-caption mt-3">
+                                                        <h6 class="font-handwriting-bold">Directeur:</h6>
+                                                        <p class="font-handwriting text-muted small mb-0">
+                                                            La gestion des formateurs permet d'ajouter un formateur avec ses informations et/ou de les modifier.
+                                                        </p>
+                                                    </div>
+                                                </div>
+                                                <div class="carousel-item">
+                                                    <img src="img/easy2drive/directeur/attributionEleve.png" class="d-block w-100" alt="Planning Auto-école">
+                                                    <div class="polaroid-caption mt-3">
+                                                        <h6 class="font-handwriting-bold">Directeur:</h6>
+                                                        <p class="font-handwriting text-muted small mb-0">
+                                                            L'attribution des élèves aux formateurs est facilitée par le système, un formateur peut avoir plusieurs élèves et un élève ne peut avoir qu'un seul formateur.
+                                                        </p>
+                                                    </div>
+                                                </div>
+                                                <div class="carousel-item">
+                                                    <img src="img/easy2drive/directeur/informationDirecteur.png" class="d-block w-100" alt="Planning Auto-école">
+                                                    <div class="polaroid-caption mt-3">
+                                                        <h6 class="font-handwriting-bold">Directeur:</h6>
+                                                        <p class="font-handwriting text-muted small mb-0">
+                                                            Le directeur peut modifier ses informations personnelles et son mot de passe.
+                                                        </p>
+                                                    </div>
+                                                </div>
+                                                <div class="carousel-item">
+                                                    <img src="img/easy2drive/directeur/infoAutoEcoleDirecteur.png" class="d-block w-100" alt="Planning Auto-école">
+                                                    <div class="polaroid-caption mt-3">
+                                                        <h6 class="font-handwriting-bold">Directeur:</h6>
+                                                        <p class="font-handwriting text-muted small mb-0">
+                                                            Le directeur peut modifier les informations de son auto-école.
+                                                        </p>
+                                                    </div>
+                                                </div>
+                                                <div class="carousel-item">
+                                                    <img src="img/easy2drive/formateur/formateur.png" class="d-block w-100" alt="Planning Auto-école">
+                                                    <div class="polaroid-caption mt-3">
+                                                        <h6 class="font-handwriting-bold">Formateur:</h6>
+                                                        <p class="font-handwriting text-muted small mb-0">
+                                                            Le formateur n'a qu'un droit de lecture, il peut consulter ses informations, les informations de ses élèves et de son auto-école.
+                                                        </p>
+                                                    </div>
+                                                </div>
+                                                <div class="carousel-item">
+                                                    <img src="img/easy2drive/formateur/listeEleveFormateur.png" class="d-block w-100" alt="Planning Auto-école">
+                                                    <div class="polaroid-caption mt-3">
+                                                        <h6 class="font-handwriting-bold">Formateur:</h6>
+                                                        <p class="font-handwriting text-muted small mb-0">
+                                                            Cette page affiche la liste de ses élèves et leurs informations.
+                                                        </p>
+                                                    </div>
+                                                </div>
+                                                <div class="carousel-item">
+                                                    <img src="img/easy2drive/formateur/informationFormateur.png" class="d-block w-100" alt="Planning Auto-école">
+                                                    <div class="polaroid-caption mt-3">
+                                                        <h6 class="font-handwriting-bold">Formateur:</h6>
+                                                        <p class="font-handwriting text-muted small mb-0">
+                                                            Le formateur peut changer son mot de passe à tout moment.
+                                                        </p>
+                                                    </div>
+                                                </div>
+                                                <div class="carousel-item">
+                                                    <img src="img/easy2drive/formateur/autoEcoleFormateur.png" class="d-block w-100" alt="Planning Auto-école">
+                                                    <div class="polaroid-caption mt-3">
+                                                        <h6 class="font-handwriting-bold">Formateur:</h6>
+                                                        <p class="font-handwriting text-muted small mb-0">
+                                                            Le formateur peut consulter les informations de son auto-école.
+                                                        </p>
+                                                    </div>
+                                                </div>
+                                                <div class="carousel-item">
+                                                    <img src="img/easy2drive/eleve/eleve.png" class="d-block w-100" alt="Planning Auto-école">
+                                                    <div class="polaroid-caption mt-3">
+                                                        <h6 class="font-handwriting-bold">Élève:</h6>
+                                                        <p class="font-handwriting text-muted small mb-0">
+                                                            Le dashboard de l'élève lui permet de consulter ses informations, son formateur et son auto-école. Droit de lecture uniquement.
+                                                        </p>
+                                                    </div>
+                                                </div>
+                                                <div class="carousel-item">
+                                                    <img src="img/easy2drive/eleve/infoEleve.png" class="d-block w-100" alt="Planning Auto-école">
+                                                    <div class="polaroid-caption mt-3">
+                                                        <h6 class="font-handwriting-bold">Élève:</h6>
+                                                        <p class="font-handwriting text-muted small mb-0">
+                                                            Informations personnelles de l'élève et modification du mot de passe.
+                                                        </p>
+                                                    </div>
+                                                </div>
+                                                <div class="carousel-item">
+                                                    <img src="img/easy2drive/eleve/infoFormateurEleve.png" class="d-block w-100" alt="Planning Auto-école">
+                                                    <div class="polaroid-caption mt-3">
+                                                        <h6 class="font-handwriting-bold">Élève:</h6>
+                                                        <p class="font-handwriting text-muted small mb-0">
+                                                            L'élève peut consulter les informations de son formateur.
+                                                        </p>
+                                                    </div>
                                                 </div>
                                             </div>
                                             
@@ -240,15 +365,164 @@
                                                 <span class="visually-hidden">Next</span>
                                             </button>
                                         </div>
-                                        
-                                        <div class="polaroid-caption mt-3">
-                                            <h6 class="font-handwriting-bold text-dark mb-2">Notes de développement :</h6>
-                                            <p class="font-handwriting text-muted small mb-0">
-                                                Gestion multi-rôles permettant le suivi des heures de conduite, la planification des leçons et le suivi pédagogique des élèves.
-                                            </p>
-                                        </div>
+                                    </div> 
+                                </div>
+                            </div>
+                        </div>
+                        <!-- stage 2026 -->
+                        <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
+                            <div class="card card-postit-blue border-0 shadow-sm p-4 h-100 position-relative transform-rotate-right">
+                                <div class="tape-effect"></div>
+                                <div class="card-body d-flex flex-column justify-content-between p-2">
+                                    <div>
+                                        <h5 class="card-title font-handwriting-bold">Stage 2026</h5>
+                                        <p class="card-text font-handwriting">Application lourde et web de gestion complète pour auto-école (Directeurs, Formateurs et Élèves).</p>
                                     </div>
+                                    <a class="btn btn-outline-dark rounded-pill font-handwriting mt-4 align-self-start shadow-sm" data-bs-toggle="offcanvas" data-bs-target="#infoProjet2" aria-controls="infoProjet2">En savoir plus</a>
+                                </div>
+                            </div>
+
+                            <div class="offcanvas offcanvas-end border-0 shadow-lg w-100 w-md-75" tabindex="-1" id="infoProjet2" aria-labelledby="infoProjet2">
+                                <div class="offcanvas-header border-bottom-0 p-4">
+                                    <h5 class="offcanvas-title font-handwriting-bold fs-3" id="titleProjet2">Stage 2026</h5>
+                                    <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                                </div>
+                                
+                                <div class="offcanvas-body p-4 d-flex flex-column gap-4 align-items-center">
                                     
+                                    <div class="polaroid-container shadow">
+                                        <div id="carouselProject2" class="carousel slide" data-bs-ride="carousel" data-bs-touch="true">
+                                            <div class="carousel-inner">
+                                                <div class="carousel-item active" data-bs-interval="10000">
+                                                    <img src="img/easy2drive/directeur/directeur.png" class="d-block w-100" alt="Dashboard Easy2Drive">
+                                                    <div class="polaroid-caption mt-3">
+
+                                                        <h6 class="font-handwriting-bold">Directeur:</h6>
+                                                        <p class="font-handwriting text-muted small mb-0">
+                                                            Le dashboard du directeur lui donne un accès à toutes les informations nécessaires pour gérer son auto-école, les formateurs et les élèves.
+                                                        </p>
+                                                    </div>
+                                                </div>
+                                                <div class="carousel-item">
+                                                    <img src="img/easy2drive/directeur/listeEleve.png" class="d-block w-100" alt="Planning Auto-école">
+                                                    <div class="polaroid-caption mt-3">
+                                                        <h6 class="font-handwriting-bold">Directeur:</h6>
+                                                        <p class="font-handwriting text-muted small mb-0">
+                                                            La gestion des élèves permet d'ajouter un élève avec ses informations et/ou de les modifier.
+                                                        </p>
+                                                    </div>
+                                                </div>
+                                                <div class="carousel-item">
+                                                    <img src="img/easy2drive/directeur/listeFormateur.png" class="d-block w-100" alt="Planning Auto-école">
+                                                    <div class="polaroid-caption mt-3">
+                                                        <h6 class="font-handwriting-bold">Directeur:</h6>
+                                                        <p class="font-handwriting text-muted small mb-0">
+                                                            La gestion des formateurs permet d'ajouter un formateur avec ses informations et/ou de les modifier.
+                                                        </p>
+                                                    </div>
+                                                </div>
+                                                <div class="carousel-item">
+                                                    <img src="img/easy2drive/directeur/attributionEleve.png" class="d-block w-100" alt="Planning Auto-école">
+                                                    <div class="polaroid-caption mt-3">
+                                                        <h6 class="font-handwriting-bold">Directeur:</h6>
+                                                        <p class="font-handwriting text-muted small mb-0">
+                                                            L'attribution des élèves aux formateurs est facilitée par le système, un formateur peut avoir plusieurs élèves et un élève ne peut avoir qu'un seul formateur.
+                                                        </p>
+                                                    </div>
+                                                </div>
+                                                <div class="carousel-item">
+                                                    <img src="img/easy2drive/directeur/informationDirecteur.png" class="d-block w-100" alt="Planning Auto-école">
+                                                    <div class="polaroid-caption mt-3">
+                                                        <h6 class="font-handwriting-bold">Directeur:</h6>
+                                                        <p class="font-handwriting text-muted small mb-0">
+                                                            Le directeur peut modifier ses informations personnelles et son mot de passe.
+                                                        </p>
+                                                    </div>
+                                                </div>
+                                                <div class="carousel-item">
+                                                    <img src="img/easy2drive/directeur/infoAutoEcoleDirecteur.png" class="d-block w-100" alt="Planning Auto-école">
+                                                    <div class="polaroid-caption mt-3">
+                                                        <h6 class="font-handwriting-bold">Directeur:</h6>
+                                                        <p class="font-handwriting text-muted small mb-0">
+                                                            Le directeur peut modifier les informations de son auto-école.
+                                                        </p>
+                                                    </div>
+                                                </div>
+                                                <div class="carousel-item">
+                                                    <img src="img/easy2drive/formateur/formateur.png" class="d-block w-100" alt="Planning Auto-école">
+                                                    <div class="polaroid-caption mt-3">
+                                                        <h6 class="font-handwriting-bold">Formateur:</h6>
+                                                        <p class="font-handwriting text-muted small mb-0">
+                                                            Le formateur n'a qu'un droit de lecture, il peut consulter ses informations, les informations de ses élèves et de son auto-école.
+                                                        </p>
+                                                    </div>
+                                                </div>
+                                                <div class="carousel-item">
+                                                    <img src="img/easy2drive/formateur/listeEleveFormateur.png" class="d-block w-100" alt="Planning Auto-école">
+                                                    <div class="polaroid-caption mt-3">
+                                                        <h6 class="font-handwriting-bold">Formateur:</h6>
+                                                        <p class="font-handwriting text-muted small mb-0">
+                                                            Cette page affiche la liste de ses élèves et leurs informations.
+                                                        </p>
+                                                    </div>
+                                                </div>
+                                                <div class="carousel-item">
+                                                    <img src="img/easy2drive/formateur/informationFormateur.png" class="d-block w-100" alt="Planning Auto-école">
+                                                    <div class="polaroid-caption mt-3">
+                                                        <h6 class="font-handwriting-bold">Formateur:</h6>
+                                                        <p class="font-handwriting text-muted small mb-0">
+                                                            Le formateur peut changer son mot de passe à tout moment.
+                                                        </p>
+                                                    </div>
+                                                </div>
+                                                <div class="carousel-item">
+                                                    <img src="img/easy2drive/formateur/autoEcoleFormateur.png" class="d-block w-100" alt="Planning Auto-école">
+                                                    <div class="polaroid-caption mt-3">
+                                                        <h6 class="font-handwriting-bold">Formateur:</h6>
+                                                        <p class="font-handwriting text-muted small mb-0">
+                                                            Le formateur peut consulter les informations de son auto-école.
+                                                        </p>
+                                                    </div>
+                                                </div>
+                                                <div class="carousel-item">
+                                                    <img src="img/easy2drive/eleve/eleve.png" class="d-block w-100" alt="Planning Auto-école">
+                                                    <div class="polaroid-caption mt-3">
+                                                        <h6 class="font-handwriting-bold">Élève:</h6>
+                                                        <p class="font-handwriting text-muted small mb-0">
+                                                            Le dashboard de l'élève lui permet de consulter ses informations, son formateur et son auto-école. Droit de lecture uniquement.
+                                                        </p>
+                                                    </div>
+                                                </div>
+                                                <div class="carousel-item">
+                                                    <img src="img/easy2drive/eleve/infoEleve.png" class="d-block w-100" alt="Planning Auto-école">
+                                                    <div class="polaroid-caption mt-3">
+                                                        <h6 class="font-handwriting-bold">Élève:</h6>
+                                                        <p class="font-handwriting text-muted small mb-0">
+                                                            Informations personnelles de l'élève et modification du mot de passe.
+                                                        </p>
+                                                    </div>
+                                                </div>
+                                                <div class="carousel-item">
+                                                    <img src="img/easy2drive/eleve/infoFormateurEleve.png" class="d-block w-100" alt="Planning Auto-école">
+                                                    <div class="polaroid-caption mt-3">
+                                                        <h6 class="font-handwriting-bold">Élève:</h6>
+                                                        <p class="font-handwriting text-muted small mb-0">
+                                                            L'élève peut consulter les informations de son formateur.
+                                                        </p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            
+                                            <button class="carousel-control-prev" type="button" data-bs-target="#carouselProject2" data-bs-slide="prev">
+                                                <span class="carousel-control-prev-icon" aria-hidden="true" style="filter: invert(1);"></span>
+                                                <span class="visually-hidden">Previous</span>
+                                            </button>
+                                            <button class="carousel-control-next" type="button" data-bs-target="#carouselProject2" data-bs-slide="next">
+                                                <span class="carousel-control-next-icon" aria-hidden="true" style="filter: invert(1);"></span>
+                                                <span class="visually-hidden">Next</span>
+                                            </button>
+                                        </div>
+                                    </div> 
                                 </div>
                             </div>
                         </div>
