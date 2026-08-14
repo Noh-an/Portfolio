@@ -577,6 +577,7 @@ strong {
 /* Styles des Post-it */
 .card-postit-yellow { background-color: #fef5c1 !important; color: #333; }
 .card-postit-blue { background-color: #d1ecf1 !important; color: #333; }
+.card-postit-green { background-color: #b2f0b2 !important; color: #333; }
 
 /* Légères rotations pour casser la rigidité */
 .transform-rotate-left { transform: rotate(-1.5deg); }
@@ -632,6 +633,30 @@ strong {
 }
 
 #infoProjet2{
+
+  background-color: #f3f1ec;
+  background-image:
+    /* Lignes horizontales séyès */
+    repeating-linear-gradient(
+      to bottom,
+      transparent 0px,
+      transparent 23px,
+      rgba(120, 155, 205, 0.28) 23px,
+      rgba(120, 155, 205, 0.28) 24px
+    ),
+    /* Marge rouge à gauche */
+    /* transparent jusqu'à 55px a partir de la gauche puis couleur rouge puis redeviens transparent a 56px */
+    /* linear-gradient fait un dégradé de couleur */
+    linear-gradient(
+      to right,
+      transparent 55px,
+      rgba(205, 75, 75, 0.22) 55px,
+      rgba(205, 75, 75, 0.22) 56px,
+      transparent 56px
+    );
+}
+
+#infoProjet3{
 
   background-color: #f3f1ec;
   background-image:

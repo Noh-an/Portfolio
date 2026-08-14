@@ -369,21 +369,20 @@
                                 </div>
                             </div>
                         </div>
-                        
                         <!-- stage 2026 -->
                         <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
-                            <div class="card card-postit-blue border-0 shadow-sm p-4 h-100 position-relative transform-rotate-right">
+                            <div class="card card-postit-green border-0 shadow-sm p-4 h-100 position-relative transform-rotate-right">
                                 <div class="tape-effect"></div>
                                 <div class="card-body d-flex flex-column justify-content-between p-2">
                                     <div>
                                         <h5 class="card-title font-handwriting-bold">Stage CNAM 2026</h5>
                                         <p class="card-text font-handwriting">Stage au sein de l'équipe informatique de la Caisse Nationale d'Assurance Maladie de Dijon.</p>
                                     </div>
-                                    <a class="btn btn-outline-dark rounded-pill font-handwriting mt-4 align-self-start shadow-sm" data-bs-toggle="offcanvas" data-bs-target="#infoProjet2" aria-controls="infoProjet2">En savoir plus</a>
+                                    <a class="btn btn-outline-dark rounded-pill font-handwriting mt-4 align-self-start shadow-sm" data-bs-toggle="offcanvas" data-bs-target="#infoProjet3" aria-controls="infoProjet3">En savoir plus</a>
                                 </div>
                             </div>
 
-                            <div class="offcanvas offcanvas-end border-0 shadow-lg w-100 w-md-75" tabindex="-1" id="infoProjet2" aria-labelledby="infoProjet2">
+                            <div class="offcanvas offcanvas-end border-0 shadow-lg w-100 w-md-75" tabindex="-1" id="infoProjet3" aria-labelledby="infoProjet3">
                                 <div class="offcanvas-header border-bottom-0 p-4">
                                     <h5 class="offcanvas-title font-handwriting-bold fs-3" id="titleProjet2">Stage CNAM 2026</h5>
                                     <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
