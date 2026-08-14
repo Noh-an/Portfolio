@@ -369,14 +369,15 @@
                                 </div>
                             </div>
                         </div>
+                        
                         <!-- stage 2026 -->
                         <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
                             <div class="card card-postit-blue border-0 shadow-sm p-4 h-100 position-relative transform-rotate-right">
                                 <div class="tape-effect"></div>
                                 <div class="card-body d-flex flex-column justify-content-between p-2">
                                     <div>
-                                        <h5 class="card-title font-handwriting-bold">Stage 2026</h5>
-                                        <p class="card-text font-handwriting">Application lourde et web de gestion complète pour auto-école (Directeurs, Formateurs et Élèves).</p>
+                                        <h5 class="card-title font-handwriting-bold">Stage CNAM 2026</h5>
+                                        <p class="card-text font-handwriting">Stage au sein de l'équipe informatique de la Caisse Nationale d'Assurance Maladie de Dijon.</p>
                                     </div>
                                     <a class="btn btn-outline-dark rounded-pill font-handwriting mt-4 align-self-start shadow-sm" data-bs-toggle="offcanvas" data-bs-target="#infoProjet2" aria-controls="infoProjet2">En savoir plus</a>
                                 </div>
@@ -384,7 +385,7 @@
 
                             <div class="offcanvas offcanvas-end border-0 shadow-lg w-100 w-md-75" tabindex="-1" id="infoProjet2" aria-labelledby="infoProjet2">
                                 <div class="offcanvas-header border-bottom-0 p-4">
-                                    <h5 class="offcanvas-title font-handwriting-bold fs-3" id="titleProjet2">Stage 2026</h5>
+                                    <h5 class="offcanvas-title font-handwriting-bold fs-3" id="titleProjet2">Stage CNAM 2026</h5>
                                     <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
                                 </div>
                                 
@@ -394,39 +395,40 @@
                                         <div id="carouselProject2" class="carousel slide" data-bs-ride="carousel" data-bs-touch="true">
                                             <div class="carousel-inner">
                                                 <div class="carousel-item active" data-bs-interval="10000">
-                                                    <img src="img/easy2drive/directeur/directeur.png" class="d-block w-100" alt="Dashboard Easy2Drive">
+                                                    <img src="img/stage/tutoDjangoSondage.png" class="d-block w-100" alt="Dashboard Easy2Drive">
                                                     <div class="polaroid-caption mt-3">
 
-                                                        <h6 class="font-handwriting-bold">Directeur:</h6>
+                                                        <h6 class="font-handwriting-bold">Tutoriel Django</h6>
                                                         <p class="font-handwriting text-muted small mb-0">
-                                                            Le dashboard du directeur lui donne un accès à toutes les informations nécessaires pour gérer son auto-école, les formateurs et les élèves.
+                                                            Ce tutoriel a pour but de présenter les fonctionnalités de Django et de montrer comment créer une application web simple.
+                                                            Création d'un formulaire auto-généré pour un sondage avec un modèle de base de données, une vue et un template.
                                                         </p>
                                                     </div>
                                                 </div>
                                                 <div class="carousel-item">
-                                                    <img src="img/easy2drive/directeur/listeEleve.png" class="d-block w-100" alt="Planning Auto-école">
+                                                    <img src="img/stage/creationQuestion.png" class="d-block w-100" alt="Planning Auto-école">
                                                     <div class="polaroid-caption mt-3">
-                                                        <h6 class="font-handwriting-bold">Directeur:</h6>
+                                                        <h6 class="font-handwriting-bold">Tutoriel Django</h6>
                                                         <p class="font-handwriting text-muted small mb-0">
-                                                            La gestion des élèves permet d'ajouter un élève avec ses informations et/ou de les modifier.
+                                                            Formulaire permettant la création d'une question enregistré en base et affiché dans la liste des questions.
                                                         </p>
                                                     </div>
                                                 </div>
                                                 <div class="carousel-item">
-                                                    <img src="img/easy2drive/directeur/listeFormateur.png" class="d-block w-100" alt="Planning Auto-école">
+                                                    <img src="img/stage/Question.png" class="d-block w-100" alt="Planning Auto-école">
                                                     <div class="polaroid-caption mt-3">
-                                                        <h6 class="font-handwriting-bold">Directeur:</h6>
+                                                        <h6 class="font-handwriting-bold">Tutoriel Django</h6>
                                                         <p class="font-handwriting text-muted small mb-0">
-                                                            La gestion des formateurs permet d'ajouter un formateur avec ses informations et/ou de les modifier.
+                                                            Possibilité de répondre à la question créée.
                                                         </p>
                                                     </div>
                                                 </div>
                                                 <div class="carousel-item">
-                                                    <img src="img/easy2drive/directeur/attributionEleve.png" class="d-block w-100" alt="Planning Auto-école">
+                                                    <img src="img/stage/Vote.png" class="d-block w-100" alt="Planning Auto-école">
                                                     <div class="polaroid-caption mt-3">
-                                                        <h6 class="font-handwriting-bold">Directeur:</h6>
+                                                        <h6 class="font-handwriting-bold">Tutoriel Django</h6>
                                                         <p class="font-handwriting text-muted small mb-0">
-                                                            L'attribution des élèves aux formateurs est facilitée par le système, un formateur peut avoir plusieurs élèves et un élève ne peut avoir qu'un seul formateur.
+                                                            Affichage du résultat du sondage avec le nombre de votes pour chaque réponse.
                                                         </p>
                                                     </div>
                                                 </div>
