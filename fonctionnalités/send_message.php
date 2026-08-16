@@ -1,6 +1,7 @@
 <?php
 declare(strict_types=1);
 session_start();
+
 require 'PHPMailer/src/PHPMailer.php';
 require 'PHPMailer/src/SMTP.php';
 require 'PHPMailer/src/Exception.php';
@@ -8,53 +9,50 @@ require 'PHPMailer/src/Exception.php';
 use PHPMailer\PHPMailer\PHPMailer;
 use PHPMailer\PHPMailer\Exception;
 
-// 1. On n'accepte que les requêtes POST
 if ($_SERVER['REQUEST_METHOD'] !== 'POST') {
- http_response_code(405);
- die('Méthode non autorisée.');
+    http_response_code(405);
+    exit('Méthode non autorisée.');
 }
-// 2. Vérification du jeton CSRF
-if ( empty($_POST['csrf_token']) || empty($_SESSION['csrf_token']) || !hash_equals($_SESSION['csrf_token'], $_POST['csrf_token'])) {
+
+// 1. Vérification CSRF
+if (empty($_POST['csrf_token']) || empty($_SESSION['csrf_token']) || !hash_equals($_SESSION['csrf_token'], $_POST['csrf_token'])) {
     http_response_code(403);
-    die("Requête invalide.");
+    exit("Requête invalide.");
 }
 
-// 3. Honeypot anti-bot
-//Si champ invisible est rempli -> c'est un bot, on ignore
+// 2. Honeypot anti-bot
 if (!empty($_POST['site_web'])) {
- // On fait comme si tout s'était bien passé pour ne pas donner d'indice au bot, mais on n'envoie rien.
- header('Location: index.php');
- exit;
+    header('Location: contact.php');
+    exit;
 }
 
-// --- 4. Récupération brute des données ---
+// 3. Rate Limiting (1 envoi toutes les 60 secondes)
+if (isset($_SESSION['last_email_time']) && (time() - $_SESSION['last_email_time']) < 60) {
+    $_SESSION['error'] = "Veuillez attendre une minute avant d'envoyer un nouveau message.";
+    $_SESSION['old'] = $_POST;
+    header('Location: contact.php');
+    exit;
+}
+
+// 4. Récupération et nettoyage
 $nom = trim($_POST['name'] ?? '');
 $prenom = trim($_POST['first_name'] ?? '');
 $email = trim($_POST['email'] ?? '');
 $message = trim($_POST['message'] ?? '');
-$sujets = $_POST['subject'] ?? []; // tableau, car <select multiple>
+$sujets = $_POST['subject'] ?? [];
 
-// --- 5. Validation ---
+// 5. Validation
 $erreurs = [];
-if ($nom === '' || mb_strlen($nom) > 30) {
- $erreurs[] = "Le nom est invalide.";
-}
-if ($prenom === '' || mb_strlen($prenom) > 30) {
- $erreurs[] = "Le prénom est invalide.";
-}
-if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
- $erreurs[] = "L'adresse email est invalide.";
-}
-if ($message === '' || mb_strlen($message) > 5000) {
- $erreurs[] = "Le message est vide ou trop long.";
-}
+if ($nom === '' || mb_strlen($nom) > 30) $erreurs[] = "Le nom est invalide (30 caractères max).";
+if ($prenom === '' || mb_strlen($prenom) > 30) $erreurs[] = "Le prénom est invalide (30 caractères max).";
+if (!filter_var($email, FILTER_VALIDATE_EMAIL)) $erreurs[] = "L'adresse email est invalide.";
+if ($message === '' || mb_strlen($message) > 5000) $erreurs[] = "Le message est vide ou dépasse 5000 caractères.";
 
-// Liste blanche des sujets autorisés
 $sujets_autorises = [
- 'stage' => "Proposition de stage",
- 'alternance' => "Proposition d'alternance",
- 'question' => "Question générale",
- 'autre' => "Autre",
+    'stage' => "Proposition de stage",
+    'alternance' => "Proposition d'alternance",
+    'question' => "Question générale",
+    'autre' => "Autre",
 ];
 
 $sujets_valides = [];
@@ -64,44 +62,56 @@ foreach ((array) $sujets as $s) {
     }
 }
 if (empty($sujets_valides)) {
- $erreurs[] = "Merci de choisir un sujet.";
-}
-if (!empty($erreurs)) {
- // On arrête tout et on renvoie les erreurs
- die(implode('<br>', array_map('htmlspecialchars', $erreurs)));
+    $erreurs[] = "Merci de choisir au moins un sujet.";
 }
 
-// --- 6. Envoi du mail ---
+// En cas d'erreur : stockage en session et redirection
+if (!empty($erreurs)) {
+    $_SESSION['errors'] = $erreurs;
+    $_SESSION['old'] = $_POST;
+    header('Location: contact.php');
+    exit;
+}
+
+// 6. Envoi du mail
 $mail = new PHPMailer(true);
 try {
- // --- Config SMTP ---
- $mail->isSMTP();
- $mail->Host = 'smtp.exemple.fr';
- $mail->SMTPAuth = true;
- $mail->Username = 'contact@tonsite.fr';
- $mail->Password = getenv('SMTP_PASSWORD'); // jamais en clair dans le code !
- $mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS;
- $mail->Port = 587;
- $mail->CharSet = 'UTF-8';
- // --- Expéditeur / destinataire ---
- $mail->setFrom('contact@tonsite.fr', 'Formulaire de contact');
- $mail->addAddress('toi@tonsite.fr');
- // Répondre directement à l'utilisateur (après validation de son email)
- $mail->addReplyTo($email, $prenom . ' ' . $nom);
- // --- Contenu ---
- $mail->isHTML(false); // texte simple : plus sûr, pas besoin d'échapper pour le XSS
- $mail->Subject = implode(', ', $sujets_valides); // objet = sujet(s) choisi(s)
- $mail->Body =
- "Nouveau message depuis le formulaire de contact\n\n" .
- "Nom : $nom\n" .
- "Prénom : $prenom\n" .
- "Email : $email\n" .
- "Sujet : " . implode(', ', $sujets_valides) . "\n\n" .
- "Message :\n$message\n";
- $mail->send();
- header('Location: index.php'); 
- exit;
+    $mail->isSMTP();
+    $mail->Host = 'smtp.gmail.com';
+    $mail->SMTPAuth = true;
+    $mail->Username = 'nohan.portfolio@gmail.com';
+    $mail->Password = getenv('SMTP_PASSWORD');
+    $mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS;
+    $mail->Port = 587;
+    $mail->CharSet = 'UTF-8';
+
+    $mail->setFrom('nohan.portfolio@gmail.com', 'Formulaire de contact');
+    $mail->addAddress('nohan.portfolio@gmail.com');
+    $mail->addReplyTo($email, $prenom . ' ' . $nom);
+
+    $mail->isHTML(false);
+    $mail->Subject = "Contact : " . implode(', ', $sujets_valides);
+    $mail->Body = 
+        "Nouveau message depuis le formulaire de contact\n\n" .
+        "Nom : $nom\n" .
+        "Prénom : $prenom\n" .
+        "Email : $email\n" .
+        "Sujet(s) : " . implode(', ', $sujets_valides) . "\n\n" .
+        "Message :\n$message\n";
+
+    $mail->send();
+
+    // Mettre à jour le timestamp et réinitialiser le token CSRF
+    $_SESSION['last_email_time'] = time();
+    unset($_SESSION['csrf_token']);
+    $_SESSION['success'] = "Votre message a bien été envoyé !";
+
+    header('Location: contact.php');
+    exit;
 } catch (Exception $e) {
- error_log("Erreur mail : {$mail->ErrorInfo}");
- die("Le message n'a pas pu être envoyé, réessaie plus tard.");
+    error_log("Erreur mail : {$mail->ErrorInfo}");
+    $_SESSION['error'] = "Le message n'a pas pu être envoyé, réessayez plus tard.";
+    $_SESSION['old'] = $_POST;
+    header('Location: contact.php');
+    exit;
 }
