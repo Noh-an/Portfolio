@@ -376,7 +376,7 @@
                                 <div class="card-body d-flex flex-column justify-content-between p-2">
                                     <div>
                                         <h5 class="card-title font-handwriting-bold">Stage CNAM 2026</h5>
-                                        <p class="card-text font-handwriting">Stage au sein de l'équipe informatique de la Caisse Nationale d'Assurance Maladie de Dijon.</p>
+                                        <p class="card-text font-handwriting">Stage au sein de l'équipe informatique de la Caisse Nationale d'Assurance Maladie de Dijon. Formulaire auto-généré avec le framework python Django et controles de saisie avec javaScript.</p>
                                     </div>
                                     <a class="btn btn-outline-dark rounded-pill font-handwriting mt-4 align-self-start shadow-sm" data-bs-toggle="offcanvas" data-bs-target="#infoProjet3" aria-controls="infoProjet3">En savoir plus</a>
                                 </div>
@@ -432,83 +432,92 @@
                                                     </div>
                                                 </div>
                                                 <div class="carousel-item">
-                                                    <img src="img/easy2drive/directeur/informationDirecteur.png" class="d-block w-100" alt="Planning Auto-école">
+                                                    <img src="img/stage/controleTrigramme.png" class="d-block w-100" alt="Planning Auto-école">
                                                     <div class="polaroid-caption mt-3">
-                                                        <h6 class="font-handwriting-bold">Directeur:</h6>
-                                                        <p class="font-handwriting text-muted small mb-0">
-                                                            Le directeur peut modifier ses informations personnelles et son mot de passe.
+                                                        <h6 class="font-handwriting-bold">Controle javaScript</h6>
+                                                        <p class="font-handwriting text-muted small mb-0"> 
+                                                            Vérifier que les 3 premières lettres du champs 1 soient identiques aux 3 dernières lettres du champs 2, sinon afficher un message d'erreur sur une interface de test. 
                                                         </p>
                                                     </div>
                                                 </div>
                                                 <div class="carousel-item">
-                                                    <img src="img/easy2drive/directeur/infoAutoEcoleDirecteur.png" class="d-block w-100" alt="Planning Auto-école">
+                                                    <img src="img/stage/popUpTrigramme.png" class="d-block w-100" alt="Planning Auto-école">
                                                     <div class="polaroid-caption mt-3">
-                                                        <h6 class="font-handwriting-bold">Directeur:</h6>
+                                                        <h6 class="font-handwriting-bold">Controle javaScript</h6>
                                                         <p class="font-handwriting text-muted small mb-0">
-                                                            Le directeur peut modifier les informations de son auto-école.
+                                                            Résultat en cas d'erreur.
                                                         </p>
                                                     </div>
                                                 </div>
                                                 <div class="carousel-item">
-                                                    <img src="img/easy2drive/formateur/formateur.png" class="d-block w-100" alt="Planning Auto-école">
+                                                    <img src="img/stage/controleVLAN.png" class="d-block w-100" alt="Planning Auto-école">
                                                     <div class="polaroid-caption mt-3">
-                                                        <h6 class="font-handwriting-bold">Formateur:</h6>
+                                                        <h6 class="font-handwriting-bold">Insertion javaScript</h6>
                                                         <p class="font-handwriting text-muted small mb-0">
-                                                            Le formateur n'a qu'un droit de lecture, il peut consulter ses informations, les informations de ses élèves et de son auto-école.
+                                                            Insère une valeur dans le champs 2 en fonction de la valeur rattachée dans le champs 1.
                                                         </p>
                                                     </div>
                                                 </div>
                                                 <div class="carousel-item">
-                                                    <img src="img/easy2drive/formateur/listeEleveFormateur.png" class="d-block w-100" alt="Planning Auto-école">
+                                                    <img src="img/stage/controleVlanResultat.png" class="d-block w-100" alt="Planning Auto-école">
                                                     <div class="polaroid-caption mt-3">
-                                                        <h6 class="font-handwriting-bold">Formateur:</h6>
+                                                        <h6 class="font-handwriting-bold">Insertion javaScript</h6>
                                                         <p class="font-handwriting text-muted small mb-0">
-                                                            Cette page affiche la liste de ses élèves et leurs informations.
+                                                            Résultat.
                                                         </p>
                                                     </div>
                                                 </div>
                                                 <div class="carousel-item">
-                                                    <img src="img/easy2drive/formateur/informationFormateur.png" class="d-block w-100" alt="Planning Auto-école">
+                                                    <img src="img/stage/vmProd1.png" class="d-block w-100" alt="Planning Auto-école">
                                                     <div class="polaroid-caption mt-3">
-                                                        <h6 class="font-handwriting-bold">Formateur:</h6>
+                                                        <h6 class="font-handwriting-bold">Insertion javaScript</h6>
                                                         <p class="font-handwriting text-muted small mb-0">
-                                                            Le formateur peut changer son mot de passe à tout moment.
+                                                            Insère une valeur dans le champs 2 en fonction de la valeur rattachée dans le champs 1.
                                                         </p>
                                                     </div>
                                                 </div>
                                                 <div class="carousel-item">
-                                                    <img src="img/easy2drive/formateur/autoEcoleFormateur.png" class="d-block w-100" alt="Planning Auto-école">
+                                                    <img src="img/stage/vmProdPR.png" class="d-block w-100" alt="Planning Auto-école">
                                                     <div class="polaroid-caption mt-3">
-                                                        <h6 class="font-handwriting-bold">Formateur:</h6>
+                                                        <h6 class="font-handwriting-bold">Insertion javaScript</h6>
                                                         <p class="font-handwriting text-muted small mb-0">
-                                                            Le formateur peut consulter les informations de son auto-école.
+                                                            Résultat de l'insertion.
                                                         </p>
                                                     </div>
                                                 </div>
                                                 <div class="carousel-item">
-                                                    <img src="img/easy2drive/eleve/eleve.png" class="d-block w-100" alt="Planning Auto-école">
+                                                    <img src="img/stage/windows.png" class="d-block w-100" alt="Planning Auto-école">
                                                     <div class="polaroid-caption mt-3">
-                                                        <h6 class="font-handwriting-bold">Élève:</h6>
+                                                        <h6 class="font-handwriting-bold">Insertion javaScript</h6>
                                                         <p class="font-handwriting text-muted small mb-0">
-                                                            Le dashboard de l'élève lui permet de consulter ses informations, son formateur et son auto-école. Droit de lecture uniquement.
+                                                            Au clique sur le texte linux, modifie le hostname de la VM pour passer sur linux.
                                                         </p>
                                                     </div>
                                                 </div>
                                                 <div class="carousel-item">
-                                                    <img src="img/easy2drive/eleve/infoEleve.png" class="d-block w-100" alt="Planning Auto-école">
+                                                    <img src="img/stage/windows.png" class="d-block w-100" alt="Planning Auto-école">
                                                     <div class="polaroid-caption mt-3">
-                                                        <h6 class="font-handwriting-bold">Élève:</h6>
+                                                        <h6 class="font-handwriting-bold">Insertion javaScript</h6>
                                                         <p class="font-handwriting text-muted small mb-0">
-                                                            Informations personnelles de l'élève et modification du mot de passe.
+                                                            Au clique sur le texte windows, modifie le hostname de la VM pour passer sur windows.
                                                         </p>
                                                     </div>
                                                 </div>
                                                 <div class="carousel-item">
-                                                    <img src="img/easy2drive/eleve/infoFormateurEleve.png" class="d-block w-100" alt="Planning Auto-école">
+                                                    <img src="img/stage/projet1.png" class="d-block w-100" alt="Planning Auto-école">
                                                     <div class="polaroid-caption mt-3">
-                                                        <h6 class="font-handwriting-bold">Élève:</h6>
+                                                        <h6 class="font-handwriting-bold">Interface du projet</h6>
                                                         <p class="font-handwriting text-muted small mb-0">
-                                                            L'élève peut consulter les informations de son formateur.
+                                                            Interface via formulaire auto-généré par Django pour remplir les informations des VM et faciliter leurs créations.
+                                                        </p>
+                                                    </div>
+                                                </div>
+                                                <div class="carousel-item">
+                                                    <img src="img/stage/projet2.png" class="d-block w-100" alt="Planning Auto-école">
+                                                    <div class="polaroid-caption mt-3">
+                                                        <h6 class="font-handwriting-bold">Interface du projet</h6>
+                                                        <p class="font-handwriting text-muted small mb-0">
+                                                            Suite de l'interface avec bouton de création, suppression et modification des VM.
                                                         </p>
                                                     </div>
                                                 </div>
