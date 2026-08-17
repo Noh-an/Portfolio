@@ -49,7 +49,7 @@ include 'head.php';
                         </div>
                     <?php endif; ?>
 
-                    <form action="send_message.php" method="post">
+                    <form action="fonctionnalites/send_message.php" method="post">
                         <fieldset>
                             <!-- Honeypot -->
                             <div style="position: absolute; left: -9999px;" aria-hidden="true">
