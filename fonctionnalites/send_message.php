@@ -107,7 +107,7 @@ try {
     unset($_SESSION['csrf_token']);
     $_SESSION['success'] = "Votre message a bien été envoyé !";
 
-    header('Location: ../index.php');
+    header('Location: ../contact.php');
     exit;
 } catch (Exception $e) {
     error_log("Erreur mail : {$mail->ErrorInfo}");
