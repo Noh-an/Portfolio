@@ -1,7 +1,7 @@
 <?php
 declare(strict_types=1);
 session_start();
-
+require_once __DIR__ . '/../config.php';
 require __DIR__ . '/../PHPMailer/src/PHPMailer.php';
 require __DIR__ . '/../PHPMailer/src/SMTP.php';
 require __DIR__ . '/../PHPMailer/src/Exception.php';
@@ -78,12 +78,12 @@ if (!empty($erreurs)) {
 $mail = new PHPMailer(true);
 try {
     $mail->isSMTP();
-    $mail->Host = 'smtp.gmail.com';
+    $mail->Host = SMTP_HOST;
     $mail->SMTPAuth = true;
-    $mail->Username = 'nohan.portfolio@gmail.com';
-    $mail->Password = getenv('SMTP_PASSWORD');
+    $mail->Username = SMTP_USER;
+    $mail->Password = SMTP_PASS;
     $mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS;
-    $mail->Port = 587;
+    $mail->Port = SMTP_PORT;
     $mail->CharSet = 'UTF-8';
 
     $mail->setFrom('nohan.portfolio@gmail.com', 'Formulaire de contact');
