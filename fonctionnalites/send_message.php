@@ -23,7 +23,7 @@ if (empty($_POST['csrf_token']) || empty($_SESSION['csrf_token']) || !hash_equal
 
 // 2. Honeypot anti-bot
 if (!empty($_POST['site_web'])) {
-    header('Location: contact.php');
+    header('Location: ../contact.php');
     exit;
 }
 
@@ -31,7 +31,7 @@ if (!empty($_POST['site_web'])) {
 if (isset($_SESSION['last_email_time']) && (time() - $_SESSION['last_email_time']) < 60) {
     $_SESSION['error'] = "Veuillez attendre une minute avant d'envoyer un nouveau message.";
     $_SESSION['old'] = $_POST;
-    header('Location: contact.php');
+    header('Location: ../contact.php');
     exit;
 }
 
@@ -70,7 +70,7 @@ if (empty($sujets_valides)) {
 if (!empty($erreurs)) {
     $_SESSION['errors'] = $erreurs;
     $_SESSION['old'] = $_POST;
-    header('Location: contact.php');
+    header('Location: ../contact.php');
     exit;
 }
 
@@ -107,12 +107,12 @@ try {
     unset($_SESSION['csrf_token']);
     $_SESSION['success'] = "Votre message a bien été envoyé !";
 
-    header('Location: contact.php');
+    header('Location: ../index.php');
     exit;
 } catch (Exception $e) {
     error_log("Erreur mail : {$mail->ErrorInfo}");
     $_SESSION['error'] = "Le message n'a pas pu être envoyé, réessayez plus tard.";
     $_SESSION['old'] = $_POST;
-    header('Location: contact.php');
+    header('Location: ../contact.php');
     exit;
 }
