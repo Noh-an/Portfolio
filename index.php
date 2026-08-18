@@ -7,13 +7,11 @@
         <section id="introduction">
             <div class="container">
 
-                <!-- row : 2 colonnes côte à côte sur md+, empilées sur mobile -->
-                <!-- align-items-center : centrage vertical des deux colonnes  -->
-                <!-- gy-4 : espace vertical entre les colonnes quand elles s'empilent sur mobile -->
+            
                 <div class="row align-items-center gy-4">
 
                     <!-- Colonne TEXTE — gauche (7/12 sur md+, pleine largeur sur mobile) -->
-                    <div class="col-12 col-md-7">
+                    <div class="col-12 col-md-6">
                         <div class="intro">
                             <p class="lean">Bonjour, je suis</p>
                             <h1 class="title-intro">Nohan Gagnor</h1>

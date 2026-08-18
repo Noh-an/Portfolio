@@ -21,6 +21,7 @@ body, input, textarea, button, select {
 
 
 body {
+  overflow-x: hidden;
   background-color: #f3f1ec;
   background-image:
     /* Lignes horizontales séyès */
@@ -219,24 +220,67 @@ header::after {
 }
 
 
-/* ---- Responsive mobile ---- */
-@media (max-width: 600px) {
-  header {
-    padding: 16px 20px 12px;
-    margin: 30px 10px 20px;
-  }
-
-  .logo {
+.hamburger-btn {
+    background: transparent;
+    border: 2px solid #1e1810;
+    border-radius: 4px;
+    font-family: 'Caveat', cursive;
     font-size: 1.5rem;
-  }
+    line-height: 1;
+    padding: 2px 12px;
+    color: #1e1810;
+    cursor: pointer;
+}
 
-  .main-nav {
+.main-nav-mobile {
+    display: flex;
+    flex-direction: column;
     gap: 14px;
-  }
+    margin-top: 16px;
+    padding-top: 14px;
+    border-top: 1px dashed rgba(30, 24, 16, 0.3);
+}
 
-  .main-nav a {
-    font-size: 1.1rem;
-  }
+.main-nav-mobile a {
+    font-family: 'Caveat', cursive;
+    font-size: 1.4rem;
+    font-weight: 700;
+    color: #3a3020;
+    text-decoration: none;
+}
+
+@media (max-width: 600px) {
+    /* le scotch est trop grand une fois le header rétréci */
+    header::before { left: -20px; width: 90px; height: 32px; }
+    header::after  { right: -30px; width: 90px; height: 32px; }
+
+    header {
+      margin: 16px 14px 20px;
+      padding: 20px 20px 16px;
+    }
+
+    footer::before { left: -20px; width: 90px; height: 32px; }
+    footer::after  { right: -30px; width: 90px; height: 32px; }
+
+    footer {
+      margin: 30px 14px 14px;
+      padding: 16px;
+    }
+
+    .footer-content {
+      text-align: center;
+    }
+
+    .footer-links ul,
+    .footer-info ul {
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 10px;
+    }
+
+    .footer-links li {
+      margin: 0 8px;
+    }
 }
 
 /* --------------------------------------------
@@ -258,7 +302,7 @@ header::after {
 }
 
 .title-intro {
-  font-size : 6rem;
+  font-size : clamp(2.6rem, 11vw, 6rem);
   font-family: 'Caveat', cursive;
   margin-bottom: 24px;
   position: relative;
@@ -392,7 +436,7 @@ strong {
     object-position: center top; /* garde le visage cadré */
     border      : 1px solid #000000;
 
-    transform       : scale(1.8) translateY(-65px); /* <-- LIGNE À AJOUTER (ajuste la valeur entre 1.1 et 1.5 selon le zoom désiré) */
+    transform       : scale(1.8) translateY(-17%); /* zoom l'image et la décale vers le haut sur l'axe y */
 }
 
 /* Légende manuscrite dans la bande blanche */
@@ -423,6 +467,27 @@ strong {
     .polaroid {
         transform: rotate(1.5deg);
         max-width: 220px;
+        margin: 0 auto;
+    }
+
+    .intro {
+        margin: 20px 0 24px;
+        padding: 20px;
+    }
+
+    .title-intro {
+        display: block;
+    }
+
+    .lean,
+    .descr-intro {
+        margin-left: 4px;
+    }
+
+    .boutons {
+        margin-left: 4px;
+        flex-wrap: wrap;
+        gap: 12px;
     }
 }
 
@@ -447,6 +512,21 @@ strong {
 
 .layout-column.info {
   margin-top: 50px;
+}
+
+@media (max-width: 768px) {
+  .layout-container {
+    grid-template-columns: 1fr;
+    padding: 0 16px;
+  }
+
+  .layout-column.info {
+    margin-top: 10px;
+  }
+
+  .info-card {
+    width: 100%;
+  }
 }
 
 #presentation .card {
@@ -547,6 +627,23 @@ strong {
 
 #competences h2 {
   margin: 0 0 30px 95px;
+}
+
+@media (max-width: 600px) {
+  #competences h2 {
+    margin: 0 0 24px 16px;
+  }
+
+  .skills-container {
+    justify-content: center;
+    gap: 20px;
+  }
+
+  .skills-container .card {
+    min-width: unset;
+    width: 100%;
+    max-width: 320px;
+  }
 }
 
 #competences .card h4 {
@@ -960,8 +1057,13 @@ strong {
 
 /* Responsive */
 @media (max-width: 768px) {
+    #cv {
+        margin: 16px 12px;
+    }
+
     .cv-content {
         grid-template-columns: 1fr;
+        padding: 0;
     }
  
     .cv-left {
@@ -973,6 +1075,35 @@ strong {
  
     .cv-right {
         padding-left: 0;
+    }
+
+    .cv-header {
+        flex-direction: column;
+        text-align: center;
+        gap: 10px;
+    }
+
+    .cv-header-info {
+        order: -1;
+    }
+
+    .cv-contact {
+        margin-left: 0;
+        align-items: center;
+    }
+
+    .download-cv {
+        justify-content: center;
+        width: 100%;
+    }
+
+    .cv-item {
+        padding: 16px;
+    }
+
+    .cv-item .cv-header {
+        flex-direction: row;
+        text-align: left;
     }
 }
 
@@ -1083,6 +1214,25 @@ fieldset {
   border-left: 1px solid rgba(255, 255, 255, 0.4);
   padding-top: 25px;
   padding-bottom: 25px;
+}
+
+@media (max-width: 768px) {
+  .contact-container {
+    grid-template-columns: 1fr;
+    padding: 0 16px;
+  }
+
+  .contact-form,
+  #links {
+    transform: rotate(0deg);
+  }
+}
+
+@media (max-width: 480px) {
+  #name-fields {
+    flex-direction: column;
+    gap: 8px;
+  }
 }
 
 /* --------------------------------------------
@@ -1244,6 +1394,3 @@ footer::after {
 .footer-links a:hover::after {
   transform: scaleX(1) rotate(-1.2deg);
 }
-
-
-
