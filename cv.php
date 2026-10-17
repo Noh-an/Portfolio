@@ -10,8 +10,8 @@
                 <!-- Header en haut -->
                 <div class="cv-header">
                     <div class="download-cv">
-                        <a href="img/Nohan GAGNOR.pdf" target="_blank">
-                            <button>Télécharger mon CV</button>
+                        <a href="img/Nohan GAGNOR.pdf" target="_blank" class="btn-download-cv">
+                            Télécharger mon CV
                         </a>
                     </div>
                     <div class="cv-logo">

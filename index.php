@@ -85,7 +85,7 @@
                 <h2>Compétences</h2>
             <div class="skills-container">  
                 <div class="card languages">
-                    <img accesskey="" src="">
+                    
                     <h4>Languages</h4>
 
                     <ul>
@@ -99,7 +99,7 @@
                 </div>
 
                 <div class="card bdd">
-                    <img accesskey="" src="">
+                    
                     <h4>Base de données</h4>
 
                     <ul>
@@ -110,7 +110,7 @@
                 </div>
 
                 <div class="card frameworks">
-                    <img accesskey="" src="">
+                    
                     <h4>Frameworks et outils</h4>
 
                     <ul>
@@ -124,7 +124,7 @@
                 </div>
 
                 <div class="card langue">
-                    <img accesskey="" src="">
+                   
                     <h4>Langues</h4>
 
                     <ul>
