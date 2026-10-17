@@ -86,7 +86,7 @@
             <div class="skills-container">  
                 <div class="card languages">
                     
-                    <h4>Languages</h4>
+                    <h4>Langages</h4>
 
                     <ul>
                         <li>HTML</li>
