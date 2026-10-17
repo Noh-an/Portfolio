@@ -38,8 +38,8 @@
                                 <img src="./img/pdpNohan.jpg" alt="Photo de Nohan Gagnor">
                             </div>
                             <div class="social-links">
-                                <a href="https://www.linkedin.com/in/nohan-gagnor-228a36354" target="_blank" class="social-link">LinkedIn</a>
-                                <a href="https://github.com/Noh-an" target="_blank" class="social-git">GitHub</a>
+                                <a id="linkedin" href="https://www.linkedin.com/in/nohan-gagnor-228a36354" target="_blank" class="social-link">LinkedIn</a>
+                                <a id="github" href="https://github.com/Noh-an" target="_blank" class="social-git">GitHub</a>
                             </div>
                         </div>
                     </div>
@@ -165,7 +165,7 @@
                                 <div class="offcanvas-body p-4 d-flex flex-column gap-4 align-items-center">
                                     
                                     <div class="polaroid-container">
-                                        <div id="carouselProject1" class="carousel slide" data-bs-ride="carousel" data-bs-touch="true">
+                                        <div id="carouselProject1" class="carousel slide carousel-dark" data-bs-ride="carousel" data-bs-touch="true">
                                             <div class="carousel-inner">
                                                 <div class="carousel-item active" data-bs-interval="10000">
                                                     <img src="img/connexion.png" class="d-block w-100" alt="Page de connexion">
@@ -196,11 +196,11 @@
                                             </div>
                                             
                                             <button class="carousel-control-prev" type="button" data-bs-target="#carouselProject1" data-bs-slide="prev">
-                                                <span class="carousel-control-prev-icon" aria-hidden="true" style="filter: invert(1);"></span>
+                                                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
                                                 <span class="visually-hidden">Previous</span>
                                             </button>
                                             <button class="carousel-control-next" type="button" data-bs-target="#carouselProject1" data-bs-slide="next">
-                                                <span class="carousel-control-next-icon" aria-hidden="true" style="filter: invert(1);"></span>
+                                                <span class="carousel-control-next-icon" aria-hidden="true"></span>
                                                 <span class="visually-hidden">Next</span>
                                             </button>
                                         </div>
@@ -355,11 +355,11 @@
                                             </div>
                                             
                                             <button class="carousel-control-prev" type="button" data-bs-target="#carouselProject2" data-bs-slide="prev">
-                                                <span class="carousel-control-prev-icon" aria-hidden="true" style="filter: invert(1);"></span>
+                                                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
                                                 <span class="visually-hidden">Previous</span>
                                             </button>
                                             <button class="carousel-control-next" type="button" data-bs-target="#carouselProject2" data-bs-slide="next">
-                                                <span class="carousel-control-next-icon" aria-hidden="true" style="filter: invert(1);"></span>
+                                                <span class="carousel-control-next-icon" aria-hidden="true"></span>
                                                 <span class="visually-hidden">Next</span>
                                             </button>
                                         </div>
@@ -389,7 +389,7 @@
                                 <div class="offcanvas-body p-4 d-flex flex-column gap-4 align-items-center">
                                     
                                     <div class="polaroid-container shadow">
-                                        <div id="carouselProject2" class="carousel slide" data-bs-ride="carousel" data-bs-touch="true">
+                                        <div id="carouselProject3" class="carousel slide carousel-dark" data-bs-ride="carousel" data-bs-touch="true">
                                             <div class="carousel-inner">
                                                 <div class="carousel-item active" data-bs-interval="10000">
                                                     <img src="img/stage/tutoDjangoSondage.png" class="d-block w-100" alt="Dashboard Easy2Drive">
@@ -521,12 +521,12 @@
                                                 </div>
                                             </div>
                                             
-                                            <button class="carousel-control-prev" type="button" data-bs-target="#carouselProject2" data-bs-slide="prev">
-                                                <span class="carousel-control-prev-icon" aria-hidden="true" style="filter: invert(1);"></span>
+                                            <button class="carousel-control-prev" type="button" data-bs-target="#carouselProject3" data-bs-slide="prev">
+                                                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
                                                 <span class="visually-hidden">Previous</span>
                                             </button>
-                                            <button class="carousel-control-next" type="button" data-bs-target="#carouselProject2" data-bs-slide="next">
-                                                <span class="carousel-control-next-icon" aria-hidden="true" style="filter: invert(1);"></span>
+                                            <button class="carousel-control-next" type="button" data-bs-target="#carouselProject3" data-bs-slide="next">
+                                                <span class="carousel-control-next-icon" aria-hidden="true"></span>
                                                 <span class="visually-hidden">Next</span>
                                             </button>
                                         </div>

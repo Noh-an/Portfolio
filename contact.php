@@ -94,6 +94,8 @@ include 'head.php';
                             <label for="message">Message :</label><br>
                             <textarea id="message" name="message" rows="5" maxlength="5000" required><?= htmlspecialchars($old['message'] ?? '') ?></textarea><br><br>
                             
+                            <p class="rgpd-notice small text-muted" style="font-size: 0.85rem; margin-top: 10px; line-height: 1.4;">🔒 <strong>Protection des données :</strong> Les informations transmises via ce formulaire sont uniquement destinées à Nohan Gagnor afin de répondre à votre demande de contact. Elles ne sont jamais cédées à des tiers et sont conservées pendant une durée maximale de 1 an. Conformément au RGPD, vous disposez d'un droit d'accès, de rectification et de suppression en écrivant à <em>nohan.portfolio@gmail.com</em>.
+                            </p>
                             <button type="submit">Envoyer</button>
                         </fieldset>
                     </form>
