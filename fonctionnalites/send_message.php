@@ -36,10 +36,11 @@ if (isset($_SESSION['last_email_time']) && (time() - $_SESSION['last_email_time'
 }
 
 // 4. Récupération et nettoyage
-$nom = trim($_POST['name'] ?? '');
-$prenom = trim($_POST['first_name'] ?? '');
-$email = trim($_POST['email'] ?? '');
-$message = trim($_POST['message'] ?? '');
+// On retire les espaces superflus ET les sauts de ligne (\r, \n) pour neutraliser toute injection d'en-tête CRLF
+$nom = str_replace(["\r", "\n"], '', trim($_POST['name'] ?? ''));
+$prenom = str_replace(["\r", "\n"], '', trim($_POST['first_name'] ?? ''));
+$email = str_replace(["\r", "\n"], '', trim($_POST['email'] ?? ''));
+$message = trim($_POST['message'] ?? ''); 
 $sujets = $_POST['subject'] ?? [];
 
 // 5. Validation

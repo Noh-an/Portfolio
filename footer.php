@@ -1,4 +1,3 @@
-<?php include 'head.php'; ?>
 <footer>
     <div class="footer-content">
         <div class="footer-links">
@@ -6,6 +5,7 @@
                 <li><a href="index.php">Accueil</a></li>
                 <li><a href="cv.php">CV</a></li>
                 <li><a href="contact.php">Contact</a></li>
+                <li><a href="mentions-legales.php">Mentions Légales</a></li>
             </ul>
         </div>
         <div class="footer-info">
@@ -17,3 +17,7 @@
         </div>
     </div>
 </footer>
+<!-- Script JS Bootstrap (placé en fin de page pour optimiser le chargement) -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
