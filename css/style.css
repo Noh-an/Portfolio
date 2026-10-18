@@ -8,40 +8,58 @@
    ========================================= */
 
 
-/* ---- Fond type cahier à lignes (à adapter selon ton body existant) ---- */
-/* 1. Déclaration de la variable dans le :root */
+/* ========================================================
+   CHARTE GRAPHIQUE MODERNE ET LUMINEUSE (Variables CSS)
+   ======================================================== */
 :root {
-  --police-brouillon: 'Caveat', cursive;
+  /* Typographies */
+  --font-manuscrite: 'Caveat', cursive;
+  --font-texte: system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+
+  /* Palette de fond & textes */
+  --bg-page: #F8FAFC;              /* Blanc ardoise lumineux (remplace le beige terne) */
+  --text-main: #0F172A;            /* Bleu nuit profond (contraste optimal WCAG AAA) */
+  --text-muted: #475569;           /* Gris ardoise élégant pour les sous-titres et dates */
+
+  /* Couleurs de Post-it fraîches et éclatantes */
+  --postit-jaune: #FEF9C3;         /* Jaune doux et chaleureux (Header / Coopenoix) */
+  --postit-bleu: #E0F2FE;          /* Bleu ciel limpide (Intro / Easy2Drive) */
+  --postit-vert: #DCFCE7;          /* Menthe fraîche énergique (Stage CNAM) */
+  --postit-rose: #FFE4E6;          /* Rose poudré moderne (Présentation / Contact) */
+
+  /* Ombres modernes et légères (adieu les ombres grises lourdes) */
+  --shadow-soft: 0 4px 20px -2px rgba(15, 23, 42, 0.08);
+  --shadow-postit: 2px 8px 18px rgba(15, 23, 42, 0.09);
 }
 
-/* 2. Utilisation de la variable sur tout le site */
-body,
-input,
-textarea,
-button,
-select {
-  font-family: var(--police-brouillon);
-}
-
-
+/* Application des polices : lisibilité optimale sur les textes, style manuscrit sur les titres */
 body {
+  font-family: var(--font-texte);
+  color: var(--text-main);
+  line-height: 1.6;
   overflow-x: hidden;
-  background-color: #f3f1ec;
+  background-color: var(--bg-page);
+  /* Lignage cahier plus clair, aérien et discret */
   background-image:
-    /* Lignes horizontales séyès */
     repeating-linear-gradient(to bottom,
       transparent 0px,
-      transparent 23px,
-      rgba(120, 155, 205, 0.28) 23px,
-      rgba(120, 155, 205, 0.28) 24px),
-    /* Marge rouge à gauche */
-    /* transparent jusqu'à 55px a partir de la gauche puis couleur rouge puis redeviens transparent a 56px */
-    /* linear-gradient fait un dégradé de couleur */
+      transparent 27px,
+      rgba(148, 163, 184, 0.22) 27px,
+      rgba(148, 163, 184, 0.22) 28px),
     linear-gradient(to right,
       transparent 55px,
-      rgba(205, 75, 75, 0.22) 55px,
-      rgba(205, 75, 75, 0.22) 56px,
+      rgba(244, 63, 94, 0.2) 55px,
+      rgba(244, 63, 94, 0.2) 56px,
       transparent 56px);
+}
+
+/* Les titres gardent la signature manuscrite Caveat */
+h1, h2, h3, .logo, .title-intro, .font-handwriting, .font-handwriting-bold {
+  font-family: var(--font-manuscrite);
+}
+
+input, textarea, select {
+  font-family: var(--font-texte);
 }
 
 
