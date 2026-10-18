@@ -148,7 +148,7 @@
                         <!-- Compétences -->
                         <div class="cv-section-skills">
                             <div id="skills-items">
-                                <div class="cv-section-title">Compétences</div>
+                                <div class="cv-section-title-card">Compétences</div>
                                 <div class="side-skill-item">
                                     <div class="side-skill-header">
                                         <span>HTML / CSS</span>
@@ -189,7 +189,7 @@
         
                         <!-- Langues -->
                         <div class="cv-section-langues">
-                            <div class="cv-section-title">Langues</div>
+                            <div class="cv-section-title-card">Langues</div>
                             <div class="cv-lang-item">
                                 <span>🇫🇷 Français</span>
                                 <span class="lang-level">Natif</span>
@@ -206,7 +206,7 @@
         
                         <!-- Centres d'intérêt -->
                         <div class="cv-section-interests">
-                            <div class="cv-section-title">Intérêts</div>
+                            <div class="cv-section-title-card">Intérêts</div>
                             <div class="cv-interests">
                                 <span class="interest-tag">Musique</span>
                                 <span class="interest-tag">Sport</span>

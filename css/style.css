@@ -2,66 +2,85 @@
    HEADER — Style Post-it / Papier Scotché
    Portfolio Nohan Gagnor
 
-   PRÉREQUIS : ajouter dans <head>
-   <link rel="preconnect" href="https://fonts.googleapis.com">
-   <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400;700&display=swap" rel="stylesheet">
-   ========================================= */
-
-
-/* ========================================================
    CHARTE GRAPHIQUE MODERNE ET LUMINEUSE (Variables CSS)
    ======================================================== */
+/* 1. Déclaration des variables dans le :root */
 :root {
-  /* Typographies */
-  --font-manuscrite: 'Caveat', cursive;
-  --font-texte: system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+  /* Typographies de l'univers carnet manuscrit */
+  --police-titres: 'Caveat', cursive;
+  --police-texte: 'Patrick Hand', cursive;
+  --police-brouillon: var(--police-titres);
 
-  /* Palette de fond & textes */
-  --bg-page: #F8FAFC;              /* Blanc ardoise lumineux (remplace le beige terne) */
-  --text-main: #0F172A;            /* Bleu nuit profond (contraste optimal WCAG AAA) */
-  --text-muted: #475569;           /* Gris ardoise élégant pour les sous-titres et dates */
+  /* Palette des Post-it (éclaircie, lumineuse et contrastée) */
+  --postit-jaune: #FFF0A5;
+  --postit-jaune-border: #F5DE82;
 
-  /* Couleurs de Post-it fraîches et éclatantes */
-  --postit-jaune: #FEF9C3;         /* Jaune doux et chaleureux (Header / Coopenoix) */
-  --postit-bleu: #E0F2FE;          /* Bleu ciel limpide (Intro / Easy2Drive) */
-  --postit-vert: #DCFCE7;          /* Menthe fraîche énergique (Stage CNAM) */
-  --postit-rose: #FFE4E6;          /* Rose poudré moderne (Présentation / Contact) */
+  --postit-bleu: #D4EEF7;
+  --postit-bleu-border: #A9DCF0;
 
-  /* Ombres modernes et légères (adieu les ombres grises lourdes) */
-  --shadow-soft: 0 4px 20px -2px rgba(15, 23, 42, 0.08);
-  --shadow-postit: 2px 8px 18px rgba(15, 23, 42, 0.09);
+  --postit-vert: #D0F2DC;
+  --postit-vert-border: #A4E6B9;
+
+  --postit-rose: #FDE2E6;
+  --postit-rose-border: #F9B8C2;
 }
 
 /* Application des polices : lisibilité optimale sur les textes, style manuscrit sur les titres */
 body {
-  font-family: var(--font-texte);
-  color: var(--text-main);
+  font-family: var(--police-texte);
+  color: #333333;
   line-height: 1.6;
   overflow-x: hidden;
-  background-color: var(--bg-page);
-  /* Lignage cahier plus clair, aérien et discret */
+  background-color: #f8fafc; /* fond clair lumineux */
   background-image:
+    /* Lignes horizontales séyès */
     repeating-linear-gradient(to bottom,
       transparent 0px,
-      transparent 27px,
-      rgba(148, 163, 184, 0.22) 27px,
-      rgba(148, 163, 184, 0.22) 28px),
+      transparent 23px,
+      rgba(120, 155, 205, 0.28) 23px,
+      rgba(120, 155, 205, 0.28) 24px),
+    /* Marge rouge à gauche */
     linear-gradient(to right,
       transparent 55px,
-      rgba(244, 63, 94, 0.2) 55px,
-      rgba(244, 63, 94, 0.2) 56px,
+      rgba(205, 75, 75, 0.22) 55px,
+      rgba(205, 75, 75, 0.22) 56px,
       transparent 56px);
 }
 
-/* Les titres gardent la signature manuscrite Caveat */
-h1, h2, h3, .logo, .title-intro, .font-handwriting, .font-handwriting-bold {
-  font-family: var(--font-manuscrite);
+/* Les titres, le logo et les grands textes conservent la signature dynamique Caveat */
+h1, h2, h3, h4, h5, h6,
+.logo,
+.title-intro,
+.font-handwriting-bold,
+.cv-section-title,
+.cv-section-title-card{
+  font-family: var(--police-titres);
 }
 
-input, textarea, select {
-  font-family: var(--font-texte);
+h1 {
+    font-size: clamp(2rem, 4vw, 4rem);
+    line-height: 1.1;
 }
 
+h2, 
+.cv-section-title,
+.cv-section-title-card {
+    font-size: clamp(1.75rem, 2.5vw, 2.5rem);
+}
+
+h3, h4{
+    font-size: clamp(1.25rem, 1.8vw, 1.75rem);
+    line-height: 1.3;
+}
+
+p {
+    font-size: clamp(1rem, 1.5vw, 1.25rem);
+    line-height: 1.5;
+}
+/* Les champs de formulaire restent très lisibles avec Patrick Hand */
+input, textarea, button, select {
+  font-family: var(--police-texte);
+} 
 
 /* ---- Header — papier scotché sur la page ---- */
 header {
@@ -70,8 +89,8 @@ header {
   padding: 35px 36px 24px;
 
   /* Couleur papier post-it */
-  background-color: #F4E7B4;
-  border: 1px solid #f3e15c;
+  background-color: var(--postit-jaune);
+  border: 1px solid var(--postit-jaune-border);
 
   /* Légère rotation "posé à la main" */
   transform: rotate(-0.6deg);
@@ -321,15 +340,11 @@ header::after {
 .intro {
   margin: 25px -25px 30px;
   padding: 25px;
-  /* background-color: #fbf9f3; */
   transform: rotate(0.1deg);
-  /* box-shadow:
-        1px 1px 0px #d6cca7,
-        3px 4px 18px rgba(67, 67, 67, 0.22); */
-  background-color: #BBE2EC;
-  /* color: #2A3E45; */
-  box-shadow: 2px 4px 12px rgba(42, 62, 69, 0.15);
+  background-color: var(--postit-bleu);
   border-left: 1px solid rgba(255, 255, 255, 0.4);
+  /* box-shadow: 1px 2px 6px rgba(42, 62, 69, 0.15); */
+  /* border: 1px solid var(--postit-bleu-border); */
 }
 
 .title-intro {
@@ -351,7 +366,7 @@ header::after {
   top: 35%;
   left: -4%;
   width: 110%;
-  height: 55%;
+  height: 50%;
   background-color: rgb(255, 235, 59);
   /* Jaune surligneur */
   z-index: -1;
@@ -388,9 +403,8 @@ header::after {
 }
 
 .descr-intro {
-  font-size: 1.5rem;
+  font-size: 1.5rem !important ;
   margin-bottom: 24px;
-  line-height: 1.5;
   margin-left: 12px;
 }
 
@@ -460,13 +474,10 @@ strong {
   width: 100%;
   border-radius: 6px;
   margin: 0 0 0 120px;
-
   /* Ombre portée — photo posée sur la page */
-  box-shadow:
-    1px 1px 0px #d6cca7,
-    6px 8px 28px rgba(67, 67, 67, 0.22);
-
-  /* Légère rotation "jetée à la main", cohérente avec le header post-it */
+   box-shadow:
+    1px 1px 0px #b3b3b3;
+  /* Légère rotation "jetée à la main"*/
   transform: rotate(-1.5deg);
 }
 
@@ -622,16 +633,18 @@ strong {
 }
 
 .info-card {
-  background-color: #FFC0CB;
+  background-color: var(--postit-rose);
+  /* border: 1px solid var(--postit-rose-border); */
   width: max-content;
-  box-shadow: 2px 4px 12px rgba(42, 62, 69, 0.15);
+  /* box-shadow: 1px 2px 6px rgba(42, 62, 69, 0.15); */
   padding: 25px;
   transform: rotate(0.2deg);
 }
 
 .objectif-card {
-  background-color: #FFC0CB;
-  box-shadow: 2px 4px 12px rgba(42, 62, 69, 0.15);
+  background-color: var(--postit-rose);
+  /* border: 1px solid var(--postit-rose-border);
+  box-shadow: 1px 2px 6px rgba(42, 62, 69, 0.15); */
   transform: rotate(-0.3deg);
 }
 
@@ -642,18 +655,25 @@ strong {
 
 .about-me {
   background-color: transparent;
+  margin-left: 20px;
 }
 
 .soft-skills {
   background-color: transparent;
 }
 
-.text-card {
+.text-card{
   text-align: justify;
-  padding: 25px;
-  font-size: 1.25rem;
+  padding: 18px;
   background-color: transparent;
+  margin-left: 20px;
+}
+
+.text-card p {
+  margin-bottom: 20px;
+  text-align: justify;
   line-height: 1.7;
+  font-size: 1.4rem;
 }
 
 /* --------------------------------------------
@@ -678,35 +698,39 @@ strong {
   /* Permet aux cartes d'occuper l'espace de manière égale */
   max-width: 280px;
   transition: transform 0.3s ease;
-  box-shadow: 2px 4px 12px rgba(42, 62, 69, 0.15);
+  /* box-shadow: 1px 2px 6px rgba(42, 62, 69, 0.15); */
   border: none !important;
 }
 
 .skills-container .card.languages {
   transform: rotate(-0.7deg) translateY(0px);
   /* Rotation -1.5 degré */
-  background-color: #F5D128;
+  background-color: var(--postit-jaune);
+  /* border: 1px solid var(--postit-jaune-border); */
 }
 
 /* Carte 2 (Base de données) : Plus haute et droite */
 .skills-container .card.bdd {
   transform: rotate(0.4deg) translateY(-10px);
   /* Rotation 1 degré + relevée de 15px */
-  background-color: #BBE2EC;
+  background-color: var(--postit-bleu);
+  /* border: 1px solid var(--postit-bleu-border); */
 }
 
 /* Carte 3 (Frameworks) : De travers à gauche et plus basse */
 .skills-container .card.frameworks {
   transform: rotate(-0.7deg) translateY(-2px);
   /* Rotation -2.5 degrés + abaissée de 10px */
-  background-color: #B2F0B2;
+  background-color: var(--postit-vert);
+  /* border: 1px solid var(--postit-vert-border); */
 }
 
 /* Carte 4 (Langues) : Relevée et de travers à droite */
 .skills-container .card.langue {
   transform: rotate(0.5deg) translateY(-5px);
   /* Rotation 2 degrés + relevée de 8px */
-  background-color: #FFC0CB;
+  background-color: var(--postit-rose);
+  /* border: 1px solid var(--postit-rose-border); */
 }
 
 /* --- BONUS --- */
@@ -743,7 +767,6 @@ strong {
 }
 
 #competences .card h4 {
-  font-size: 1.2rem;
   margin: 15px 0;
   text-align: center;
 }
@@ -777,18 +800,22 @@ strong {
 }
 
 /* Styles des Post-it */
+/* Styles des Post-it projets */
 .card-postit-yellow {
-  background-color: #fef5c1 !important;
+  background-color: var(--postit-jaune) !important;
+  border: 1px solid var(--postit-jaune-border) !important;
   color: #333;
 }
 
 .card-postit-blue {
-  background-color: #d1ecf1 !important;
+  background-color: var(--postit-bleu) !important;
+  border: 1px solid var(--postit-bleu-border) !important;
   color: #333;
 }
 
 .card-postit-green {
-  background-color: #b2f0b2 !important;
+  background-color: var(--postit-vert) !important;
+  border: 1px solid var(--postit-vert-border) !important;
   color: #333;
 }
 
@@ -983,10 +1010,12 @@ strong {
 
 /* Sections */
 .cv-section-title {
-  font-size: 24px;
-  font-weight: bold;
   margin-bottom: 12px;
   padding-bottom: 8px;
+}
+
+.cv-section-title-card {
+  margin-bottom: 6px;
 }
 
 .cv-formation,
@@ -998,9 +1027,8 @@ strong {
 }
 
 #stageCnam {
-  background-color: #BBE2EC;
+  background-color: var(--postit-bleu);
   transform: rotate(-0.5deg);
-  box-shadow: 2px 4px 12px rgba(42, 62, 69, 0.15);
   border-left: 1px solid rgba(255, 255, 255, 0.4);
 }
 
@@ -1014,9 +1042,9 @@ strong {
 }
 
 #easyDrive {
-  background-color: #BBE2EC;
+  background-color: var(--postit-bleu);
   transform: rotate(0.2deg);
-  box-shadow: 2px 4px 12px rgba(42, 62, 69, 0.15);
+  /* box-shadow: 2px 4px 12px rgba(42, 62, 69, 0.15); */
   border-left: 1px solid rgba(255, 255, 255, 0.4);
 }
 
@@ -1030,9 +1058,9 @@ strong {
 }
 
 #coopenoix {
-  background-color: #BBE2EC;
+  background-color: var(--postit-bleu);
   transform: rotate(-0.6deg);
-  box-shadow: 2px 4px 12px rgba(42, 62, 69, 0.15);
+  /* box-shadow: 2px 4px 12px rgba(42, 62, 69, 0.15); */
   border-left: 1px solid rgba(255, 255, 255, 0.4);
 }
 
@@ -1046,9 +1074,9 @@ strong {
 }
 
 #stage {
-  background-color: #BBE2EC;
+  background-color: var(--postit-bleu);
   transform: rotate(0.4deg);
-  box-shadow: 2px 4px 12px rgba(42, 62, 69, 0.15);
+  /* box-shadow: 2px 4px 12px rgba(42, 62, 69, 0.15); */
   border-left: 1px solid rgba(255, 255, 255, 0.4);
 }
 
@@ -1068,16 +1096,16 @@ strong {
 }
 
 #formations {
-  background-color: #FFC0CB;
+  background-color: var(--postit-rose);
   transform: rotate(0.4deg);
-  box-shadow: 2px 4px 12px rgba(42, 62, 69, 0.15);
+  /* box-shadow: 2px 4px 12px rgba(42, 62, 69, 0.15); */
   border-left: 1px solid rgba(255, 255, 255, 0.4);
 }
 
 .cv-section-skills {
-  background-color: #fef5c1;
+  background-color: var(--postit-jaune);
   transform: rotate(0.4deg);
-  box-shadow: 2px 4px 12px rgba(42, 62, 69, 0.15);
+  /* box-shadow: 2px 4px 12px rgba(42, 62, 69, 0.15); */
   border-left: 1px solid rgba(255, 255, 255, 0.4);
 }
 
@@ -1091,7 +1119,7 @@ strong {
   margin-bottom: 6px;
 }
 
-.cv-item-title h3 {
+.cv-item-title{
   margin: 0;
   font-size: 14px;
   font-weight: 600;
@@ -1153,9 +1181,9 @@ strong {
 }
 
 .cv-section-langues {
-  background-color: #fef5c1;
+  background-color: var(--postit-jaune);
   transform: rotate(0.4deg);
-  box-shadow: 2px 4px 12px rgba(42, 62, 69, 0.15);
+  /* box-shadow: 2px 4px 12px rgba(42, 62, 69, 0.15); */
   border-left: 1px solid rgba(255, 255, 255, 0.4);
   padding: 25px;
 }
@@ -1175,9 +1203,9 @@ strong {
 }
 
 .cv-section-interests {
-  background-color: #fef5c1;
+  background-color: var(--postit-jaune);
   transform: rotate(0.4deg);
-  box-shadow: 2px 4px 12px rgba(42, 62, 69, 0.15);
+  /* box-shadow: 2px 4px 12px rgba(42, 62, 69, 0.15); */
   border-left: 1px solid rgba(255, 255, 255, 0.4);
   padding: 10px;
 }
@@ -1254,14 +1282,10 @@ strong {
   margin-bottom: 20px;
 }
 
-.contact-intro p {
-  font-family: 'Caveat', cursive;
-}
-
 .contact-form {
-  background-color: #BBE2EC;
+  background-color: var(--postit-bleu);
   transform: rotate(0.2deg);
-  box-shadow: 2px 4px 12px rgba(42, 62, 69, 0.15);
+  /* box-shadow: 2px 4px 12px rgba(42, 62, 69, 0.15); */
   border-left: 1px solid rgba(255, 255, 255, 0.4);
   padding: 25px;
 }
@@ -1337,10 +1361,9 @@ fieldset {
 }
 
 #links {
-  background-color: #FFC0CB;
+  background-color: var(--postit-rose);
   transform: rotate(-0.4deg);
-  box-shadow: 2px 4px 12px rgba(42, 62, 69, 0.15);
-  border-left: 1px solid rgba(255, 255, 255, 0.4);
+  /* box-shadow: 2px 4px 12px rgba(42, 62, 69, 0.15); */
   padding-top: 25px;
   padding-bottom: 25px;
 }
@@ -1374,8 +1397,8 @@ footer {
   margin: 55px 35px 15px 35px;
   padding: 20px 20px 20px;
   /* Couleur papier post-it */
-  background-color: #F4E7B4;
-  border: 1px solid #f3e15c;
+  background-color: var(--postit-jaune);
+  border: 1px solid var(--postit-jaune-border);
 
   /* Légère rotation "posé à la main" */
   transform: rotate(-0.3deg);

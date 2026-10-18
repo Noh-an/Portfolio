@@ -24,8 +24,8 @@
                             </div>
 
                             <div class="boutons">
-                                <a id="btn-contact" href="contact.php" class="">Me contacter</a>
-                                <a id="btn-projets" href="#projets" class="">Mes projets</a>
+                                <a id="btn-contact" href="contact.php">Me contacter</a>
+                                <a id="btn-projets" href="#projets">Mes projets</a>
                             </div>
                         </div>
                     </div>
@@ -138,11 +138,8 @@
         <section id="projets">
             <div class="container">
                 <div>
-                    <h2 class="font-handwriting-bold mb-4">Mes réalisations</h2>
-
-                    <div class="row g-5">
-                        <p class="font-handwriting text-muted col-12 mb-4">Voici quelques-uns de mes projets les plus récents et pertinents, démontrant mes compétences en développement web et applicatif :</p>
-                        
+                    <h2 class="">Mes réalisations</h2>
+                    <div class="row g-5">                        
                         <!-- Coopenoix -->
                         <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
                             <!-- Carte du projet coopenoix dans l'index -->
@@ -150,7 +147,7 @@
                                 <div class="tape-effect"></div> <div class="card-body d-flex flex-column justify-content-between p-2">
                                     <div>
                                         <h5 class="card-title font-handwriting-bold">COOPENOIX</h5>
-                                        <p class="card-text font-handwriting">Permettre au client de SUIVRE ET Vérifier en temps réel l'état de sa commande</p>
+                                        <p class="card-text">Permettre au client de suivre et de Vérifier en temps réel l'état de sa commande.</p>
                                     </div>
                                     <a class="btn btn-outline-dark rounded-pill font-handwriting mt-4 align-self-start shadow-sm" data-bs-toggle="offcanvas" data-bs-target="#infoProjet1" aria-controls="infoProjet1">En savoir plus</a>
                                 </div>
@@ -217,7 +214,7 @@
                                 <div class="card-body d-flex flex-column justify-content-between p-2">
                                     <div>
                                         <h5 class="card-title font-handwriting-bold">EASY2DRIVE</h5>
-                                        <p class="card-text font-handwriting">Application lourde et web de gestion complète pour auto-école (Directeurs, Formateurs et Élèves).</p>
+                                        <p class="card-text">Application lourde et web de gestion complète pour auto-école (Directeurs, Formateurs et Élèves).</p>
                                     </div>
                                     <a class="btn btn-outline-dark rounded-pill font-handwriting mt-4 align-self-start shadow-sm" data-bs-toggle="offcanvas" data-bs-target="#infoProjet2" aria-controls="infoProjet2">En savoir plus</a>
                                 </div>
@@ -374,7 +371,7 @@
                                 <div class="card-body d-flex flex-column justify-content-between p-2">
                                     <div>
                                         <h5 class="card-title font-handwriting-bold">Stage CNAM 2026</h5>
-                                        <p class="card-text font-handwriting">Stage au sein de l'équipe informatique de la Caisse Nationale d'Assurance Maladie de Dijon. Formulaire auto-généré avec le framework python Django et controles de saisie avec javaScript.</p>
+                                        <p class="card-text">Stage au sein de l'équipe informatique de la Caisse Nationale d'Assurance Maladie de Dijon. Formulaire auto-généré avec le framework python Django et controles de saisie avec javaScript.</p>
                                     </div>
                                     <a class="btn btn-outline-dark rounded-pill font-handwriting mt-4 align-self-start shadow-sm" data-bs-toggle="offcanvas" data-bs-target="#infoProjet3" aria-controls="infoProjet3">En savoir plus</a>
                                 </div>

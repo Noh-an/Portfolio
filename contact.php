@@ -77,7 +77,6 @@ include 'head.php';
                             <?php 
                             $selected_subjects = $old['subject'] ?? [];
                             $options = [
-                                'stage' => "Proposition de stage",
                                 'alternance' => "Proposition d'alternance",
                                 'question' => "Question générale",
                                 'autre' => "Autre"
