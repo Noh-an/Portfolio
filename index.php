@@ -12,7 +12,7 @@
 
                     <!-- Colonne TEXTE — gauche (7/12 sur md+, pleine largeur sur mobile) -->
                     <div class="col-12 col-md-6">
-                        <div class="intro">
+                        <div class="intro shadow-sm rounded">
                             <p class="lean">Bonjour, je suis</p>
                             <h1 class="title-intro">Nohan Gagnor</h1>
 
@@ -37,8 +37,8 @@
                             <div class="polaroid-frame">
                                 <img src="./img/pdpNohan.jpg" alt="Photo de Nohan Gagnor">
                             </div>
-                            <div class="social-links">
-                                <a id="linkedin" href="https://www.linkedin.com/in/nohan-gagnor-228a36354" target="_blank" class="social-link">LinkedIn</a>
+                            <div class="social-links ">
+                                <a id="linkedin" href="https://www.linkedin.com/in/nohan-gagnor-228a36354" target="_blank" class="social-git">LinkedIn</a>
                                 <a id="github" href="https://github.com/Noh-an" target="_blank" class="social-git">GitHub</a>
                             </div>
                         </div>
@@ -63,7 +63,7 @@
 
                 <!-- mes informations -->
                 <div class="layout-column info">
-                    <div class="card info-card">
+                    <div class="card info-card shadow-sm rounded">
                         <h3>Informations</h3>
                         <ul>
                             <li><strong>Âge :</strong> 20 ans</li>
@@ -72,7 +72,7 @@
                         </ul>
                     </div>
                     <!-- objectif et compétences -->
-                    <div class="card objectif-card">
+                    <div class="card objectif-card shadow-sm rounded">
                         <h3>Mon objectif</h3>
                         <p>Mon objectif est de devenir un développeur web et applicatif complet, capable de concevoir et de réaliser des projets  innovants et performants. Je souhaite contribuer à des équipes dynamiques et engagées dans l'excellence technique.</p>
                     </div>
@@ -84,7 +84,7 @@
             
                 <h2>Compétences</h2>
             <div class="skills-container">  
-                <div class="card languages">
+                <div class="card languages shadow-sm rounded">
                     
                     <h4>Langages</h4>
 
@@ -98,7 +98,7 @@
                     </ul>
                 </div>
 
-                <div class="card bdd">
+                <div class="card bdd shadow-sm rounded">
                     
                     <h4>Base de données</h4>
 
@@ -109,7 +109,7 @@
                     </ul>
                 </div>
 
-                <div class="card frameworks">
+                <div class="card frameworks shadow-sm rounded">
                     
                     <h4>Frameworks et outils</h4>
 
@@ -123,7 +123,7 @@
                     </ul>
                 </div>
 
-                <div class="card langue">
+                <div class="card langue shadow-sm rounded">
                    
                     <h4>Langues</h4>
 
@@ -143,7 +143,7 @@
                         <!-- Coopenoix -->
                         <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
                             <!-- Carte du projet coopenoix dans l'index -->
-                            <div class="card card-postit-yellow border-0 shadow-sm p-4 h-100 position-relative transform-rotate-left">
+                            <div class="card card-postit-yellow shadow-sm p-4 h-100 position-relative transform-rotate-left">
                                 <div class="tape-effect"></div> <div class="card-body d-flex flex-column justify-content-between p-2">
                                     <div>
                                         <h5 class="card-title font-handwriting-bold">COOPENOIX</h5>
@@ -209,7 +209,7 @@
 
                         <!-- Easy2Drive -->
                         <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
-                            <div class="card card-postit-blue border-0 shadow-sm p-4 h-100 position-relative transform-rotate-right">
+                            <div class="card card-postit-blue shadow-sm p-4 h-100 position-relative transform-rotate-right">
                                 <div class="tape-effect"></div>
                                 <div class="card-body d-flex flex-column justify-content-between p-2">
                                     <div>
