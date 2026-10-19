@@ -10,13 +10,11 @@
                 <!-- Header en haut -->
                 <div class="cv-header">
                     <div class="download-cv">
-                        <a href="img/Nohan GAGNOR.pdf" target="_blank" class="btn-download-cv">
+                        <a href="img/CV Nohan GAGNOR.pdf" target="_blank" class="btn-download-cv">
                             Télécharger mon CV
                         </a>
                     </div>
-                    <div class="cv-logo">
-                        <img src="img/logo.png" alt="CV Logo">
-                    </div>
+                    
                     <div class="cv-header-info">
                         <h1>Nohan Gagnor</h1>
                         <div class="cv-title">// Étudiant BTS SIO SLAM — 2ème année</div>
@@ -31,12 +29,11 @@
         
                 <!-- Contenu 2 colonnes -->
                 <div class="cv-content">
-                    
                     <!-- Colonne gauche : Expériences -->
                     <div class="cv-column cv-left">
                         <div class="cv-experiences">
                             <div class="cv-section-title">Expériences</div>
-                            <div id="stageCnam">
+                            <div id="stageCnam" class="shadow-sm border rounded">
                                 <div class="cv-item">
                                     <div class="cv-header">
                                         <div class="cv-item-title"><h3>STAGE CNAM - BTS SIO</h3></div>
@@ -56,7 +53,7 @@
                                     </div>
                                 </div>
                             </div>
-                            <div id="easyDrive">
+                            <div id="easyDrive" class="shadow-sm rounded">
                                 <div class="cv-item">
                                     <div class="cv-header">
                                         <div class="cv-item-title"><h3>Projet EASY2DRIVE - BTS SIO</h3></div>
@@ -76,7 +73,7 @@
                                     </div>
                                 </div>
                             </div>
-                            <div id="coopenoix">
+                            <div id="coopenoix" class="shadow-sm rounded">
                                 <div class="cv-item">
                                     <div class="cv-header">
                                         <div class="cv-item-title"><h3>Projet COOPENOIX - BTS SIO</h3></div>
@@ -92,7 +89,7 @@
                                     </div>
                                 </div>
                             </div>
-                            <div id="stage">
+                            <div id="stage" class="shadow-sm rounded">
                                 <div class="cv-item">
                                     <div class="cv-header">
                                         <div class="cv-item-title"><h3>Stage d'observation - Hillebrand Gori</h3></div>
@@ -117,7 +114,7 @@
                         <!-- Formation -->
                         <div class="cv-formation">
                             <div class="cv-section-title">Formation</div>
-                            <div id="formations">
+                            <div id="formations" class="shadow-sm rounded">
                                 <div class="cv-item">
                                     <div class="cv-header">
                                         <div class="cv-item-title"><h3>BTS Services Informatiques aux Organisations</h3></div>
@@ -146,7 +143,7 @@
                         </div>
         
                         <!-- Compétences -->
-                        <div class="cv-section-skills">
+                        <div class="cv-section-skills shadow-sm rounded">
                             <div id="skills-items">
                                 <div class="cv-section-title-card">Compétences</div>
                                 <div class="side-skill-item">
@@ -188,7 +185,7 @@
                         </div>
         
                         <!-- Langues -->
-                        <div class="cv-section-langues">
+                        <div class="cv-section-langues shadow-sm rounded">
                             <div class="cv-section-title-card">Langues</div>
                             <div class="cv-lang-item">
                                 <span>🇫🇷 Français</span>
@@ -205,7 +202,7 @@
                         </div>
         
                         <!-- Centres d'intérêt -->
-                        <div class="cv-section-interests">
+                        <div class="cv-section-interests shadow-sm rounded" >
                             <div class="cv-section-title-card">Intérêts</div>
                             <div class="cv-interests">
                                 <span class="interest-tag">Musique</span>

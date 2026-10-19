@@ -28,7 +28,7 @@ include 'head.php';
             </div>
 
             <div class="contact-container">
-                <div class="contact-form">
+                <div class="contact-form shadow-sm rounded">
                     
                     <!-- Affichage des alertes -->
                     <?php if ($success): ?>
@@ -61,17 +61,19 @@ include 'head.php';
                             <div id="name-fields">
                                 <div class="form-group">
                                     <label for="name">Nom :</label>
-                                    <input type="text" id="name" name="name" maxlength="30" value="<?= htmlspecialchars($old['name'] ?? '') ?>" required>
+                                    <input type="text" id="name" name="name" maxlength="30" autocomplete="family-name"
+                                    value="<?= htmlspecialchars($old['name'] ?? '') ?>" required>
                                 </div>
 
                                 <div class="form-group">
                                     <label for="first_name">Prénom :</label>
-                                    <input type="text" id="first_name" name="first_name" maxlength="30" value="<?= htmlspecialchars($old['first_name'] ?? '') ?>" required>
+                                    <input type="text" id="first_name" name="first_name" maxlength="30" autocomplete="given-name"
+                                    value="<?= htmlspecialchars($old['first_name'] ?? '') ?>" required>
                                 </div>
                             </div>
 
                             <label for="email">Email :</label><br>
-                            <input type="email" id="email" name="email" value="<?= htmlspecialchars($old['email'] ?? '') ?>" required><br><br>
+                            <input type="email" id="email" name="email" autocomplete="off" value="<?= htmlspecialchars($old['email'] ?? '') ?>" required><br><br>
 
                             <label>Sujet :</label><br>
                             <?php 
@@ -93,7 +95,7 @@ include 'head.php';
                             <label for="message">Message :</label><br>
                             <textarea id="message" name="message" rows="5" maxlength="5000" required><?= htmlspecialchars($old['message'] ?? '') ?></textarea><br><br>
                             
-                            <p class="rgpd-notice small text-muted" style="font-size: 0.85rem; margin-top: 10px; line-height: 1.4;">🔒 <strong>Protection des données :</strong> Les informations transmises via ce formulaire sont uniquement destinées à Nohan Gagnor afin de répondre à votre demande de contact. Elles ne sont jamais cédées à des tiers et sont conservées pendant une durée maximale de 1 an. Conformément au RGPD, vous disposez d'un droit d'accès, de rectification et de suppression en écrivant à <em>nohan.portfolio@gmail.com</em>.
+                            <p class="rgpd-notice small text-muted">🔒 <strong>Protection des données :</strong> Les informations transmises via ce formulaire sont uniquement destinées à Nohan Gagnor afin de répondre à votre demande de contact. Elles ne sont jamais cédées à des tiers et sont conservées pendant une durée maximale de 1 an. Conformément au RGPD, vous disposez d'un droit d'accès, de rectification et de suppression en écrivant à <em>nohan.portfolio@gmail.com</em>.
                             </p>
                             <button type="submit">Envoyer</button>
                         </fieldset>
@@ -101,7 +103,7 @@ include 'head.php';
                 </div>
 
                 <div class="contact-info">
-                    <div id="links">
+                    <div id="links" class="shadow-sm rounded">
                         <ul>
                             <li><a href="mailto:nohan.portfolio@gmail.com" class="social-link">Email</a></li>
                             <li><a href="https://github.com/Noh-an" target="_blank" class="social-link">GitHub</a></li>
